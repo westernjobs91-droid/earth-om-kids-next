@@ -1,79 +1,77 @@
-import { Metadata } from 'next';
+'use client';
+
+import React from 'react';
 import Link from 'next/link';
-import BlogNewsletter from '@/components/BlogNewsletter';
 
-export const metadata: Metadata = {
-  title: 'Blog & Resources | Earth & OM Kids',
-  description: 'Helpful articles on kids yoga, mindfulness for children, emotional regulation, and bringing calm to Toronto classrooms and families.',
-};
+export default function BlogPage() {
+  const blogPosts = [
+    {
+      slug: "benefits-of-kids-yoga-for-emotional-regulation",
+      title: "How Kids Yoga Helps with Emotional Regulation in Toronto Classrooms",
+      excerpt: "Discover how simple yoga and mindfulness practices can help children manage big emotions, reduce anxiety, and improve focus in school.",
+      date: "May 2026",
+      readTime: "7 min read",
+      category: "Emotional Regulation"
+    },
+    {
+      slug: "breathing-exercises-for-kids",
+      title: "5 Simple Breathing Exercises You Can Practice with Your Child at Home",
+      excerpt: "Easy, fun breathing techniques that help children calm down, improve concentration, and sleep better.",
+      date: "May 2026",
+      readTime: "5 min read",
+      category: "Mindfulness"
+    },
+    {
+      slug: "what-to-expect-in-kids-yoga-class",
+      title: "What to Expect in a Kids Yoga Class (Ages 3–6)",
+      excerpt: "A complete guide for parents on what happens during a typical kids yoga class and how it benefits your child.",
+      date: "May 2026",
+      readTime: "6 min read",
+      category: "For Parents"
+    },
+    {
+      slug: "yoga-for-focus-and-attention",
+      title: "Can Yoga Improve Focus and Attention in School-Age Children?",
+      excerpt: "Research-backed benefits of yoga for improving concentration, reducing restlessness, and supporting learning.",
+      date: "May 2026",
+      readTime: "8 min read",
+      category: "Child Development"
+    }
+  ];
 
-export default function Blog() {
   return (
-    <>
-      <div className="max-w-5xl mx-auto px-6 pt-14 pb-10">
-        <div className="text-center">
-          <div className="inline px-4 py-1 bg-[#A7C4A0]/20 text-[#2D5A4A] text-xs font-semibold tracking-[1.5px] rounded-full mb-3">YOGA &amp; MINDFULNESS RESOURCES</div>
-          <h1 className="text-6xl tracking-tighter font-semibold heading-serif">Insights for raising calm, confident kids</h1>
-          <p className="mt-4 max-w-md mx-auto text-lg text-[#1F2E2A]/70">Practical tips, research-backed insights, and stories from our work with Toronto children and schools.</p>
-        </div>
+    <div className="max-w-5xl mx-auto px-6 py-16">
+      <div className="text-center mb-12">
+        <div className="text-[#2D5A4A] text-xs tracking-[2px] font-semibold mb-2">RESOURCES &amp; INSIGHTS</div>
+        <h1 className="text-5xl tracking-tighter font-semibold heading-serif">Kids Yoga Blog</h1>
+        <p className="mt-3 text-xl text-[#1F2E2A]/70 max-w-md mx-auto">
+          Helpful articles on kids yoga, mindfulness, and supporting children’s emotional wellbeing.
+        </p>
       </div>
 
-      {/* Blog Posts Grid */}
-      <section className="max-w-6xl mx-auto px-6 pb-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          
-          {/* Post 1 */}
-          <a href="#" className="group block bg-white rounded-3xl overflow-hidden border border-[#E8D5B7] hover:border-[#2D5A4A]/40 transition">
-            <div className="h-48 bg-[#E8D5B7] relative">
-              <img src="https://picsum.photos/id/1016/600/400" alt="Child doing yoga pose in classroom" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-              <div className="absolute top-4 left-4 px-3 py-1 bg-white/90 text-xs font-semibold rounded-full">FOR EDUCATORS</div>
+      <div className="grid md:grid-cols-2 gap-8">
+        {blogPosts.map((post, index) => (
+          <Link 
+            key={index} 
+            href={`/blog/${post.slug}`}
+            className="group block bg-white border border-[#E8D5B7] rounded-3xl p-8 hover:border-[#2D5A4A]/40 transition-all"
+          >
+            <div className="flex items-center gap-x-3 mb-4">
+              <span className="text-xs px-3 py-1 bg-[#F8F1E9] rounded-full text-[#2D5A4A]">{post.category}</span>
+              <span className="text-xs text-[#1F2E2A]/50">{post.date} • {post.readTime}</span>
             </div>
-            <div className="p-7">
-              <div className="text-xs text-[#2D5A4A] font-semibold tracking-wider">JANUARY 2026 • 8 MIN READ</div>
-              <h3 className="mt-2 text-2xl font-semibold tracking-tight group-hover:text-[#2D5A4A] transition">5 Simple Ways to Bring Mindfulness into a Busy Classroom</h3>
-              <p className="mt-3 text-sm text-[#1F2E2A]/75 line-clamp-3">Quick, low-prep techniques that help children regulate emotions and improve focus — without adding more to your plate.</p>
-              <div className="mt-5 flex items-center text-sm font-semibold text-[#2D5A4A]">Read article <i className="fa-solid fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition"></i></div>
+            
+            <h2 className="text-2xl font-semibold tracking-tight group-hover:text-[#2D5A4A] transition-colors">
+              {post.title}
+            </h2>
+            <p className="mt-3 text-[#1F2E2A]/70 line-clamp-3">{post.excerpt}</p>
+            
+            <div className="mt-6 text-sm font-semibold text-[#2D5A4A] group-hover:underline">
+              Read article →
             </div>
-          </a>
-
-          {/* Post 2 */}
-          <a href="#" className="group block bg-white rounded-3xl overflow-hidden border border-[#E8D5B7] hover:border-[#2D5A4A]/40 transition">
-            <div className="h-48 bg-[#E8D5B7] relative">
-              <img src="https://picsum.photos/id/1005/600/400" alt="Toddler doing yoga with parent" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-              <div className="absolute top-4 left-4 px-3 py-1 bg-white/90 text-xs font-semibold rounded-full">FOR PARENTS</div>
-            </div>
-            <div className="p-7">
-              <div className="text-xs text-[#2D5A4A] font-semibold tracking-wider">DECEMBER 2025 • 6 MIN READ</div>
-              <h3 className="mt-2 text-2xl font-semibold tracking-tight group-hover:text-[#2D5A4A] transition">How to Introduce Yoga to Toddlers (Without the Meltdowns)</h3>
-              <p className="mt-3 text-sm text-[#1F2E2A]/75 line-clamp-3">Practical, playful strategies that work with 18-month to 3-year-olds — even on the wiggly days.</p>
-              <div className="mt-5 flex items-center text-sm font-semibold text-[#2D5A4A]">Read article <i className="fa-solid fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition"></i></div>
-            </div>
-          </a>
-
-          {/* Post 3 */}
-          <a href="#" className="group block bg-white rounded-3xl overflow-hidden border border-[#E8D5B7] hover:border-[#2D5A4A]/40 transition">
-            <div className="h-48 bg-[#E8D5B7] relative">
-              <img src="https://picsum.photos/id/201/600/400" alt="Children practicing breathing exercises" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-              <div className="absolute top-4 left-4 px-3 py-1 bg-white/90 text-xs font-semibold rounded-full">RESEARCH &amp; INSIGHTS</div>
-            </div>
-            <div className="p-7">
-              <div className="text-xs text-[#2D5A4A] font-semibold tracking-wider">NOVEMBER 2025 • 10 MIN READ</div>
-              <h3 className="mt-2 text-2xl font-semibold tracking-tight group-hover:text-[#2D5A4A] transition">The Science of Kids Yoga: How It Supports Brain Development &amp; Emotional Health</h3>
-              <p className="mt-3 text-sm text-[#1F2E2A]/75 line-clamp-3">A clear look at what research tells us about movement, breath, and mindfulness in early childhood.</p>
-              <div className="mt-5 flex items-center text-sm font-semibold text-[#2D5A4A]">Read article <i className="fa-solid fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition"></i></div>
-            </div>
-          </a>
-
-        </div>
-        
-        <div className="text-center mt-10">
-          <p className="text-sm text-[#2D5A4A]/70">More articles coming soon on topics like emotional regulation, yoga for anxiety in children, and creating mindful classroom transitions.</p>
-          <Link href="/contact" className="mt-4 inline-block text-sm font-semibold text-[#2D5A4A]">Have a topic suggestion? Let us know →</Link>
-        </div>
-      </section>
-
-      {/* Newsletter signup */}
-      <BlogNewsletter />
-    </>
+          </Link>
+        ))}
+      </div>
+    </div>
   );
 }

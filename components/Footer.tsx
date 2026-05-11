@@ -5,6 +5,8 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-[#1F2E2A] text-[#F8F1E9]/80 pt-16 pb-10">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-y-12">
+        
+        {/* Logo + Description */}
         <div className="md:col-span-5">
           <div className="flex items-center gap-x-3 mb-4">
             <div className="w-11 h-11 bg-[#2D5A4A] rounded-2xl flex items-center justify-center overflow-hidden">
@@ -21,13 +23,15 @@ const Footer: React.FC = () => {
           </div>
           <p className="max-w-xs text-sm">Refined kids yoga &amp; mindfulness programs for schools, centres, and families in Toronto.</p>
           
+          {/* Social Icons */}
           <div className="mt-6 flex gap-x-4 text-xl">
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white"><i className="fa-brands fa-instagram"></i></a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white"><i className="fa-brands fa-linkedin"></i></a>
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-white"><i className="fa-brands fa-facebook"></i></a>
           </div>
         </div>
-        
+
+        {/* Explore Links */}
         <div className="md:col-span-3 text-sm">
           <div className="font-semibold text-white mb-4 tracking-wider text-xs">EXPLORE</div>
           <div className="space-y-[9px]">
@@ -38,22 +42,34 @@ const Footer: React.FC = () => {
             <Link href="/blog" className="block hover:text-white">Yoga Resources</Link>
           </div>
         </div>
-        
+
+        {/* Contact Info - Updated */}
         <div className="md:col-span-4 text-sm">
           <div className="font-semibold text-white mb-4 tracking-wider text-xs">GET IN TOUCH</div>
           <div className="space-y-1.5">
-            <a href="mailto:hello@earthandom.ca" className="block hover:text-white">hello@earthandom.ca</a>
-            <a href="tel:4165550192" className="block hover:text-white">(416) 555-0192</a>
+            <a 
+              href="mailto:earthandomkids@gmail.com" 
+              className="block hover:text-white"
+            >
+              earthandomkids@gmail.com
+            </a>
+            <a 
+              href="tel:6478568206" 
+              className="block hover:text-white"
+            >
+              (647) 856-8206
+            </a>
             <div className="pt-2">Toronto, Ontario, Canada</div>
             <div className="text-xs pt-4">Serving Toronto &amp; the GTA</div>
           </div>
-          
+
           <div className="mt-8 text-xs">
             <Link href="/contact" className="underline hover:no-underline">Request a custom program →</Link>
           </div>
         </div>
       </div>
-      
+
+      {/* Bottom Bar */}
       <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/10 text-xs flex flex-col md:flex-row justify-between items-center gap-y-2 text-[#F8F1E9]/50">
         <div>© 2026 Earth &amp; OM Kids. All rights reserved.</div>
         <div className="flex gap-x-5">

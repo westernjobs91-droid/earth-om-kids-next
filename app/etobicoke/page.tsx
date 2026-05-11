@@ -1,0 +1,100 @@
+'use client';
+
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+export default function EtobicokePage() {
+  return (
+    <div className="max-w-6xl mx-auto px-6 py-16">
+      
+      {/* Hero */}
+      <div className="text-center mb-20">
+        <div className="inline-block px-4 py-1 bg-[#A7C4A0]/20 text-[#2D5A4A] text-xs font-semibold tracking-[1.5px] rounded-full mb-4">
+          SERVING ETOBICOKE
+        </div>
+        <h1 className="text-5xl md:text-6xl tracking-tighter font-semibold heading-serif mb-4">
+          Kids Yoga in Etobicoke
+        </h1>
+        <p className="max-w-2xl mx-auto text-xl text-[#1F2E2A]/70">
+          Professional kids yoga and mindfulness programs for schools, childcare centres, and families in Etobicoke, Toronto.
+        </p>
+        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <Link href="/contact" className="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-[#2D5A4A] hover:bg-[#1F2E2A] transition text-white font-semibold rounded-3xl text-lg">
+            Book an Etobicoke Program
+          </Link>
+          <Link href="/programs" className="inline-flex items-center justify-center gap-x-3 px-10 py-4 border border-[#2D5A4A] text-[#2D5A4A] hover:bg-white font-semibold rounded-3xl text-lg">
+            View All Programs
+          </Link>
+        </div>
+      </div>
+
+      {/* Why Etobicoke */}
+      <section className="mb-20">
+        <div className="text-center mb-12">
+          <div className="text-[#2D5A4A] text-xs tracking-[2px] font-semibold mb-2">WHY ETOBICOKE FAMILIES &amp; SCHOOLS CHOOSE US</div>
+          <h2 className="text-4xl tracking-tighter font-semibold heading-serif">Bringing calm to West Toronto</h2>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            { icon: "fa-map-marker-alt", title: "Serving Etobicoke & West Toronto", desc: "We work with schools, daycares, and families across Etobicoke and West Toronto." },
+            { icon: "fa-school", title: "Local School & Daycare Partners", desc: "Trusted by several Etobicoke schools and childcare centres for regular programs." },
+            { icon: "fa-clock", title: "Convenient On-Site Programs", desc: "We come to your school, daycare, or home in Etobicoke." }
+          ].map((item, index) => (
+            <motion.div 
+              key={index}
+              className="bg-white p-8 rounded-3xl border border-[#E8D5B7] shadow-sm"
+              whileHover={{ y: -8, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+            >
+              <div className="w-12 h-12 bg-[#F1EDE6] rounded-2xl flex items-center justify-center mb-6">
+                <i className={`fa-solid ${item.icon} text-2xl text-[#2D5A4A]`}></i>
+              </div>
+              <h3 className="font-semibold text-xl tracking-tight mb-3">{item.title}</h3>
+              <p className="text-[#1F2E2A]/70">{item.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Programs in Etobicoke */}
+      <section className="mb-20">
+        <div className="text-center mb-10">
+          <div className="text-[#2D5A4A] text-xs tracking-[2px] font-semibold mb-2">PROGRAMS IN ETOBICOKE</div>
+          <h2 className="text-4xl tracking-tighter font-semibold heading-serif">What We Offer in Etobicoke</h2>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            { title: "School Yoga Programs", desc: "In-class yoga and mindfulness for Etobicoke schools and childcare centres.", link: "/schools" },
+            { title: "After-School Classes", desc: "Weekly kids yoga classes for children in Etobicoke.", link: "/families" },
+            { title: "Workshops & Birthday Parties", desc: "Mindful birthday parties and family workshops in Etobicoke.", link: "/contact" }
+          ].map((item, index) => (
+            <motion.div 
+              key={index}
+              className="bg-white p-8 rounded-3xl border border-[#E8D5B7]"
+              whileHover={{ y: -8, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+            >
+              <h3 className="font-semibold text-xl mb-3">{item.title}</h3>
+              <p className="text-[#1F2E2A]/70 flex-1 mb-4">{item.desc}</p>
+              <Link href={item.link} className="text-sm font-semibold text-[#2D5A4A]">Learn more →</Link>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <div className="text-center bg-[#F8F1E9] rounded-3xl p-12">
+        <h2 className="text-3xl tracking-tighter font-semibold heading-serif mb-4">
+          Ready to bring kids yoga to Etobicoke?
+        </h2>
+        <p className="text-[#1F2E2A]/70 mb-8 max-w-md mx-auto">
+          Whether you're a school, daycare, or parent in Etobicoke — we’d love to work with you.
+        </p>
+        <Link href="/contact" className="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-[#2D5A4A] hover:bg-[#1F2E2A] transition text-white font-semibold rounded-3xl text-lg">
+          Request an Etobicoke Program
+        </Link>
+      </div>
+    </div>
+  );
+}

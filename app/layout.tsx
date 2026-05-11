@@ -18,16 +18,52 @@ const playfair = Playfair_Display({
   display: 'swap',
 });
 
-export const metadata: Metadata = {
+export const metadata = {
+  metadataBase: new URL('https://earth-om-kids-next.vercel.app'), // Change this later to your custom domain
   title: {
-    default: 'Earth & OM Kids | Kids Yoga & Mindfulness Programs in Toronto',
-    template: '%s | Earth & OM Kids',
+    default: "Earth & OM Kids | Kids Yoga & Mindfulness in Toronto",
+    template: "%s | Earth & OM Kids",
   },
-  description: 'Refined kids yoga and mindfulness programs for schools, childcare centres, Montessori communities, and families in Toronto and the GTA. Led by Early Childhood Educator Taran Kaur. Calm minds, joyful movement, confident children.',
+  description: "Professional kids yoga and mindfulness programs in Toronto & the GTA. Trusted by 25+ schools and childcare centres since 2018. Calm minds. Joyful movement. Confident kids.",
   icons: {
-    icon: '/favicon.ico',
+    icon: "/yoga-icon.png",
+  },
+  openGraph: {
+    title: "Earth & OM Kids | Kids Yoga & Mindfulness in Toronto",
+    description: "Professional kids yoga and mindfulness programs in Toronto & the GTA. Trusted by 25+ schools and childcare centres since 2018.",
+    images: [
+      {
+        url: "/yoga-icon.png", // You can replace this with a better OG image later
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Earth & OM Kids",
+      "description": "Kids yoga and mindfulness programs in Toronto and the GTA.",
+      "url": "https://earth-om-kids-next.vercel.app",
+      "telephone": "+1-647-856-8206", // Add your phone number
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toronto",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      },
+      "areaServed": ["Toronto", "North York", "Scarborough", "Etobicoke", "GTA"],
+      "serviceType": "Kids Yoga and Mindfulness Programs"
+    })
+  }}
+/>
 
 export default function RootLayout({
   children,

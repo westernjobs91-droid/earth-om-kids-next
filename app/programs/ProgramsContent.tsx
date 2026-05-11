@@ -10,11 +10,13 @@ export default function ProgramsContent() {
       <div className="max-w-5xl mx-auto px-6 pt-14 pb-10 text-center">
         <div className="inline px-4 py-1 bg-[#A7C4A0]/20 text-[#2D5A4A] text-xs font-semibold tracking-[1.5px] rounded-full mb-3">PROGRAMS FOR EVERY SETTING</div>
         <h1 className="text-6xl tracking-tighter font-semibold heading-serif">Kids Yoga &amp; Mindfulness<br />Programs in Toronto</h1>
-        <p className="mt-4 max-w-lg mx-auto text-xl text-[#1F2E2A]/70">Joyful, developmentally appropriate experiences for children ages 18 months and up — in schools, after-school programs, and family settings.</p>
+        <p className="mt-4 max-w-lg mx-auto text-xl text-[#1F2E2A]/70">
+          Joyful, developmentally appropriate experiences for children ages 18 months and up — in schools, after-school programs, and family settings across Toronto and the GTA.
+        </p>
       </div>
 
       {/* Program 1: School Yoga */}
-           <motion.section 
+      <motion.section 
         id="school-programs" 
         className="max-w-6xl mx-auto px-6 pb-16 scroll-mt-20"
         initial={{ opacity: 0, y: 40 }}
@@ -38,7 +40,9 @@ export default function ProgramsContent() {
                 <h2 className="text-4xl tracking-tight font-semibold heading-serif">School Yoga Programs</h2>
               </div>
             </div>
-            <p className="text-lg text-[#1F2E2A]/80">Professional, classroom-ready yoga and mindfulness sessions designed specifically for the realities of school and daycare environments.</p>
+            <p className="text-lg text-[#1F2E2A]/80">
+              Professional, classroom-ready yoga and mindfulness sessions designed specifically for the realities of school and daycare environments in Toronto.
+            </p>
             
             <div className="mt-8">
               <div className="text-sm font-semibold mb-3 text-[#2D5A4A]">POPULAR FORMATS</div>
@@ -100,7 +104,9 @@ export default function ProgramsContent() {
                 <h2 className="text-4xl tracking-tight font-semibold heading-serif">After-School Yoga Classes</h2>
               </div>
             </div>
-            <p className="text-lg text-[#1F2E2A]/80">Playful, calming weekly classes where children unwind, move their bodies, practice mindfulness, and build confidence in a small-group setting.</p>
+            <p className="text-lg text-[#1F2E2A]/80">
+              Playful, calming weekly classes where children unwind, move their bodies, practice mindfulness, and build confidence in a small-group setting.
+            </p>
           </div>
           <div className="lg:w-7/12">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -123,7 +129,7 @@ export default function ProgramsContent() {
       </motion.section>
 
       {/* Program 3: Workshops & Events */}
-           <motion.section 
+      <motion.section 
         id="workshops-events"
         className="max-w-6xl mx-auto px-6 pb-16 scroll-mt-20"
         initial={{ opacity: 0, y: 40 }}
@@ -148,7 +154,9 @@ export default function ProgramsContent() {
                   <h2 className="text-4xl tracking-tight font-semibold heading-serif">Workshops, Events &amp; Parties</h2>
                 </div>
               </div>
-              <p className="text-lg text-[#1F2E2A]/80">One-time or short-series experiences perfect for camps, community events, family celebrations, and themed days.</p>
+              <p className="text-lg text-[#1F2E2A]/80">
+                One-time or short-series experiences perfect for camps, community events, family celebrations, and themed days across Toronto.
+              </p>
             </div>
             <div className="lg:w-7/12">
               <div className="grid grid-cols-2 gap-4 text-sm">
@@ -165,7 +173,7 @@ export default function ProgramsContent() {
                 </div>
                 <div className="bg-[#F8F1E9] p-6 rounded-2xl">
                   <div className="text-xs uppercase tracking-wider font-semibold text-[#2D5A4A] mb-2">FULLY CUSTOMIZABLE</div>
-                  <p className="text-sm">Themes, length (30–90 min), age groups, and focus areas can be tailored to your event. Great for PD days, holiday celebrations, or team-building with a mindful twist.</p>
+                  <p className="text-sm">Themes, length (30–90 min), age groups, and focus areas can be tailored to your event. Great for PD days, holiday celebrations, or team-building.</p>
                 </div>
               </div>
             </div>
@@ -200,6 +208,32 @@ export default function ProgramsContent() {
               <div className="font-semibold text-xl mt-1">{item.age}</div>
               <div className="text-xs mt-3 text-[#1F2E2A]/70">{item.desc}</div>
             </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* NEW: FAQ Section for SEO */}
+      <section className="max-w-4xl mx-auto px-6 pb-16">
+        <div className="text-center mb-10">
+          <div className="text-[#2D5A4A] text-xs tracking-[2px] font-semibold mb-2">FREQUENTLY ASKED QUESTIONS</div>
+          <h2 className="text-3xl font-semibold tracking-tight heading-serif">Common Questions About Our Programs</h2>
+        </div>
+
+        <div className="space-y-4">
+          {[
+            { q: "What age groups do your programs support?", a: "We work with children from 18 months to 12 years old across all our programs." },
+            { q: "Do you come to schools and daycares?", a: "Yes. All our school and childcare programs are delivered on-site at your location across Toronto and the GTA." },
+            { q: "How long are the sessions?", a: "School sessions are typically 30–45 minutes. After-school classes are 45–60 minutes. Workshops and parties can be customized from 30–90 minutes." },
+            { q: "Can programs be customized?", a: "Absolutely. We tailor themes, length, and focus areas based on your goals, age group, and setting." },
+            { q: "Do you offer programs for special needs?", a: "Yes. We have experience adapting sessions to be inclusive and supportive for children with diverse learning needs." }
+          ].map((faq, index) => (
+            <details key={index} className="group bg-white border border-[#E8D5B7] rounded-3xl p-6">
+              <summary className="font-semibold cursor-pointer list-none flex justify-between items-center">
+                {faq.q}
+                <span className="text-[#2D5A4A] group-open:rotate-180 transition-transform">↓</span>
+              </summary>
+              <p className="mt-4 text-[#1F2E2A]/80">{faq.a}</p>
+            </details>
           ))}
         </div>
       </section>
