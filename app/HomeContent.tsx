@@ -372,7 +372,7 @@ export default function Home() {
             </div>
             <p className="italic text-[#1F2E2A]/80">"The children are noticeably calmer and more focused after Taran’s sessions. She has a beautiful way of connecting with even our youngest toddlers."</p>
             <div className="mt-6 text-sm">
-              <div className="font-semibold">— Director, Beach Hill Montessori</div>
+              <div className="font-semibold">— Director</div>
               <div className="text-[#2D5A4A]/60">Toronto, ON</div>
             </div>
           </motion.div>
@@ -384,7 +384,7 @@ export default function Home() {
             </div>
             <p className="italic text-[#1F2E2A]/80">"Our after-school program has been transformed. The kids love the breathing games and animal poses. Parents constantly comment on how relaxed their children are at pickup."</p>
             <div className="mt-6 text-sm">
-              <div className="font-semibold">— Program Coordinator, Kids Connect Daycare</div>
+              <div className="font-semibold">— Parent</div>
               <div className="text-[#2D5A4A]/60">North York, ON</div>
             </div>
           </motion.div>
@@ -396,7 +396,7 @@ export default function Home() {
             </div>
             <p className="italic text-[#1F2E2A]/80">"Taran brought such warmth and professionalism to our wellness week. The custom program was perfectly tailored to our mixed-age group. Highly recommend for any school community."</p>
             <div className="mt-6 text-sm">
-              <div className="font-semibold">— Head of School, Lycée Français Toronto</div>
+              <div className="font-semibold">— Principal</div>
               <div className="text-[#2D5A4A]/60">Toronto, ON</div>
             </div>
           </motion.div>

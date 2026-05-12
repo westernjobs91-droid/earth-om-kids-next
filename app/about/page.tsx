@@ -106,7 +106,7 @@ export default function About() {
           
           <div className="space-y-8 text-lg text-[#1F2E2A]/80 max-w-prose mx-auto">
             <p>
-              “In my years working in early childhood settings, I saw so many children carrying stress they didn’t have words for. Yoga gave them a language — through their bodies and breath — to feel safe, strong, and calm.”
+              “In my years working in early childhood settings, I saw so many children carrying stress they didn’t have words for. Yoga gave them a language through their bodies and breath to feel safe, strong, and calm.”
             </p>
             
             <p>
