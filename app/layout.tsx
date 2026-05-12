@@ -33,7 +33,7 @@ export const metadata = {
     description: "Professional kids yoga and mindfulness programs in Toronto & the GTA. Trusted by 25+ schools and childcare centres since 2018.",
     images: [
       {
-        url: "/yoga-icon.png", // You can replace this with a better OG image later
+        url: "/og-image.jpg", // You can replace this with a better OG image later
         width: 1200,
         height: 630,
       },
