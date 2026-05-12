@@ -40,8 +40,11 @@ export const metadata = {
     ],
   },
   twitter: {
-    card: "summary_large_image",
-  },
+  card: "summary_large_image",
+  title: "Earth & OM Kids | Kids Yoga Toronto",
+  description: "Professional kids yoga and mindfulness programs in Toronto & GTA.",
+  images: ["/og-image.jpg"],
+},
 };
 <script
   type="application/ld+json"
