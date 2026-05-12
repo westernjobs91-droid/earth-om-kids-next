@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
             </div>
             <div>
               <div className="font-semibold text-2xl tracking-tight text-[#2D5A4A]">Earth &amp; OM Kids</div>
-              <div className="text-[10px] text-[#A7C4A0] -mt-1 tracking-[2px]">Kids Yoga • Mindfulness • School Programs</div>
+              <div className="text-[10px] text-[#2D5A4A]/70 -mt-1 tracking-[2px]">Kids Yoga • Mindfulness • School Programs</div>
             </div>
           </Link>
 
