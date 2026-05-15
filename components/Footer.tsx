@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
               <div className="w-11 h-11 bg-[#2D5A4A] rounded-2xl flex items-center justify-center overflow-hidden">
                 <img 
                   src="/yoga-icon.png" 
-                  alt="Earth & OM Kids Logo" 
+                  alt="Earth & OM Kids — kids yoga and mindfulness programs Toronto" 
                   className="w-7 h-7 object-contain" 
                 />
               </div>
