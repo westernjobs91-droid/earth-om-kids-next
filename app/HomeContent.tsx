@@ -149,7 +149,7 @@ export default function Home() {
             <div className="benefit-icon w-14 h-14 bg-[#2D5A4A]/10 rounded-2xl flex items-center justify-center mb-6">
               <i className="fa-solid fa-user-graduate text-3xl text-[#2D5A4A]"></i>
             </div>
-            <h3 className="font-semibold text-2xl tracking-tight mb-3">Led by a Registered Early Childhood Educator</h3>
+            <h3 className="font-semibold text-2xl tracking-tight mb-3">Led by an Early Childhood Educator</h3>
             <p className="text-[#1F2E2A]/70 leading-relaxed">Deep expertise in child development, classroom dynamics, and age-appropriate practices that work with young children.</p>
           </motion.div>
 

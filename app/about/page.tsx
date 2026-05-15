@@ -4,13 +4,13 @@ import Link from 'next/link';
 // ─── METADATA ────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   title: 'About Taran Kaur | Earth & OM Kids',
-  description: 'Meet Taran Kaur, Registered Early Childhood Educator and founder of Earth & OM Kids. Nearly 10 years experience bringing calm, playful yoga and mindfulness to children in Toronto schools and families.',
+  description: 'Meet Taran Kaur, Early Childhood Educator and founder of Earth & OM Kids. Nearly 10 years experience bringing calm, playful yoga and mindfulness to children in Toronto schools and families.',
   alternates: {
     canonical: '/about',
   },
   openGraph: {
     title: 'About Taran Kaur | Earth & OM Kids Yoga Toronto',
-    description: 'Registered Early Childhood Educator with nearly 10 years experience. Heart-centered, nature-inspired kids yoga and mindfulness in Toronto.',
+    description: 'Early Childhood Educator with nearly 10 years experience. Heart-centered, nature-inspired kids yoga and mindfulness in Toronto.',
   },
 };
 
@@ -23,8 +23,8 @@ const taranPersonSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Taran Kaur",
-  "jobTitle": "Registered Early Childhood Educator & Kids Yoga Teacher",
-  "description": "Registered Early Childhood Educator (RECE) with nearly 10 years of experience in Toronto's childcare and Montessori communities. Founder of Earth & OM Kids, specializing in children's yoga, mindfulness, and trauma-informed practices for ages 18 months to 12 years.",
+  "jobTitle": "Early Childhood Educator & Kids Yoga Teacher",
+  "description": "Early Childhood Educator (RECE) with nearly 10 years of experience in Toronto's childcare and Montessori communities. Founder of Earth & OM Kids, specializing in children's yoga, mindfulness, and trauma-informed practices for ages 18 months to 12 years.",
   "url": "https://kids.earthandom.ca/about",
   "image": "https://kids.earthandom.ca/taran-photo.jpg",
   "worksFor": {
@@ -36,7 +36,7 @@ const taranPersonSchema = {
     {
       "@type": "EducationalOccupationalCredential",
       "credentialCategory": "Professional Certification",
-      "name": "Registered Early Childhood Educator (RECE)",
+      "name": "Early Childhood Educator (RECE)",
       "recognizedBy": {
         "@type": "Organization",
         "name": "College of Early Childhood Educators of Ontario"
@@ -75,7 +75,7 @@ export default function About() {
           </div>
           <h1 className="text-6xl tracking-tighter font-semibold heading-serif">Taran Kaur</h1>
           <p className="mt-3 text-2xl text-[#2D5A4A]/80">
-            Registered Early Childhood Educator • Kids Yoga &amp; Mindfulness Teacher
+            Early Childhood Educator • Kids Yoga &amp; Mindfulness Teacher
           </p>
         </div>
       </div>
@@ -89,7 +89,7 @@ export default function About() {
               <div className="aspect-[4/3] bg-[#E8D5B7] rounded-3xl overflow-hidden shadow-xl mb-6 relative">
                 <img
                   src="/taran-photo.jpg"
-                  alt="Taran Kaur, Registered Early Childhood Educator (RECE) and founder of Earth & OM Kids, leading a children's yoga session in Toronto"
+                  alt="Taran Kaur, Early Childhood Educator (RECE) and founder of Earth & OM Kids, leading a children's yoga session in Toronto"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
@@ -105,7 +105,7 @@ export default function About() {
                   <div>
                     <div className="font-semibold">Credentials</div>
                     <div className="text-sm text-[#1F2E2A]/70">
-                      Registered Early Childhood Educator (RECE)<br />
+                      Early Childhood Educator (RECE)<br />
                       Nearly 10 years in early childhood education
                     </div>
                   </div>
@@ -125,7 +125,7 @@ export default function About() {
               </p>
 
               <p>
-                With nearly a decade of experience as a Registered Early Childhood Educator in Toronto's diverse childcare and Montessori communities, Taran has seen how children thrive when given the right tools for emotional regulation and self-awareness.
+                With nearly a decade of experience as a Early Childhood Educator in Toronto's diverse childcare and Montessori communities, Taran has seen how children thrive when given the right tools for emotional regulation and self-awareness.
               </p>
 
               <p>
@@ -190,7 +190,7 @@ export default function About() {
 
           <div className="bg-white p-8 rounded-3xl border border-[#E8D5B7]">
             <h3 className="font-semibold text-xl mb-3">Educator-Led Expertise</h3>
-            <p className="text-[#1F2E2A]/70">Led by a Registered Early Childhood Educator with nearly 10 years of real classroom experience.</p>
+            <p className="text-[#1F2E2A]/70">Led by an Early Childhood Educator with nearly 10 years of real classroom experience.</p>
           </div>
         </div>
       </section>
