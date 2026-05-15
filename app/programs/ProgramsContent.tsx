@@ -11,7 +11,7 @@ export default function ProgramsContent() {
         <div className="inline px-4 py-1 bg-[#A7C4A0]/20 text-[#2D5A4A] text-xs font-semibold tracking-[1.5px] rounded-full mb-3">PROGRAMS FOR EVERY SETTING</div>
         <h1 className="text-6xl tracking-tighter font-semibold heading-serif">Kids Yoga &amp; Mindfulness<br />Programs in Toronto</h1>
         <p className="mt-4 max-w-lg mx-auto text-xl text-[#1F2E2A]/70">
-          Joyful, developmentally appropriate experiences for children ages 18 months and up — in schools, after-school programs, and family settings across Toronto and the GTA.
+          Joyful, developmentally appropriate experiences for children ages 18 months and up in schools, after-school programs, and family settings across Toronto and the GTA.
         </p>
       </div>
 

@@ -17,17 +17,13 @@ const blogPosts: Record<string, BlogPost> = {
     date: "May 2026",
     readTime: "7 min read",
     category: "Emotional Regulation",
-    content: `In today’s fast-paced world, many children in Toronto classrooms are struggling with big emotions — frustration, anxiety, anger, and difficulty transitioning between activities. As a result, teachers and parents are increasingly looking for tools that go beyond traditional discipline.
+    content: `In today’s fast-paced world, many children in Toronto classrooms are struggling with big emotions, frustration, anxiety, anger, and difficulty transitioning between activities. As a result, teachers and parents are increasingly looking for tools that go beyond traditional discipline.
 
 This is where kids yoga and mindfulness have shown powerful results.
 
 Why Emotional Regulation Matters in School
 
-Children who can recognize and manage their emotions tend to:
-- Focus better during lessons
-- Have fewer outbursts and meltdowns
-- Build stronger relationships with peers and teachers
-- Perform better academically
+Children who can recognize and manage their emotions tend to: Focus better during lessons, Have fewer outbursts and meltdowns , Build stronger relationships with peers and teachers , Perform better academically
 
 Research shows that mindfulness practices (including yoga) can significantly improve emotional regulation in children as young as 4 years old.
 
@@ -45,19 +41,15 @@ Through yoga poses and movement, children become more aware of physical sensatio
 Slow, intentional movement helps discharge excess energy and tension in a healthy way, especially helpful for active or anxious children.
 
 4. Calm-Down Routines  
-We teach short sequences children can do when they feel dysregulated — giving them autonomy instead of relying on adults to calm them down.
+We teach short sequences children can do when they feel dysregulated giving them autonomy instead of relying on adults to calm them down.
 
 Real Results We See in Toronto Schools
 
-Teachers consistently report:
-- Fewer disruptions during transitions
-- Children using breathing techniques on their own
-- Improved ability to express feelings with words instead of actions
-- A calmer overall classroom environment
+Teachers consistently report: Fewer disruptions during transitions , Children using breathing techniques on their own , Improved ability to express feelings with words instead of actions , A calmer overall classroom environment
 
 Final Thoughts
 
-Kids yoga is not just about poses — it’s about giving children lifelong tools for emotional wellbeing. In a city as busy and stimulating as Toronto, these skills are more valuable than ever.
+Kids yoga is not just about poses it’s about giving children lifelong tools for emotional wellbeing. In a city as busy and stimulating as Toronto, these skills are more valuable than ever.
 
 If you’re a teacher, school administrator, or parent interested in bringing these tools to your classroom or home, feel free to reach out.`
   },
@@ -106,7 +98,7 @@ Even 3–5 minutes a day can make a noticeable difference. Try practicing during
     date: "May 2026",
     readTime: "6 min read",
     category: "For Parents",
-    content: `If you’re considering signing your child up for a kids yoga class in Toronto, you might be wondering — what actually happens during a session?
+    content: `If you’re considering signing your child up for a kids yoga class in Toronto, you might be wondering what actually happens during a session?
 
 Here’s a breakdown of what a typical class looks like for preschool and early school-age children:
 
@@ -131,10 +123,7 @@ Guided relaxation, sometimes with a short story or visualization.
 
 What Makes Kids Yoga Different from Adult Yoga?
 
-- Lots of movement and play
-- Stories and imagination are central
-- No pressure to be “perfect” in poses
-- Focus on fun, confidence, and emotional skills rather than flexibility
+Lots of movement and play, Stories and imagination are central, No pressure to be “perfect” in poses, Focus on fun, confidence, and emotional skills rather than flexibility
 
 What Should Your Child Wear?
 
@@ -156,15 +145,12 @@ Even after just a few classes, many parents notice:
     category: "Child Development",
     content: `Many parents and teachers in Toronto ask us the same question: “Can yoga actually help my child focus better in school?”
 
-The short answer is yes — and there’s growing research to support it.
+The short answer is yes and there’s growing research to support it.
 
 Why Focus is Challenging for Kids Today
 
 Between screens, busy schedules, and high stimulation, many children struggle with:
-- Sustained attention
-- Sitting still for longer periods
-- Transitioning between tasks
-- Managing distractions
+Sustained attention, Sitting still for longer periods, Transitioning between tasks, Managing distractions
 
 How Yoga Helps Improve Focus
 
@@ -185,16 +171,11 @@ Through breath and movement, children practice staying in the present instead of
 What the Research Says
 
 Studies have found that children who practice yoga and mindfulness regularly show improvements in:
-- Attention span
-- Executive function
-- Classroom behavior
-- Academic performance
+Attention span, Executive function, Classroom behavior, Academic performance
 
 Practical Tips for Parents
 
-- Practice short breathing exercises together at home
-- Encourage movement breaks during homework
-- Consider enrolling your child in a consistent kids yoga program`
+Practice short breathing exercises together at home, Encourage movement breaks during homework, Consider enrolling your child in a consistent kids yoga program`
   }
 };
 
