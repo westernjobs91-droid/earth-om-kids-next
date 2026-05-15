@@ -93,7 +93,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold tracking-tight text-[#1F2E2A] mb-3">Cookies & analytics</h2>
             <p className="text-[#1F2E2A]/75 leading-relaxed">
-              Our website may use basic analytics tools (such as Google Analytics) to help us understand how visitors find and use our site — for example, which pages are most visited or how people arrive at our site. This data is aggregated and anonymous. No personally identifiable information is collected through cookies.
+              Our website may use basic analytics tools (such as Google Analytics) to help us understand how visitors find and use our site for example, which pages are most visited or how people arrive at our site. This data is aggregated and anonymous. No personally identifiable information is collected through cookies.
             </p>
           </section>
 

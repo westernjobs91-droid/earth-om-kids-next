@@ -28,7 +28,7 @@ export default function Accessibility() {
           <section>
             <h2 className="text-2xl font-semibold tracking-tight text-[#1F2E2A] mb-3">Our commitment</h2>
             <p className="text-[#1F2E2A]/75 leading-relaxed">
-              Earth &amp; OM Kids is committed to ensuring our website is accessible to everyone — including people with disabilities. We believe inclusivity extends beyond our yoga programs and into every aspect of how we show up, including online. We strive to meet or exceed the Web Content Accessibility Guidelines (WCAG) 2.1 at Level AA.
+              Earth &amp; OM Kids is committed to ensuring our website is accessible to everyone including people with disabilities. We believe inclusivity extends beyond our yoga programs and into every aspect of how we show up, including online. We strive to meet or exceed the Web Content Accessibility Guidelines (WCAG) 2.1 at Level AA.
             </p>
           </section>
 
@@ -64,7 +64,7 @@ export default function Accessibility() {
           <section>
             <h2 className="text-2xl font-semibold tracking-tight text-[#1F2E2A] mb-3">Known limitations</h2>
             <p className="text-[#1F2E2A]/75 leading-relaxed">
-              While we work hard to make our site as accessible as possible, some areas may not yet meet all accessibility standards. We are actively working to identify and address these gaps. If you encounter any barriers, please let us know — your feedback directly shapes our improvements.
+              While we work hard to make our site as accessible as possible, some areas may not yet meet all accessibility standards. We are actively working to identify and address these gaps. If you encounter any barriers, please let us know your feedback directly shapes our improvements.
             </p>
           </section>
 
@@ -75,7 +75,7 @@ export default function Accessibility() {
             <div className="bg-[#A7C4A0]/10 border border-[#A7C4A0]/30 rounded-3xl p-7">
               <h2 className="text-2xl font-semibold tracking-tight text-[#1F2E2A] mb-3">Inclusive programs for all children</h2>
               <p className="text-[#1F2E2A]/75 leading-relaxed">
-                Our accessibility commitment extends to our programs. As a Registered Early Childhood Educator, Taran has extensive experience adapting sessions for children with diverse learning needs, physical abilities, and developmental profiles. Every child is welcome. We design sessions that are flexible, inclusive, and respectful of each child's unique pace and personality.
+                Our accessibility commitment extends to our programs. As an Early Childhood Educator, Taran has extensive experience adapting sessions for children with diverse learning needs, physical abilities, and developmental profiles. Every child is welcome. We design sessions that are flexible, inclusive, and respectful of each child's unique pace and personality.
               </p>
               <Link
                 href="/programs"
