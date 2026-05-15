@@ -87,8 +87,8 @@ const Footer: React.FC = () => {
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-y-3 text-xs text-[#F8F1E9]/50">
           <div>© {new Date().getFullYear()} Earth &amp; OM Kids. All rights reserved.</div>
           <div className="flex gap-x-6">
-            <a href="#" className="hover:text-white/80">Privacy Policy</a>
-            <a href="#" className="hover:text-white/80">Accessibility</a>
+          <Link href="/privacy-policy" className="hover:text-white/80">Privacy Policy</Link>
+<Link href="/accessibility" className="hover:text-white/80">Accessibility</Link>
           </div>
         </div>
       </div>
