@@ -2,7 +2,7 @@
 import NorthYorkContent from './NorthYorkContent';
 
 export const metadata = {
-  title: "Kids Yoga North York | School & Family Programs | Earth & OM Kids",
+  title: "Kids Yoga North York | School & Family Programs",
   description: "Professional kids yoga and mindfulness programs for schools, childcare centres, and families across North York. Trusted by local schools since 2018.",
   alternates: { canonical: '/north-york' },
   openGraph: {

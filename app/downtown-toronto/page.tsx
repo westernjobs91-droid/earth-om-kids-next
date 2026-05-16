@@ -1,7 +1,7 @@
 import DowntownTorontoContent from './DowntownTorontoContent';
 
 export const metadata = {
-  title: "Kids Yoga Downtown Toronto | School & Family Programs | Earth & OM Kids",
+  title: "Kids Yoga Downtown Toronto | School & Family Programs",
   description: "Professional kids yoga and mindfulness programs for schools, childcare centres, and families across Downtown Toronto. Trusted by local schools since 2018.",
   alternates: { canonical: '/downtown-toronto' },
   openGraph: {

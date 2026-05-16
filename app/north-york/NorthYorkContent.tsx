@@ -70,7 +70,7 @@ export default function NorthYorkPage() {
           {[
             {
               icon: "fa-graduation-cap",
-              title: "Led by a ECE",
+              title: "Led by an ECE",
               desc: "Taran is an Early Childhood Educator not just a yoga teacher. This means every session is grounded in real child development expertise and classroom experience."
             },
             {
