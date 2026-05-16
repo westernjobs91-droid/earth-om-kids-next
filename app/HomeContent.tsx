@@ -431,25 +431,73 @@ export default function Home() {
         </div>
       </section>
 
-      {/* NEW: Who We Serve */}
+{/* WHO WE SERVE — replace the existing section with this */}
       <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="text-center mb-10">
           <div className="text-[#2D5A4A] text-xs tracking-[2px] font-semibold mb-2">WHO WE WORK WITH</div>
           <h2 className="text-4xl tracking-tighter font-semibold heading-serif">Who We Serve</h2>
+          <p className="mt-3 text-[#1F2E2A]/60 max-w-md mx-auto">From classrooms to living rooms, we bring yoga and mindfulness to every corner of Toronto and the GTA.</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {[
-            "Schools & Montessori Programs",
-            "Childcare Centres & Daycares",
-            "After-School Programs",
-            "Families (Birthday Parties & Workshops)",
-            "Special Needs & Inclusive Groups",
-            "Community & Corporate Events"
+            {
+              icon: "fa-school",
+              title: "Schools & Montessori Programs",
+              desc: "In-class sessions, wellness weeks, and ongoing programs designed for Toronto public, private, and Montessori schools.",
+              link: "/schools",
+              linkText: "School programs"
+            },
+            {
+              icon: "fa-building",
+              title: "Childcare Centres & Daycares",
+              desc: "Weekly yoga sessions and mindfulness programs tailored for childcare centres and daycares across the GTA.",
+              link: "/schools",
+              linkText: "Daycare programs"
+            },
+            {
+              icon: "fa-sun",
+              title: "After-School Programs",
+              desc: "Fun weekly classes for toddlers, preschoolers, and school-age children in small, nurturing group settings.",
+              link: "/families",
+              linkText: "After-school classes"
+            },
+            {
+              icon: "fa-cake-candles",
+              title: "Birthday Parties & Workshops",
+              desc: "Magical yoga birthday parties and family workshops delivered at your home, condo, or venue across Toronto.",
+              link: "/yoga-birthday-party-toronto",
+              linkText: "Birthday parties"
+            },
+            {
+              icon: "fa-heart",
+              title: "Special Needs & Inclusive Groups",
+              desc: "Fully adapted sessions for children with diverse learning needs, sensory sensitivities, and developmental profiles.",
+              link: "/contact",
+              linkText: "Get in touch"
+            },
+            {
+              icon: "fa-users",
+              title: "Community & Corporate Events",
+              desc: "One-time wellness experiences for community events, staff wellness days, and corporate family programs.",
+              link: "/contact",
+              linkText: "Book an event"
+            }
           ].map((item, index) => (
-            <div key={index} className="bg-[#F8F1E9] p-6 rounded-3xl border border-[#E8D5B7]/60 text-sm font-medium">
-              {item}
-            </div>
+            <motion.div
+              key={index}
+              className="group bg-white p-8 rounded-3xl border border-[#E8D5B7] flex flex-col hover:border-[#2D5A4A]/30 transition-all"
+              whileHover={{ y: -6, transition: { type: "spring", stiffness: 400, damping: 25 } }}
+            >
+              <div className="w-12 h-12 bg-[#2D5A4A]/10 rounded-2xl flex items-center justify-center mb-5">
+                <i className={`fa-solid ${item.icon} text-xl text-[#2D5A4A]`}></i>
+              </div>
+              <h3 className="font-semibold text-lg tracking-tight mb-2">{item.title}</h3>
+              <p className="text-[#1F2E2A]/70 text-sm leading-relaxed flex-1">{item.desc}</p>
+              <Link href={item.link} className="mt-5 text-sm font-semibold text-[#2D5A4A] inline-flex items-center">
+                {item.linkText} <i className="fa-solid fa-arrow-right ml-2 text-xs"></i>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </section>
