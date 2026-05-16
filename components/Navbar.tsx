@@ -46,20 +46,20 @@ const Navbar: React.FC = () => {
             </div>
             <div>
               <div className="font-semibold text-xl lg:text-2xl tracking-tight text-[#2D5A4A]">Earth &amp; OM Kids</div>
-              {/* Hide tagline on md screens — too wide with full nav */}
-              <div className="hidden lg:block text-[10px] text-[#2D5A4A]/70 -mt-1 tracking-[2px]">Kids Yoga • Mindfulness • School Programs</div>
+              {/* Tagline hidden until xl so logo stays compact on lg */}
+              <div className="hidden xl:block text-[10px] text-[#2D5A4A]/70 -mt-1 tracking-[2px]">Kids Yoga • Mindfulness • School Programs</div>
             </div>
           </Link>
 
-          {/* Desktop Menu — gap reduced on md, normal on lg */}
-          <div className="hidden md:flex items-center gap-x-4 lg:gap-x-7 text-sm font-medium">
+          {/* Desktop nav — visible from lg (1024px) up */}
+          <div className="hidden lg:flex items-center gap-x-4 lg:gap-x-5 xl:gap-x-7 text-sm font-medium">
             {navLinks.map((link) => {
               if (link.href === '/programs') {
                 return (
                   <div key={link.href} className="relative group">
                     <Link
                       href={link.href}
-                      className={`nav-link text-[#1F2E2A] transition-colors flex items-center gap-x-1 ${isActive(link.href) ? 'nav-active' : ''}`}
+                      className={`nav-link text-[#1F2E2A] transition-colors flex items-center gap-x-1 whitespace-nowrap ${isActive(link.href) ? 'nav-active' : ''}`}
                     >
                       {link.label}
                       <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" />
@@ -102,7 +102,7 @@ const Navbar: React.FC = () => {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`nav-link text-[#1F2E2A] transition-colors ${isActive(link.href) ? 'nav-active' : ''}`}
+                  className={`nav-link text-[#1F2E2A] transition-colors whitespace-nowrap ${isActive(link.href) ? 'nav-active' : ''}`}
                 >
                   {link.label}
                 </Link>
@@ -110,7 +110,7 @@ const Navbar: React.FC = () => {
             })}
           </div>
 
-          {/* CTA Button — hidden on md, shows on lg */}
+          {/* CTA Button — visible from lg up */}
           <div className="hidden lg:block">
             <Link
               href="/contact"
@@ -121,7 +121,7 @@ const Navbar: React.FC = () => {
             </Link>
           </div>
 
-          {/* Mobile Menu Button — shows below lg */}
+          {/* Hamburger — only shows below lg */}
           <button
             onClick={toggleMobileMenu}
             className="lg:hidden w-10 h-10 flex items-center justify-center text-[#2D5A4A]"
@@ -132,7 +132,7 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Animated Mobile Menu */}
+      {/* Mobile Menu — only shows below lg */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -154,27 +154,14 @@ const Navbar: React.FC = () => {
                 </Link>
               ))}
 
-              {/* New service pages in mobile menu */}
               <div className="border-t border-[#E8D5B7] pt-3 flex flex-col gap-y-3">
-                <Link
-                  href="/toddler-yoga-toronto"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="py-2 text-[#1F2E2A]"
-                >
+                <Link href="/toddler-yoga-toronto" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-[#1F2E2A]">
                   Toddler Yoga
                 </Link>
-                <Link
-                  href="/mindfulness-for-kids-toronto"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="py-2 text-[#1F2E2A]"
-                >
+                <Link href="/mindfulness-for-kids-toronto" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-[#1F2E2A]">
                   Mindfulness for Kids
                 </Link>
-                <Link
-                  href="/yoga-birthday-party-toronto"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="py-2 text-[#1F2E2A]"
-                >
+                <Link href="/yoga-birthday-party-toronto" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-[#1F2E2A]">
                   Birthday Parties
                 </Link>
               </div>
