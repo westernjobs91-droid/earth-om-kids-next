@@ -45,13 +45,14 @@ const Navbar: React.FC = () => {
               />
             </div>
             <div>
-              <div className="font-semibold text-2xl tracking-tight text-[#2D5A4A]">Earth &amp; OM Kids</div>
-              <div className="text-[10px] text-[#2D5A4A]/70 -mt-1 tracking-[2px]">Kids Yoga • Mindfulness • School Programs</div>
+              <div className="font-semibold text-xl lg:text-2xl tracking-tight text-[#2D5A4A]">Earth &amp; OM Kids</div>
+              {/* Hide tagline on md screens — too wide with full nav */}
+              <div className="hidden lg:block text-[10px] text-[#2D5A4A]/70 -mt-1 tracking-[2px]">Kids Yoga • Mindfulness • School Programs</div>
             </div>
           </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-x-8 text-sm font-medium">
+          {/* Desktop Menu — gap reduced on md, normal on lg */}
+          <div className="hidden md:flex items-center gap-x-4 lg:gap-x-7 text-sm font-medium">
             {navLinks.map((link) => {
               if (link.href === '/programs') {
                 return (
@@ -66,7 +67,6 @@ const Navbar: React.FC = () => {
 
                     {/* Programs Dropdown */}
                     <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-[#E8D5B7] rounded-2xl shadow-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-
                       <Link href="/programs" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
                         Programs Overview
                       </Link>
@@ -110,8 +110,8 @@ const Navbar: React.FC = () => {
             })}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* CTA Button — hidden on md, shows on lg */}
+          <div className="hidden lg:block">
             <Link
               href="/contact"
               className="inline-flex items-center px-6 py-3 bg-[#F4D35E] hover:bg-[#E8C84A] text-[#2D5A4A] text-sm font-semibold rounded-2xl transition-all active:scale-[0.985] shadow-sm hover:shadow"
@@ -121,10 +121,10 @@ const Navbar: React.FC = () => {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button — shows below lg */}
           <button
             onClick={toggleMobileMenu}
-            className="md:hidden w-10 h-10 flex items-center justify-center text-[#2D5A4A]"
+            className="lg:hidden w-10 h-10 flex items-center justify-center text-[#2D5A4A]"
             aria-label="Toggle mobile menu"
           >
             {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -140,7 +140,7 @@ const Navbar: React.FC = () => {
             animate={{ opacity: 1, height: "auto", y: 0 }}
             exit={{ opacity: 0, height: 0, y: -10 }}
             transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
-            className="md:hidden bg-white border-t border-[#E8D5B7] px-6 py-4 overflow-hidden"
+            className="lg:hidden bg-white border-t border-[#E8D5B7] px-6 py-4 overflow-hidden"
           >
             <div className="flex flex-col gap-y-3 text-sm font-medium">
               {navLinks.map((link) => (
