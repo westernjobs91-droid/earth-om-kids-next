@@ -34,13 +34,14 @@ const Navbar: React.FC = () => {
     <nav className="bg-white border-b border-[#E8D5B7] sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center h-20">
-                {/* Logo */}
+
+          {/* Logo */}
           <Link href="/" className="flex items-center gap-x-3">
             <div className="w-11 h-11 bg-[#2D5A4A] rounded-2xl flex items-center justify-center overflow-hidden">
-              <img 
-                src="/yoga-icon.png" 
-                alt="Earth & OM Kids — kids yoga and mindfulness programs Toronto" 
-                className="w-7 h-7 object-contain" 
+              <img
+                src="/yoga-icon.png"
+                alt="Earth & OM Kids — kids yoga and mindfulness programs Toronto"
+                className="w-7 h-7 object-contain"
               />
             </div>
             <div>
@@ -49,7 +50,7 @@ const Navbar: React.FC = () => {
             </div>
           </Link>
 
-          {/* Desktop Menu (with dropdown) */}
+          {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-x-8 text-sm font-medium">
             {navLinks.map((link) => {
               if (link.href === '/programs') {
@@ -62,20 +63,36 @@ const Navbar: React.FC = () => {
                       {link.label}
                       <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" />
                     </Link>
+
                     {/* Programs Dropdown */}
-                    <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-[#E8D5B7] rounded-2xl shadow-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-[#E8D5B7] rounded-2xl shadow-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+
                       <Link href="/programs" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
                         Programs Overview
                       </Link>
                       <Link href="/programs#school-programs" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
                         In-School Yoga
                       </Link>
-                                           <Link href="/programs#workshops-events" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
+                      <Link href="/programs#workshops-events" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
                         Workshops &amp; Events
                       </Link>
+
                       <div className="border-t border-[#E8D5B7] my-1 mx-2"></div>
+
                       <Link href="/families" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
                         Family Sessions
+                      </Link>
+                      <Link href="/toddler-yoga-toronto" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
+                        Toddler Yoga
+                      </Link>
+                      <Link href="/mindfulness-for-kids-toronto" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
+                        Mindfulness for Kids
+                      </Link>
+
+                      <div className="border-t border-[#E8D5B7] my-1 mx-2"></div>
+
+                      <Link href="/yoga-birthday-party-toronto" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
+                        🎂 Birthday Parties
                       </Link>
                     </div>
                   </div>
@@ -93,10 +110,10 @@ const Navbar: React.FC = () => {
             })}
           </div>
 
-          {/* CTA Button (joyful yellow) */}
+          {/* CTA Button */}
           <div className="hidden md:block">
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="inline-flex items-center px-6 py-3 bg-[#F4D35E] hover:bg-[#E8C84A] text-[#2D5A4A] text-sm font-semibold rounded-2xl transition-all active:scale-[0.985] shadow-sm hover:shadow"
             >
               Book a Program
@@ -105,7 +122,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             onClick={toggleMobileMenu}
             className="md:hidden w-10 h-10 flex items-center justify-center text-[#2D5A4A]"
             aria-label="Toggle mobile menu"
@@ -136,8 +153,34 @@ const Navbar: React.FC = () => {
                   {link.label}
                 </Link>
               ))}
-              <Link 
-                href="/contact" 
+
+              {/* New service pages in mobile menu */}
+              <div className="border-t border-[#E8D5B7] pt-3 flex flex-col gap-y-3">
+                <Link
+                  href="/toddler-yoga-toronto"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="py-2 text-[#1F2E2A]"
+                >
+                  Toddler Yoga
+                </Link>
+                <Link
+                  href="/mindfulness-for-kids-toronto"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="py-2 text-[#1F2E2A]"
+                >
+                  Mindfulness for Kids
+                </Link>
+                <Link
+                  href="/yoga-birthday-party-toronto"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="py-2 text-[#1F2E2A]"
+                >
+                  Birthday Parties
+                </Link>
+              </div>
+
+              <Link
+                href="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="mt-2 inline-flex justify-center items-center px-6 py-3 bg-[#F4D35E] hover:bg-[#E8C84A] text-[#2D5A4A] text-sm font-semibold rounded-2xl transition-all active:scale-[0.985]"
               >
