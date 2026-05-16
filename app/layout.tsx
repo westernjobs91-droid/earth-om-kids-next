@@ -23,7 +23,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Earth & OM Kids",
-  "description": "Professional kids yoga and mindfulness programs for schools, childcare centres, and families across Toronto and the GTA. Led by a Registered Early Childhood Educator (RECE) since 2018.",
+  "description": "Professional kids yoga and mindfulness programs for schools, childcare centres, and families across Toronto and the GTA. Led by a trained Early Childhood Educator since 2018.",
   "url": "https://kids.earthandom.ca",
   "telephone": "+16478568206",
   "email": "earthandomkids@gmail.com",
@@ -98,18 +98,25 @@ const localBusinessSchema = {
   ]
 };
 
-// ─── METADATA (Next.js handles <title>, <meta>, <og> tags automatically) ─────
+// ─── SCHEMA: WebSite (helps Google show "Earth & OM Kids" instead of domain) ──
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Earth & OM Kids",
+  "url": "https://kids.earthandom.ca",
+  "description": "Professional kids yoga and mindfulness programs for Toronto schools and families."
+};
+
+// ─── METADATA ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  // UPDATE THIS once custom domain is live:
   metadataBase: new URL('https://kids.earthandom.ca'),
 
   title: {
     default: "Kids Yoga Toronto | School & Family Programs | Earth & OM Kids",
     template: "%s | Earth & OM Kids",
   },
-  description: "Professional kids yoga and mindfulness programs in Toronto & GTA. Trusted by 25+ schools and childcare centres. Led by a Registered Early Childhood Educator. Ages 18 months+.",
+  description: "Professional kids yoga and mindfulness programs in Toronto & GTA. Trusted by 25+ schools and childcare centres. Led by a trained Early Childhood Educator. Ages 18 months+.",
 
-  // Canonical URL — tells Google which domain to index (not vercel.app)
   alternates: {
     canonical: '/',
   },
@@ -120,7 +127,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     title: "Kids Yoga Toronto | School & Family Programs | Earth & OM Kids",
-    description: "Professional kids yoga and mindfulness programs in Toronto & GTA. Trusted by 25+ schools since 2018. Led by a Registered Early Childhood Educator.",
+    description: "Professional kids yoga and mindfulness programs in Toronto & GTA. Trusted by 25+ schools since 2018. Led by a trained Early Childhood Educator.",
     url: "https://kids.earthandom.ca",
     siteName: "Earth & OM Kids",
     locale: "en_CA",
@@ -142,7 +149,6 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
 
-  // Helps Google understand this is a Canadian local business
   other: {
     "geo.region": "CA-ON",
     "geo.placename": "Toronto",
@@ -158,10 +164,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
-        {/* LocalBusiness schema — runs on every single page */}
+        {/* LocalBusiness schema — runs on every page */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        {/* WebSite schema — tells Google the site name is "Earth & OM Kids" */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
       <body className="bg-[#F8F1E9] text-[#1F2E2A]">
