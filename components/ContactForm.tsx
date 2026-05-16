@@ -138,7 +138,7 @@ export default function ContactForm() {
             <div className="text-center mb-10">
               <div className="inline px-4 py-1 bg-[#A7C4A0]/20 text-[#2D5A4A] text-xs font-semibold tracking-[1.5px] rounded-full mb-3">LET&apos;S CONNECT</div>
               <h1 className="text-5xl tracking-tighter font-semibold heading-serif">We&apos;d love to hear from you</h1>
-              <p className="mt-4 text-xl text-[#1F2E2A]/70">Whether you&apos;re a school, centre, or family looking to bring calm and joy through yoga — we&apos;re here to help.</p>
+              <p className="mt-4 text-xl text-[#1F2E2A]/70">Whether you&apos;re a school, centre, or family looking to bring calm and joy through yoga we&apos;re here to help.</p>
             </div>
 
             <form onSubmit={handleSubmit} className="bg-white rounded-3xl p-10 border border-[#E8D5B7] soft-shadow space-y-6">
