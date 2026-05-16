@@ -54,7 +54,7 @@ export default function ScarboroughPage() {
             We have partnered with schools and childcare centres along Kingston Road, Lawrence Avenue East, Ellesmere Road, Sheppard Avenue East, and throughout the Scarborough Town Centre corridor. Whether your child attends a community daycare, a public school, or a private Montessori program in Scarborough, we can create a program that works for them.
           </p>
           <p>
-            Our Scarborough programs include in-school yoga sessions, after-school weekly classes, wellness weeks, PD day programs, birthday parties, and family yoga workshops. Every program is delivered on-site at your Scarborough location — no travel required for your school or family.
+            Our Scarborough programs include in-school yoga sessions, after-school weekly classes, wellness weeks, PD day programs, birthday parties, and family yoga workshops. Every program is delivered on-site at your Scarborough location no travel required for your school or family.
           </p>
         </div>
       </section>
@@ -150,7 +150,7 @@ export default function ScarboroughPage() {
             <blockquote className="text-xl md:text-2xl leading-relaxed font-light italic mb-6">
               "The children are noticeably calmer and more focused after Taran's sessions. She has a beautiful way of connecting with even our youngest toddlers."
             </blockquote>
-            <div className="text-white/70 text-sm">— Director, Toronto</div>
+            <div className="text-white/70 text-sm">Director, Toronto</div>
           </div>
         </div>
       </section>

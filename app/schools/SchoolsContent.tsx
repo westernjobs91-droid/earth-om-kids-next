@@ -117,11 +117,11 @@ export default function SchoolsContent() {
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-white p-8 rounded-3xl border border-[#E8D5B7]">
             <p className="italic text-[#1F2E2A]/80">"The children are noticeably calmer and more focused after Taran’s sessions. She has a beautiful way of connecting with even our youngest toddlers."</p>
-            <div className="mt-6 text-sm font-semibold">— Director, Toronto</div>
+            <div className="mt-6 text-sm font-semibold">Director, Toronto</div>
           </div>
           <div className="bg-white p-8 rounded-3xl border border-[#E8D5B7]">
             <p className="italic text-[#1F2E2A]/80">"Taran brought such warmth and professionalism to our wellness week. The custom program was perfectly tailored to our mixed-age group."</p>
-            <div className="mt-6 text-sm font-semibold">— Prinicipal, Toronto</div>
+            <div className="mt-6 text-sm font-semibold">Prinicipal, Toronto</div>
           </div>
         </div>
       </section>

@@ -172,7 +172,7 @@ export default function Home() {
               <i className="fa-solid fa-sliders-h text-3xl text-[#2D5A4A]"></i>
             </div>
             <h3 className="font-semibold text-2xl tracking-tight mb-3">Fully Customizable Programs</h3>
-            <p className="text-[#1F2E2A]/70 leading-relaxed">Every program is tailored to your schedule, space, age groups, and specific goals — whether focus, transitions, or emotional literacy.</p>
+            <p className="text-[#1F2E2A]/70 leading-relaxed">Every program is tailored to your schedule, space, age groups, and specific goals whether focus, transitions, or emotional literacy.</p>
           </motion.div>
 
           <motion.div 
@@ -205,7 +205,7 @@ export default function Home() {
               <i className="fa-solid fa-handshake text-3xl text-[#2D5A4A]"></i>
             </div>
             <h3 className="font-semibold text-2xl tracking-tight mb-3">Trusted by 25+ Local Schools &amp; Centres</h3>
-            <p className="text-[#1F2E2A]/70 leading-relaxed">From Montessori and daycare programs to elementary schools — we’ve built strong, long-term partnerships across Toronto.</p>
+            <p className="text-[#1F2E2A]/70 leading-relaxed">From Montessori and daycare programs to elementary schools we’ve built strong, long-term partnerships across Toronto.</p>
           </motion.div>
         </div>
       </section>
@@ -372,7 +372,7 @@ export default function Home() {
             </div>
             <p className="italic text-[#1F2E2A]/80">"The children are noticeably calmer and more focused after Taran’s sessions. She has a beautiful way of connecting with even our youngest toddlers."</p>
             <div className="mt-6 text-sm">
-              <div className="font-semibold">— Director</div>
+              <div className="font-semibold">Director</div>
               <div className="text-[#2D5A4A]/60">Toronto, ON</div>
             </div>
           </motion.div>
@@ -384,7 +384,7 @@ export default function Home() {
             </div>
             <p className="italic text-[#1F2E2A]/80">"Our after-school program has been transformed. The kids love the breathing games and animal poses. Parents constantly comment on how relaxed their children are at pickup."</p>
             <div className="mt-6 text-sm">
-              <div className="font-semibold">— Parent</div>
+              <div className="font-semibold">Parent</div>
               <div className="text-[#2D5A4A]/60">North York, ON</div>
             </div>
           </motion.div>
@@ -396,7 +396,7 @@ export default function Home() {
             </div>
             <p className="italic text-[#1F2E2A]/80">"Taran brought such warmth and professionalism to our wellness week. The custom program was perfectly tailored to our mixed-age group. Highly recommend for any school community."</p>
             <div className="mt-6 text-sm">
-              <div className="font-semibold">— Principal</div>
+              <div className="font-semibold">Principal</div>
               <div className="text-[#2D5A4A]/60">Toronto, ON</div>
             </div>
           </motion.div>
@@ -491,7 +491,7 @@ export default function Home() {
           viewport={{ once: true, margin: "-100px" }}
         >
           <h2 className="text-4xl md:text-5xl tracking-tighter font-semibold heading-serif mb-4">Ready to bring calm &amp; joy to your children?</h2>
-          <p className="text-xl text-[#1F2E2A]/70 mb-8 max-w-md mx-auto">Whether you&apos;re a school, childcare centre, or parent — we&apos;d love to partner with you.</p>
+          <p className="text-xl text-[#1F2E2A]/70 mb-8 max-w-md mx-auto">Whether you&apos;re a school, childcare centre, or parent we&apos;d love to partner with you.</p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="px-10 py-4 bg-[#2D5A4A] hover:bg-[#1F2E2A] transition text-white font-semibold rounded-3xl text-lg inline-flex items-center justify-center gap-x-2">

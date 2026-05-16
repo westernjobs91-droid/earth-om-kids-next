@@ -54,7 +54,7 @@ export default function DowntownTorontoPage() {
             We have partnered with schools and childcare centres throughout the downtown core along Spadina Avenue, Bloor Street West, College Street, Queen Street West, King Street, and the Yonge Street corridor from Bloor to the waterfront. We also work with Montessori programs, French language schools, and community daycares across Downtown Toronto.
           </p>
           <p>
-            One of Earth and OM Kids is proud partners is Lycée Français Toronto, one of Downtown Toronto's premier French language schools. This partnership reflects our ability to adapt programs for diverse school communities with specific cultural and educational approaches. Our Downtown Toronto programs include in-school yoga sessions, wellness weeks, after school classes, birthday parties, PD day programs, and family yoga workshops — all fully customized to your community's needs.
+            One of Earth and OM Kids is proud partners is Lycée Français Toronto, one of Downtown Toronto's premier French language schools. This partnership reflects our ability to adapt programs for diverse school communities with specific cultural and educational approaches. Our Downtown Toronto programs include in-school yoga sessions, wellness weeks, after school classes, birthday parties, PD day programs, and family yoga workshops all fully customized to your community's needs.
           </p>
         </div>
       </section>

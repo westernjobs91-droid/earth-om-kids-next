@@ -105,7 +105,7 @@ export default function About() {
                   <div>
                     <div className="font-semibold">Credentials</div>
                     <div className="text-sm text-[#1F2E2A]/70">
-                      Early Childhood Educator (RECE)<br />
+                      Early Childhood Educator (ECE)<br />
                       Nearly 10 years in early childhood education
                     </div>
                   </div>
@@ -230,7 +230,7 @@ export default function About() {
         <div className="max-w-lg mx-auto px-6 text-center">
           <h3 className="text-3xl font-semibold tracking-tight">Let's work together</h3>
           <p className="mt-3 text-white/80">
-            Whether you're a school, childcare centre, or parent — I'd love to bring calm and confidence to the children in your care.
+            Whether you're a school, childcare centre, or parent I'd love to bring calm and confidence to the children in your care.
           </p>
           <Link
             href="/contact"

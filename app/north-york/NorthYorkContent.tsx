@@ -177,7 +177,7 @@ export default function NorthYorkPage() {
             <blockquote className="text-xl md:text-2xl leading-relaxed font-light italic mb-6">
               "Our after-school program has been transformed. The kids love the breathing games and animal poses. Parents constantly comment on how relaxed their children are at pickup."
             </blockquote>
-            <div className="text-white/70 text-sm">— Parent, North York</div>
+            <div className="text-white/70 text-sm">Parent, North York</div>
           </div>
         </div>
       </section>
