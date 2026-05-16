@@ -37,6 +37,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/blog/breathing-exercises-for-kids`,                   lastModified: '2026-05-01', changeFrequency: 'yearly', priority: 0.6 },
     { url: `${baseUrl}/blog/what-to-expect-in-kids-yoga-class`,              lastModified: '2026-05-01', changeFrequency: 'yearly', priority: 0.6 },
     { url: `${baseUrl}/blog/yoga-for-focus-and-attention`,                   lastModified: '2026-05-01', changeFrequency: 'yearly', priority: 0.6 },
+    { url: `${baseUrl}/blog/best-kids-yoga-classes-toronto`,             lastModified: new Date('2026-05-15'), changeFrequency: 'yearly', priority: 0.6 },
+{ url: `${baseUrl}/blog/how-to-choose-school-yoga-provider-toronto`, lastModified: new Date('2026-05-15'), changeFrequency: 'yearly', priority: 0.6 },
+{ url: `${baseUrl}/blog/montessori-and-yoga-toronto`,                lastModified: new Date('2026-05-15'), changeFrequency: 'yearly', priority: 0.6 },
     // Add new blog posts here as you publish them
 
     // ─── Phase 2 service pages — uncomment when built ─────────────────────────

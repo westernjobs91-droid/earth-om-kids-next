@@ -20,6 +20,18 @@ const postMeta: Record<string, { title: string; description: string }> = {
     title: 'Can Yoga Improve Focus and Attention in School-Age Children? | Earth & OM Kids',
     description: 'Research-backed benefits of yoga for improving concentration, reducing restlessness, and supporting learning in school-age children across Toronto.',
   },
+  'best-kids-yoga-classes-toronto': {
+  title: 'Best Kids Yoga Classes in Toronto 2026: A Parent\'s Complete Guide | Earth & OM Kids',
+  description: 'The complete Toronto parent guide to finding the best kids yoga classes. What to look for, questions to ask, and why Earth and OM Kids is trusted by 25+ schools.',
+},
+'how-to-choose-school-yoga-provider-toronto': {
+  title: 'How to Choose a School Yoga Provider in Toronto: 8 Questions to Ask | Earth & OM Kids',
+  description: '8 essential questions every Toronto school principal and childcare director should ask before booking a kids yoga provider. Written by a trained Early Childhood Educator.',
+},
+'montessori-and-yoga-toronto': {
+  title: 'Montessori and Yoga: Why They Are a Perfect Match for Toronto Children | Earth & OM Kids',
+  description: 'Discover why Montessori schools across Toronto are embracing kids yoga. Shared values, movement as learning, and real results from Toronto Montessori communities.',
+},
 };
 
 // ─── Dynamic metadata per post ────────────────────────────────────────────────
