@@ -42,7 +42,7 @@ export default function BirthdayPartyContent() {
         </h2>
         <div className="prose prose-lg max-w-none text-[#1F2E2A]/75 space-y-4">
           <p>
-            Looking for a unique and unforgettable kids birthday party idea in Toronto? Earth and OM Kids brings the magic of yoga and mindfulness directly to your party venue. Our birthday yoga parties are fun, energetic, and filled with laughter — giving children an experience they will talk about long after the cake is gone.
+            Looking for a unique and unforgettable kids birthday party idea in Toronto? Earth and OM Kids brings the magic of yoga and mindfulness directly to your party venue. Our birthday yoga parties are fun, energetic, and filled with laughter giving children an experience they will talk about long after the cake is gone.
           </p>
           <p>
             Our kids yoga birthday parties are available across Toronto and the Greater Toronto Area including North York, Scarborough, Etobicoke, Downtown Toronto, Vaughan, Mississauga, Markham, and Richmond Hill. We come to your home, backyard, condo amenity room, community centre, or any party venue in the GTA. You handle the cake. We handle the fun.
@@ -71,7 +71,7 @@ export default function BirthdayPartyContent() {
             {
               icon: "fa-wand-magic-sparkles",
               title: "Themed Yoga Adventure",
-              desc: "A fully custom story-based yoga journey built around your child's favourite theme. Animals, nature, space, ocean, superheroes — we make it magical."
+              desc: "A fully custom story-based yoga journey built around your child's favourite theme. Animals, nature, space, ocean, superheroes we make it magical."
             },
             {
               icon: "fa-wind",

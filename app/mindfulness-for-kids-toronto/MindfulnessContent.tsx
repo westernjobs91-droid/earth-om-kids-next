@@ -54,7 +54,7 @@ export default function MindfulnessContent() {
             We offer children's mindfulness programs for Toronto schools, daycares, Montessori programs, and families. Programs range from single wellness sessions and PD day workshops to ongoing weekly visits and multi-week mindfulness series. Every program is fully customized to the goals, age group, and environment of your Toronto school or family.
           </p>
           <p>
-            Research consistently shows that children who practice mindfulness regularly demonstrate improved attention, better emotional regulation, reduced anxiety, and stronger social skills. These are not abstract benefits — they are changes that Toronto teachers, directors, and parents notice in real classrooms and real homes within weeks of starting a program.
+            Research consistently shows that children who practice mindfulness regularly demonstrate improved attention, better emotional regulation, reduced anxiety, and stronger social skills. These are not abstract benefits they are changes that Toronto teachers, directors, and parents notice in real classrooms and real homes within weeks of starting a program.
           </p>
         </div>
       </section>
@@ -207,7 +207,7 @@ export default function MindfulnessContent() {
           {[
             {
               q: "What is mindfulness for kids?",
-              a: "Mindfulness for kids is the practice of helping children pay attention to the present moment through breathing, movement, and body awareness activities. For children it looks like breathing games, yoga poses, guided relaxation, and sensory activities — not sitting in silence. It builds emotional regulation, focus, and resilience."
+              a: "Mindfulness for kids is the practice of helping children pay attention to the present moment through breathing, movement, and body awareness activities. For children it looks like breathing games, yoga poses, guided relaxation, and sensory activities not sitting in silence. It builds emotional regulation, focus, and resilience."
             },
             {
               q: "What age can children start mindfulness?",

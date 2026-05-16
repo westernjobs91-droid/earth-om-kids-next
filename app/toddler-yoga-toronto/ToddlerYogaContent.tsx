@@ -42,13 +42,13 @@ export default function ToddlerYogaContent() {
         </h2>
         <div className="prose prose-lg max-w-none text-[#1F2E2A]/75 space-y-4">
           <p>
-            Earth and OM Kids offers Toronto's most thoughtfully designed toddler yoga program for children from 18 months old. While most yoga programs start at age 3 or older, we believe the foundation for lifelong mindfulness and body awareness starts much earlier — and we have the early childhood education background to do it right.
+            Earth and OM Kids offers Toronto's most thoughtfully designed toddler yoga program for children from 18 months old. While most yoga programs start at age 3 or older, we believe the foundation for lifelong mindfulness and body awareness starts much earlier and we have the early childhood education background to do it right.
           </p>
           <p>
-            Our toddler yoga sessions are nothing like adult yoga classes. They are short (20 to 30 minutes), joyful, and built entirely around how toddlers actually learn — through songs, repetition, animal sounds, imaginative play, and movement that feels like fun rather than exercise. There are no expectations for sitting still, following long instructions, or holding poses perfectly. Toddlers wiggle. We celebrate that.
+            Our toddler yoga sessions are nothing like adult yoga classes. They are short (20 to 30 minutes), joyful, and built entirely around how toddlers actually learn through songs, repetition, animal sounds, imaginative play, and movement that feels like fun rather than exercise. There are no expectations for sitting still, following long instructions, or holding poses perfectly. Toddlers wiggle. We celebrate that.
           </p>
           <p>
-            Every toddler yoga session is led by Taran Kaur, a trained Early Childhood Educator with nearly 10 years of experience working with very young children across Toronto daycares, Montessori schools, and childcare centres. Taran understands toddler development deeply — cognitively, emotionally, and physically — and designs every session around the real developmental needs of this age group.
+            Every toddler yoga session is led by Taran Kaur, a trained Early Childhood Educator with nearly 10 years of experience working with very young children across Toronto daycares, Montessori schools, and childcare centres. Taran understands toddler development deeply cognitively, emotionally, and physically and designs every session around the real developmental needs of this age group.
           </p>
           <p>
             We deliver toddler yoga programs across Toronto and the GTA including North York, Scarborough, Etobicoke, Downtown Toronto, Vaughan, Mississauga, and Markham. We come directly to your daycare, Montessori school, childcare centre, or home. Many Toronto daycares and childcare centres bring us in for regular weekly toddler yoga sessions as part of their enrichment programming.
