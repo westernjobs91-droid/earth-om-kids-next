@@ -87,6 +87,7 @@ const Footer: React.FC = () => {
           <div className="md:col-span-2 text-sm">
             <div className="font-semibold text-white mb-5 tracking-wider text-xs">WHERE WE SERVE</div>
             <div className="space-y-[10px]">
+              <Link href="/toronto" className="block hover:text-white">Toronto</Link>
               <Link href="/north-york" className="block hover:text-white">North York</Link>
               <Link href="/scarborough" className="block hover:text-white">Scarborough</Link>
               <Link href="/etobicoke" className="block hover:text-white">Etobicoke</Link>

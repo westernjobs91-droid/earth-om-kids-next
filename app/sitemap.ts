@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/scarborough`,      lastModified: today, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/etobicoke`,        lastModified: today, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/downtown-toronto`, lastModified: today, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/toronto`, lastModified: today, changeFrequency: 'monthly', priority: 0.9 },
     // Phase 2 — add these once pages are built:
     // { url: `${baseUrl}/vaughan`,       lastModified: today, changeFrequency: 'monthly', priority: 0.8 },
     // { url: `${baseUrl}/mississauga`,   lastModified: today, changeFrequency: 'monthly', priority: 0.8 },
