@@ -135,7 +135,7 @@ export default function DowntownTorontoPage() {
             <div className="bg-[#2D5A4A] text-white rounded-3xl p-10">
               <div className="text-[#A7C4A0] text-xs font-semibold tracking-[2px] mb-3">FOR DOWNTOWN TORONTO SCHOOLS AND DAYCARES</div>
               <h3 className="text-3xl font-semibold tracking-tight heading-serif mb-4">Bring professional yoga to your Downtown Toronto school</h3>
-              <p className="text-white/75 mb-8 leading-relaxed">We work with TDSB schools, private schools, Montessori programs, French language schools, and childcare centres across Downtown Toronto. Single sessions, wellness weeks, and ongoing programs available.</p>
+              <p className="text-white/75 mb-8 leading-relaxed">We work with public schools, private schools, Montessori programs, French language schools, and childcare centres across Downtown Toronto. Single sessions, wellness weeks, and ongoing programs available.</p>
               <Link href="/schools" className="inline-flex items-center justify-center px-8 py-3 bg-white text-[#2D5A4A] font-semibold rounded-2xl hover:bg-[#F8F1E9] transition text-sm">Learn about school programs</Link>
             </div>
             <div className="bg-white rounded-3xl p-10 border border-[#E8D5B7]">

@@ -194,7 +194,7 @@ export default function TorontoContent() {
             <div className="bg-[#2D5A4A] text-white rounded-3xl p-10">
               <div className="text-[#A7C4A0] text-xs font-semibold tracking-[2px] mb-3">FOR TORONTO SCHOOLS AND DAYCARES</div>
               <h3 className="text-3xl font-semibold tracking-tight heading-serif mb-4">Bring professional yoga to your Toronto school</h3>
-              <p className="text-white/75 mb-8 leading-relaxed">We work with TDSB schools, private schools, Montessori programs, and childcare centres across Toronto. Single sessions, wellness weeks, and ongoing programs available.</p>
+              <p className="text-white/75 mb-8 leading-relaxed">We work with public schools, private schools, Montessori programs, and childcare centres across Toronto. Single sessions, wellness weeks, and ongoing programs available.</p>
               <Link href="/schools" className="inline-flex items-center justify-center px-8 py-3 bg-white text-[#2D5A4A] font-semibold rounded-2xl hover:bg-[#F8F1E9] transition text-sm">
                 Learn about school programs
               </Link>
@@ -348,7 +348,7 @@ export default function TorontoContent() {
           {[
             { q: "What Toronto neighbourhoods do you serve?", a: "We serve all of Toronto including The Annex, Yorkville, Rosedale, Forest Hill, Lawrence Park, Leaside, Don Mills, Leslieville, Riverdale, The Beaches, Danforth, East York, Midtown, Corktown, Trinity Bellwoods, Little Italy, Kensington Market, Harbourfront, Liberty Village, High Park, Bloor West Village, and all surrounding areas. We also cover North York, Scarborough, Etobicoke, and the Greater Toronto Area." },
             { q: "What is the youngest age you work with in Toronto?", a: "We accept children from 18 months old. Our toddler yoga program is specifically designed for children 18 months to 3 years and is one of the only programs in Toronto led by someone with a formal early childhood education background. Sessions are short, playful, and song-based." },
-            { q: "Do you work with TDSB and private schools in Toronto?", a: "Yes. We work with Toronto District School Board schools, private schools, Montessori programs, French language schools, and independent childcare centres throughout Toronto. We are happy to discuss becoming an approved external provider for your school or board." },
+            { q: "Do you work with public and private schools in Toronto?", a: "Yes. We work with public schools, private schools, Montessori programs, French language schools, and independent childcare centres throughout Toronto. We are happy to discuss becoming an approved external provider for your school or board." },
             { q: "What types of programs do you offer Toronto schools?", a: "We offer in-class yoga sessions, wellness weeks, PD day programs, lunchtime mindfulness, after school classes, and ongoing weekly visits. All programs are fully customized to your school's goals, age groups, schedule, and space." },
             { q: "How much do kids yoga programs cost in Toronto?", a: "Pricing depends on the program type, frequency, group size, and location within Toronto. We offer flexible packages for schools, daycares, and families. Contact us for a custom proposal with no obligation." },
             { q: "How do I book a kids yoga program in Toronto?", a: "Fill out our contact form or call us at (647) 856-8206. We respond within 1 to 2 business days with a custom proposal tailored to your Toronto school, daycare, or family." },

@@ -125,7 +125,7 @@ export default function MindfulnessContent() {
           {[
             {
               title: "Toronto Schools and Daycares",
-              desc: "We deliver children's mindfulness programs to TDSB schools, private schools, Montessori programs, and childcare centres across Toronto. Programs are designed to support classroom wellness goals and integrate with your existing schedule.",
+              desc: "We deliver children's mindfulness programs to public schools, private schools, Montessori programs, and childcare centres across Toronto. Programs are designed to support classroom wellness goals and integrate with your existing schedule.",
               link: "/schools",
               linkText: "School programs"
             },

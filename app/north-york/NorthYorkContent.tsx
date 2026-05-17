@@ -157,7 +157,7 @@ export default function NorthYorkPage() {
             <div className="bg-[#2D5A4A] text-white rounded-3xl p-10">
               <div className="text-[#A7C4A0] text-xs font-semibold tracking-[2px] mb-3">FOR NORTH YORK SCHOOLS AND DAYCARES</div>
               <h3 className="text-3xl font-semibold tracking-tight heading-serif mb-4">Bring professional yoga to your North York school</h3>
-              <p className="text-white/75 mb-8 leading-relaxed">We work with TDSB schools, private schools, Montessori programs, and childcare centres across North York. Single sessions, wellness weeks, and ongoing programs available.</p>
+              <p className="text-white/75 mb-8 leading-relaxed">We work with public schools, private schools, Montessori programs, and childcare centres across North York. Single sessions, wellness weeks, and ongoing programs available.</p>
               <Link href="/schools" className="inline-flex items-center justify-center px-8 py-3 bg-white text-[#2D5A4A] font-semibold rounded-2xl hover:bg-[#F8F1E9] transition text-sm">
                 Learn about school programs
               </Link>
@@ -251,7 +251,7 @@ export default function NorthYorkPage() {
           {[
             { q: "Which areas of North York do you serve?", a: "We serve all of North York including Willowdale, Newtonbrook, Bathurst Manor, Lawrence Park North, Don Mills, York Mills, Bayview Village, Lansing, and communities along Yonge, Sheppard, Wilson, Finch, and Jane corridors." },
             { q: "What is the youngest age you work with in North York?", a: "We accept children from 18 months old. Our toddler yoga program is specifically designed for children 18 months to 3 years and is one of the only programs in North York led by someone with a formal early childhood education background." },
-            { q: "Do you work with TDSB schools in North York?", a: "Yes. We work with both TDSB and private schools across North York. We can design programs that align with your school's wellness goals and curriculum. Contact us to discuss becoming an approved external provider for your school board." },
+            { q: "Do you work with public schools in North York?", a: "Yes. We work with both public and private schools across North York. We can design programs that align with your school's wellness goals and curriculum. Contact us to discuss becoming an approved external provider for your school board." },
             { q: "How much do programs cost in North York?", a: "Pricing depends on the program type, frequency, and group size. We offer flexible packages for schools, daycares, and families. Contact us for a custom proposal tailored to your North York school or family." },
           ].map((item, index) => (
             <div key={index} className="bg-white rounded-3xl border border-[#E8D5B7] p-7">
