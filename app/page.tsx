@@ -49,7 +49,7 @@ const faqSchema = {
       "name": "Do you offer yoga programs for children with special needs?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. As a Registered Early Childhood Educator (RECE), Taran has extensive experience working with diverse learners and can fully adapt sessions to be inclusive and supportive for children with varying needs."
+        "text": "Yes. As a trained Early Childhood Educator (ECE), Taran has extensive experience working with diverse learners and can fully adapt sessions to be inclusive and supportive for children with varying needs."
       }
     },
     {
