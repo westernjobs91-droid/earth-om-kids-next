@@ -24,7 +24,7 @@ const taranPersonSchema = {
   "@type": "Person",
   "name": "Taran Kaur",
   "jobTitle": "Early Childhood Educator & Kids Yoga Teacher",
-  "description": "Early Childhood Educator (RECE) with nearly 10 years of experience in Toronto's childcare and Montessori communities. Founder of Earth & OM Kids, specializing in children's yoga, mindfulness, and trauma-informed practices for ages 18 months to 12 years.",
+  "description": "Early Childhood Educator (ECE) with nearly 10 years of experience in Toronto's childcare and Montessori communities. Founder of Earth & OM Kids, specializing in children's yoga, mindfulness, and trauma-informed practices for ages 18 months to 12 years.",
   "url": "https://kids.earthandom.ca/about",
   "image": "https://kids.earthandom.ca/taran-photo.jpg",
   "worksFor": {
@@ -36,7 +36,7 @@ const taranPersonSchema = {
     {
       "@type": "EducationalOccupationalCredential",
       "credentialCategory": "Professional Certification",
-      "name": "Early Childhood Educator (RECE)",
+      "name": "Early Childhood Educator (ECE)",
       "recognizedBy": {
         "@type": "Organization",
         "name": "College of Early Childhood Educators of Ontario"
@@ -89,7 +89,7 @@ export default function About() {
               <div className="aspect-[4/3] bg-[#E8D5B7] rounded-3xl overflow-hidden shadow-xl mb-6 relative">
                 <img
                   src="/taran-photo.jpg"
-                  alt="Taran Kaur, Early Childhood Educator (RECE) and founder of Earth & OM Kids, leading a children's yoga session in Toronto"
+                  alt="Taran Kaur, Early Childhood Educator (ECE) and founder of Earth & OM Kids, leading a children's yoga session in Toronto"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
