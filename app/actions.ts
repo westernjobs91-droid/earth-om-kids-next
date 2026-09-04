@@ -4,6 +4,7 @@ import { Resend } from 'resend';
 import React from 'react';
 import { render } from '@react-email/render';
 import ContactEmail from '../emails/ContactEmail';
+import AutoReplyEmail from '../emails/AutoReplyEmail';
 
 const resend = new Resend(process.env.RESEND_API_KEY!);
 
@@ -40,6 +41,11 @@ export async function sendContactForm(formData: ContactFormData) {
     React.createElement(ContactEmail, { formData })
   );
 
+  // Render auto-reply email
+  const autoReplyHtml = await render(
+    React.createElement(AutoReplyEmail, { name: formData.name })
+  );
+
   try {
     const { error } = await resend.emails.send({
       from: 'Earth & OM Kids <onboarding@resend.dev>',
@@ -56,6 +62,14 @@ export async function sendContactForm(formData: ContactFormData) {
         error: 'We couldn\'t send your message right now. Please try again or email us directly at earthandomkids@gmail.com.' 
       };
     }
+
+    // Send auto-reply confirmation to the person who submitted the form
+    await resend.emails.send({
+      from: 'Earth & OM Kids <onboarding@resend.dev>',
+      to: [formData.email],
+      subject: 'We received your message | Earth & OM Kids',
+      html: autoReplyHtml,
+    });
 
     return { success: true };
   } catch (err) {
