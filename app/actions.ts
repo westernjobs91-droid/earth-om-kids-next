@@ -48,7 +48,7 @@ export async function sendContactForm(formData: ContactFormData) {
 
   try {
     const { error } = await resend.emails.send({
-      from: 'Earth & OM Kids <onboarding@resend.dev>',
+      from: 'Earth & OM Kids <hello@earthandom.ca>',
       to: ['earthandomkids@gmail.com'],
       replyTo: formData.email,
       subject: `New Inquiry from ${formData.name} | Earth & OM Kids`,
@@ -65,7 +65,7 @@ export async function sendContactForm(formData: ContactFormData) {
 
     // Send auto-reply confirmation to the person who submitted the form
     await resend.emails.send({
-      from: 'Earth & OM Kids <onboarding@resend.dev>',
+      from: 'Earth & OM Kids <hello@earthandom.ca>',
       to: [formData.email],
       subject: 'We received your message | Earth & OM Kids',
       html: autoReplyHtml,
