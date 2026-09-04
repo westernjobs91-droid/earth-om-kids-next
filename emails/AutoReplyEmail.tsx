@@ -9,6 +9,8 @@ import {
   Section,
   Text,
   Hr,
+  Row,
+  Column,
 } from '@react-email/components';
 
 interface AutoReplyEmailProps {
@@ -19,140 +21,258 @@ export default function AutoReplyEmail({ name }: AutoReplyEmailProps) {
   return (
     <Html>
       <Head />
-      <Preview>We received your message — Earth & OM Kids will be in touch soon!</Preview>
+      <Preview>We received your message! Earth & OM Kids will be in touch soon. 🌿</Preview>
       <Body style={{
-        backgroundColor: '#F8F1E9',
+        backgroundColor: '#EEF5EE',
         margin: 0,
         padding: '40px 20px',
-        fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+        fontFamily: 'Georgia, "Times New Roman", serif',
       }}>
+
+        {/* Hero Banner */}
         <Container style={{
-          backgroundColor: '#ffffff',
-          margin: '0 auto',
-          padding: '40px',
-          borderRadius: '16px',
           maxWidth: '600px',
-          boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)'
+          margin: '0 auto',
         }}>
-          {/* Brand Header */}
-          <Section style={{ textAlign: 'center', marginBottom: '32px' }}>
+          <Section style={{
+            background: 'linear-gradient(135deg, #2D5A4A 0%, #3D7A62 50%, #4A9070 100%)',
+            borderRadius: '20px 20px 0 0',
+            padding: '48px 40px 40px',
+            textAlign: 'center',
+          }}>
+            {/* Decorative circles */}
+            <Text style={{ fontSize: '36px', margin: '0 0 16px 0', lineHeight: '1' }}>🌿</Text>
             <Text style={{
-              fontSize: '32px',
-              fontWeight: '700',
-              color: '#2D5A4A',
+              fontSize: '36px',
+              fontWeight: '800',
+              color: '#ffffff',
               margin: '0 0 6px 0',
-              letterSpacing: '-0.03em'
+              letterSpacing: '-0.02em',
+              lineHeight: '1.1',
             }}>
               Earth &amp; OM Kids
             </Text>
             <Text style={{
-              fontSize: '15px',
-              color: '#2D5A4A',
-              opacity: 0.75,
-              margin: 0,
-              letterSpacing: '0.5px'
+              fontSize: '13px',
+              color: '#A7D4B8',
+              margin: '0',
+              letterSpacing: '3px',
+              textTransform: 'uppercase',
             }}>
-              Kids Yoga &amp; Mindfulness • Toronto
+              Kids Yoga &amp; Mindfulness · Toronto
             </Text>
           </Section>
 
-          <Hr style={{ borderColor: '#E8D5B7', margin: '0 0 32px 0' }} />
-
-          {/* Main Message */}
-          <Heading style={{
-            color: '#2D5A4A',
-            fontSize: '26px',
-            margin: '0 0 16px 0',
-            fontWeight: '600',
-            letterSpacing: '-0.02em'
-          }}>
-            Thank you, {name}!
-          </Heading>
-
-          <Text style={{
-            color: '#1F2E2A',
-            fontSize: '16px',
-            lineHeight: '1.7',
-            margin: '0 0 20px 0'
-          }}>
-            We have received your request and will get back to you shortly.
-          </Text>
-
-          <Text style={{
-            color: '#1F2E2A',
-            fontSize: '16px',
-            lineHeight: '1.7',
-            margin: '0 0 32px 0'
-          }}>
-            In the meantime, feel free to explore our programs or reach out to us directly at{' '}
-            <Link
-              href="mailto:earthandomkids@gmail.com"
-              style={{ color: '#2D5A4A', textDecoration: 'underline' }}
-            >
-              earthandomkids@gmail.com
-            </Link>.
-          </Text>
-
-          {/* Warm closing block */}
+          {/* Curved connector */}
           <Section style={{
-            backgroundColor: '#F8F1E9',
-            borderRadius: '12px',
-            padding: '24px 26px',
-            marginBottom: '32px',
-            border: '1px solid #E8D5B7',
-            textAlign: 'center'
+            backgroundColor: '#2D5A4A',
+            padding: '0',
+            margin: '0',
           }}>
             <Text style={{
+              backgroundColor: '#ffffff',
+              borderRadius: '20px 20px 0 0',
+              margin: '0',
+              padding: '0',
+              fontSize: '1px',
+              lineHeight: '24px',
+              color: 'transparent',
+            }}>.</Text>
+          </Section>
+
+          {/* Main Card */}
+          <Section style={{
+            backgroundColor: '#ffffff',
+            padding: '40px 44px',
+          }}>
+            {/* Greeting */}
+            <Heading style={{
               color: '#2D5A4A',
-              fontSize: '16px',
-              fontWeight: '500',
-              margin: '0 0 6px 0'
-            }}>
-              With warmth,
-            </Text>
-            <Text style={{
-              color: '#2D5A4A',
-              fontSize: '17px',
+              fontSize: '30px',
               fontWeight: '700',
-              margin: '0 0 4px 0'
+              margin: '0 0 8px 0',
+              letterSpacing: '-0.02em',
+              lineHeight: '1.2',
             }}>
-              Taran Kaur
-            </Text>
+              Thank you, {name}! 🙏
+            </Heading>
+
             <Text style={{
-              color: '#2D5A4A',
-              fontSize: '14px',
-              opacity: 0.75,
-              margin: 0
+              color: '#5A8A72',
+              fontSize: '15px',
+              margin: '0 0 28px 0',
+              letterSpacing: '0.3px',
             }}>
-              Earth &amp; OM Kids • Toronto, Ontario
+              We're so glad you reached out.
             </Text>
+
+            <Hr style={{ borderColor: '#E8F0E8', margin: '0 0 28px 0' }} />
+
+            {/* Confirmation message */}
+            <Section style={{
+              backgroundColor: '#F0F8F2',
+              borderRadius: '14px',
+              padding: '28px 30px',
+              marginBottom: '28px',
+              borderLeft: '4px solid #2D5A4A',
+            }}>
+              <Text style={{
+                color: '#1F2E2A',
+                fontSize: '17px',
+                lineHeight: '1.75',
+                margin: '0',
+                fontStyle: 'italic',
+              }}>
+                "We have received your request and will get back to you shortly."
+              </Text>
+            </Section>
+
+            <Text style={{
+              color: '#4A6B5A',
+              fontSize: '15px',
+              lineHeight: '1.75',
+              margin: '0 0 32px 0',
+            }}>
+              While you wait, feel free to explore our programs: toddler yoga, mindfulness sessions, and birthday parties. We can't wait to connect with you!
+            </Text>
+
+            {/* 3 feature highlights */}
+            <Row style={{ marginBottom: '32px' }}>
+              <Column style={{ width: '33%', textAlign: 'center', padding: '0 6px' }}>
+                <Section style={{
+                  backgroundColor: '#F8FBF8',
+                  borderRadius: '12px',
+                  padding: '20px 12px',
+                  border: '1px solid #DCF0E0',
+                }}>
+                  <Text style={{ fontSize: '28px', margin: '0 0 8px 0' }}>🧘</Text>
+                  <Text style={{
+                    fontSize: '12px',
+                    fontWeight: '700',
+                    color: '#2D5A4A',
+                    margin: '0',
+                    letterSpacing: '0.5px',
+                  }}>Kids Yoga</Text>
+                </Section>
+              </Column>
+              <Column style={{ width: '33%', textAlign: 'center', padding: '0 6px' }}>
+                <Section style={{
+                  backgroundColor: '#F8FBF8',
+                  borderRadius: '12px',
+                  padding: '20px 12px',
+                  border: '1px solid #DCF0E0',
+                }}>
+                  <Text style={{ fontSize: '28px', margin: '0 0 8px 0' }}>🌸</Text>
+                  <Text style={{
+                    fontSize: '12px',
+                    fontWeight: '700',
+                    color: '#2D5A4A',
+                    margin: '0',
+                    letterSpacing: '0.5px',
+                  }}>Mindfulness</Text>
+                </Section>
+              </Column>
+              <Column style={{ width: '33%', textAlign: 'center', padding: '0 6px' }}>
+                <Section style={{
+                  backgroundColor: '#F8FBF8',
+                  borderRadius: '12px',
+                  padding: '20px 12px',
+                  border: '1px solid #DCF0E0',
+                }}>
+                  <Text style={{ fontSize: '28px', margin: '0 0 8px 0' }}>🎉</Text>
+                  <Text style={{
+                    fontSize: '12px',
+                    fontWeight: '700',
+                    color: '#2D5A4A',
+                    margin: '0',
+                    letterSpacing: '0.5px',
+                  }}>Birthdays</Text>
+                </Section>
+              </Column>
+            </Row>
+
+            {/* CTA Button */}
+            <Section style={{ textAlign: 'center', marginBottom: '32px' }}>
+              <Link
+                href="https://www.earthandom.ca"
+                style={{
+                  backgroundColor: '#2D5A4A',
+                  color: '#ffffff',
+                  fontSize: '15px',
+                  fontWeight: '700',
+                  textDecoration: 'none',
+                  padding: '16px 40px',
+                  borderRadius: '50px',
+                  display: 'inline-block',
+                  letterSpacing: '0.5px',
+                }}
+              >
+                Explore Our Programs →
+              </Link>
+            </Section>
+
+            <Hr style={{ borderColor: '#E8F0E8', margin: '0 0 28px 0' }} />
+
+            {/* Signature */}
+            <Section style={{ textAlign: 'center' }}>
+              <Text style={{
+                color: '#8AB09A',
+                fontSize: '13px',
+                margin: '0 0 6px 0',
+                letterSpacing: '1px',
+                textTransform: 'uppercase',
+              }}>
+                With warmth &amp; gratitude
+              </Text>
+              <Text style={{
+                color: '#2D5A4A',
+                fontSize: '22px',
+                fontWeight: '700',
+                margin: '0 0 4px 0',
+                fontStyle: 'italic',
+              }}>
+                Taran Kaur
+              </Text>
+              <Text style={{
+                color: '#8AB09A',
+                fontSize: '13px',
+                margin: '0',
+              }}>
+                Founder · Earth &amp; OM Kids · Toronto
+              </Text>
+            </Section>
           </Section>
 
           {/* Footer */}
-          <Section style={{ textAlign: 'center', paddingTop: '8px' }}>
+          <Section style={{
+            backgroundColor: '#2D5A4A',
+            borderRadius: '0 0 20px 20px',
+            padding: '24px 40px',
+            textAlign: 'center',
+          }}>
             <Text style={{
+              color: '#A7D4B8',
               fontSize: '13px',
-              color: '#2D5A4A',
-              opacity: 0.65,
-              margin: '0 0 6px 0'
+              margin: '0 0 8px 0',
             }}>
-              Visit us at{' '}
-              <Link
-                href="https://www.earthandom.ca"
-                style={{ color: '#2D5A4A', textDecoration: 'underline' }}
-              >
-                earthandom.ca
+              Questions? Email us at{' '}
+              <Link href="mailto:earthandomkids@gmail.com" style={{ color: '#ffffff', textDecoration: 'underline' }}>
+                earthandomkids@gmail.com
               </Link>
             </Text>
             <Text style={{
-              fontSize: '12px',
-              color: '#2D5A4A',
-              opacity: 0.55,
-              margin: 0
+              color: '#6AAE8A',
+              fontSize: '11px',
+              margin: '0',
+              letterSpacing: '0.5px',
             }}>
-              Earth &amp; OM Kids • Toronto, Ontario • earthandomkids@gmail.com
+              © 2025 Earth &amp; OM Kids · Toronto, Ontario ·{' '}
+              <Link href="https://www.earthandom.ca" style={{ color: '#6AAE8A', textDecoration: 'underline' }}>
+                earthandom.ca
+              </Link>
             </Text>
           </Section>
+
         </Container>
       </Body>
     </Html>
