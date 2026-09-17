@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { School, Calendar, ArrowRight, GraduationCap, MapPin, SlidersHorizontal, Star, Phone } from 'lucide-react';
 
 export default function EtobicokePage() {
   return (
@@ -23,10 +24,10 @@ export default function EtobicokePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/schools" className="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-white text-[#2D5A4A] font-semibold rounded-3xl text-lg hover:bg-[#F8F1E9] transition">
-                For Schools and Daycares <i className="fa-solid fa-school"></i>
+                For Schools and Daycares <School className="h-4 w-4" />
               </Link>
               <Link href="/contact" className="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold rounded-3xl text-lg transition">
-                Book a Program <i className="fa-solid fa-calendar"></i>
+                Book a Program <Calendar className="h-4 w-4" />
               </Link>
             </div>
           </motion.div>
@@ -77,20 +78,20 @@ export default function EtobicokePage() {
                 <p>We come directly to your Etobicoke school, daycare, community centre, or home. Sessions are flexible, fully customizable, and designed to fit seamlessly into your existing schedule along Bloor Street West, Kipling Avenue, Islington Avenue, Royal York Road, Dixon Road, and throughout the Humber River corridor.</p>
               </div>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <Link href="/about" className="inline-flex items-center text-sm font-semibold text-[#2D5A4A] hover:underline">Meet Taran <i className="fa-solid fa-arrow-right ml-2"></i></Link>
-                <Link href="/contact" className="inline-flex items-center text-sm font-semibold text-[#2D5A4A] hover:underline">Get in touch <i className="fa-solid fa-arrow-right ml-2"></i></Link>
+                <Link href="/about" className="inline-flex items-center text-sm font-semibold text-[#2D5A4A] hover:underline">Meet Taran <ArrowRight className="h-4 w-4 ml-2" /></Link>
+                <Link href="/contact" className="inline-flex items-center text-sm font-semibold text-[#2D5A4A] hover:underline">Get in touch <ArrowRight className="h-4 w-4 ml-2" /></Link>
               </div>
             </div>
             <div className="space-y-4">
               {[
-                { icon: "fa-graduation-cap", title: "Trained Early Childhood Educator", desc: "Nearly 10 years of real classroom and childcare experience across Toronto and Etobicoke." },
-                { icon: "fa-school", title: "Etobicoke School Partnerships", desc: "Trusted partnerships with schools and childcare centres across Etobicoke and West Toronto. Many return season after season." },
-                { icon: "fa-location-dot", title: "We Come to You", desc: "Serving all Etobicoke neighbourhoods, schools, daycares, and homes across West Toronto." },
-                { icon: "fa-sliders", title: "Fully Customized Programs", desc: "Every session tailored to your age group, goals, space, and schedule." },
+                { icon: GraduationCap, title: "Trained Early Childhood Educator", desc: "Nearly 10 years of real classroom and childcare experience across Toronto and Etobicoke." },
+                { icon: School, title: "Etobicoke School Partnerships", desc: "Trusted partnerships with schools and childcare centres across Etobicoke and West Toronto. Many return season after season." },
+                { icon: MapPin, title: "We Come to You", desc: "Serving all Etobicoke neighbourhoods, schools, daycares, and homes across West Toronto." },
+                { icon: SlidersHorizontal, title: "Fully Customized Programs", desc: "Every session tailored to your age group, goals, space, and schedule." },
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-x-4 bg-[#F8F1E9] rounded-2xl p-5 border border-[#E8D5B7]">
                   <div className="w-10 h-10 bg-[#2D5A4A]/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <i className={`fa-solid ${item.icon} text-[#2D5A4A]`}></i>
+                    <item.icon className="h-5 w-5 text-[#2D5A4A]" />
                   </div>
                   <div>
                     <div className="font-semibold text-sm mb-1">{item.title}</div>
@@ -122,7 +123,7 @@ export default function EtobicokePage() {
               <div className="text-4xl mb-4">{item.emoji}</div>
               <h3 className="font-semibold text-xl mb-3 tracking-tight">{item.title}</h3>
               <p className="text-[#1F2E2A]/70 text-sm leading-relaxed flex-1">{item.desc}</p>
-              <Link href={item.link} className="mt-6 text-sm font-semibold text-[#2D5A4A] inline-flex items-center">{item.linkText} <i className="fa-solid fa-arrow-right ml-2 text-xs"></i></Link>
+              <Link href={item.link} className="mt-6 text-sm font-semibold text-[#2D5A4A] inline-flex items-center">{item.linkText} <ArrowRight className="h-3 w-3 ml-2" /></Link>
             </motion.div>
           ))}
         </div>
@@ -152,7 +153,7 @@ export default function EtobicokePage() {
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="bg-[#2D5A4A] text-white rounded-3xl p-10 md:p-14">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="flex gap-1 text-[#F4D35E] justify-center mb-6">{[...Array(5)].map((_, i) => <i key={i} className="fa-solid fa-star"></i>)}</div>
+            <div className="flex gap-1 text-[#F4D35E] justify-center mb-6">{[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4" fill="currentColor" strokeWidth={0} />)}</div>
             <blockquote className="text-xl md:text-2xl leading-relaxed font-light italic mb-6">"Taran brought such warmth and professionalism to our wellness week. The custom program was perfectly tailored to our mixed age group. Highly recommend for any school community."</blockquote>
             <div className="text-white/70 text-sm">Principal, Toronto</div>
           </div>
@@ -225,7 +226,7 @@ export default function EtobicokePage() {
           <p className="text-white/75 text-xl mb-10 max-w-2xl mx-auto">We respond within 1 to 2 business days. No obligation. Just a friendly conversation about how we can support the children in your care.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link href="/contact" className="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-white text-[#2D5A4A] font-semibold rounded-3xl text-lg hover:bg-[#F8F1E9] transition">Request a Program</Link>
-            <a href="tel:6478568206" className="inline-flex items-center justify-center gap-x-3 px-10 py-4 border border-white/40 text-white font-semibold rounded-3xl text-lg hover:bg-white/10 transition"><i className="fa-solid fa-phone"></i> (647) 856-8206</a>
+            <a href="tel:6478568206" className="inline-flex items-center justify-center gap-x-3 px-10 py-4 border border-white/40 text-white font-semibold rounded-3xl text-lg hover:bg-white/10 transition"><Phone className="h-4 w-4" /> (647) 856-8206</a>
           </div>
           <p className="text-white/50 text-sm">Serving Etobicoke and all of Toronto since 2018</p>
         </div>

@@ -38,9 +38,11 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-x-3">
             <div className="w-11 h-11 bg-[#2D5A4A] rounded-2xl flex items-center justify-center overflow-hidden">
-              <img
+              <Image
                 src="/yoga-icon.png"
                 alt="Earth & OM Kids — kids yoga and mindfulness programs Toronto"
+                width={28}
+                height={28}
                 className="w-7 h-7 object-contain"
               />
             </div>

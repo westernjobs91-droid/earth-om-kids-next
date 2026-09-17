@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Accessibility | Earth & OM Kids',
+  title: 'Accessibility',
   description: 'Accessibility statement for Earth & OM Kids — our commitment to an inclusive and accessible website for all users in Toronto and the GTA.',
   alternates: { canonical: '/accessibility' },
 };

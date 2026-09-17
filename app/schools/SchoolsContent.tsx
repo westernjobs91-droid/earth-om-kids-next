@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { Mail, GraduationCap, Clock, TrendingUp, SlidersHorizontal, Users, Handshake } from 'lucide-react';
 
 export default function SchoolsContent() {
   return (
@@ -20,7 +21,7 @@ export default function SchoolsContent() {
         </p>
         <div className="mt-8">
           <Link href="/contact" className="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-[#2D5A4A] hover:bg-[#1F2E2A] transition text-white font-semibold rounded-3xl text-lg">
-            Request a School Program <i className="fa-solid fa-envelope ml-2"></i>
+            Request a School Program <Mail className="h-4 w-4 ml-2" />
           </Link>
         </div>
       </div>
@@ -34,16 +35,16 @@ export default function SchoolsContent() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            { icon: "fa-user-graduate", title: "Led by a Registered ECE", desc: "Deep understanding of child development, classroom dynamics, and how to support diverse learners." },
-            { icon: "fa-clock", title: "Classroom-Ready Sessions", desc: "30–45 minute sessions that fit seamlessly into your daily schedule with minimal disruption." },
-            { icon: "fa-chart-line", title: "Measurable Classroom Impact", desc: "Improved focus, emotional regulation, fewer disruptions, and calmer transitions reported by teachers." },
-            { icon: "fa-sliders-h", title: "Fully Customizable", desc: "We tailor every program to your school’s goals, age groups, space, and schedule." },
-            { icon: "fa-users", title: "Inclusive and Supportive", desc: "Experience working with mixed-age groups and children with diverse learning needs." },
-            { icon: "fa-handshake", title: "Long-Term Partnerships", desc: "Many schools return year after year because of the consistent quality and results." }
+            { icon: GraduationCap, title: "Led by a Registered ECE", desc: "Deep understanding of child development, classroom dynamics, and how to support diverse learners." },
+            { icon: Clock, title: "Classroom-Ready Sessions", desc: "30–45 minute sessions that fit seamlessly into your daily schedule with minimal disruption." },
+            { icon: TrendingUp, title: "Measurable Classroom Impact", desc: "Improved focus, emotional regulation, fewer disruptions, and calmer transitions reported by teachers." },
+            { icon: SlidersHorizontal, title: "Fully Customizable", desc: "We tailor every program to your school’s goals, age groups, space, and schedule." },
+            { icon: Users, title: "Inclusive and Supportive", desc: "Experience working with mixed-age groups and children with diverse learning needs." },
+            { icon: Handshake, title: "Long-Term Partnerships", desc: "Many schools return year after year because of the consistent quality and results." }
           ].map((item, index) => (
             <div key={index} className="bg-white p-8 rounded-3xl border border-[#E8D5B7]">
               <div className="w-14 h-14 bg-[#2D5A4A]/10 rounded-2xl flex items-center justify-center mb-6">
-                <i className={`fa-solid ${item.icon} text-3xl text-[#2D5A4A]`}></i>
+                <item.icon className="h-7 w-7 text-[#2D5A4A]" />
               </div>
               <h3 className="font-semibold text-xl tracking-tight mb-3">{item.title}</h3>
               <p className="text-[#1F2E2A]/70 leading-relaxed">{item.desc}</p>

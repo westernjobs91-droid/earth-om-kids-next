@@ -4,13 +4,13 @@ import ProgramsContent from './ProgramsContent';
 // ─── METADATA ────────────────────────────────────────────────────────────────
 export const metadata = {
   title: "Kids Yoga Programs Toronto | Schools, After-School & Workshops",
-  description: "Explore our kids yoga and mindfulness programs in Toronto. School yoga sessions, after-school classes, birthday parties, and custom workshops for ages 18 months to 12 years. Serving Toronto & GTA since 2018.",
+  description: "Explore our kids yoga and mindfulness programs in Toronto: school sessions, after-school classes, birthday parties, and custom workshops.",
   alternates: {
     canonical: '/programs',
   },
   openGraph: {
     title: "Kids Yoga Programs Toronto | Schools, After-School & Workshops",
-    description: "Professional kids yoga and mindfulness programs in Toronto. In-school sessions, after-school classes, birthday parties, and custom workshops for children ages 18 months+.",
+    description: "Professional kids yoga and mindfulness programs in Toronto: in-school sessions, after-school classes, birthday parties, and custom workshops.",
     images: [
       {
         url: "/og-image.jpg",

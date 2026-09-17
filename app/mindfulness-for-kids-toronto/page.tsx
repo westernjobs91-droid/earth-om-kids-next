@@ -1,12 +1,12 @@
 import MindfulnessContent from './MindfulnessContent';
 
 export const metadata = {
-  title: 'Mindfulness for Kids Toronto | Children\'s Mindfulness Programs | Earth & OM Kids',
-  description: 'Professional mindfulness programs for children across Toronto and the GTA. Help your child manage stress, improve focus, and build emotional resilience. Ages 18 months to 12 years.',
+  title: 'Mindfulness for Kids Toronto | Children\'s Mindfulness Programs',
+  description: 'Professional mindfulness programs for children across Toronto and the GTA. Help your child manage stress, improve focus, and build resilience.',
   alternates: { canonical: '/mindfulness-for-kids-toronto' },
   openGraph: {
     title: 'Mindfulness for Kids Toronto | Earth & OM Kids',
-    description: 'Professional children\'s mindfulness programs for Toronto schools, daycares, and families. Ages 18 months to 12 years. Led by a trained Early Childhood Educator.',
+    description: 'Professional children\'s mindfulness programs for Toronto schools, daycares, and families. Led by a trained Early Childhood Educator.',
     url: 'https://kids.earthandom.ca/mindfulness-for-kids-toronto',
   },
 };

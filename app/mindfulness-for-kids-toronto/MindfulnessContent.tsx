@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { Wind, PersonStanding, Ear, Heart, Cloud, Sun, ArrowRight } from 'lucide-react';
 
 export default function MindfulnessContent() {
   return (
@@ -70,32 +71,32 @@ export default function MindfulnessContent() {
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
-              icon: "fa-wind",
+              icon: Wind,
               title: "Breathing Techniques",
               desc: "Fun, memorable breathing exercises like balloon breathing, bunny breathing, and 5 finger breathing that children can use independently when they feel overwhelmed."
             },
             {
-              icon: "fa-person-walking",
+              icon: PersonStanding,
               title: "Mindful Movement",
               desc: "Slow intentional movement through yoga poses and body scans that help children connect physical sensations with emotional states."
             },
             {
-              icon: "fa-ear-listen",
+              icon: Ear,
               title: "Sensory Awareness",
               desc: "Simple activities that engage all five senses to anchor children in the present moment. Particularly effective for anxious or easily distracted children."
             },
             {
-              icon: "fa-heart",
+              icon: Heart,
               title: "Emotional Check-ins",
               desc: "Age-appropriate tools for naming and identifying feelings. Children learn a feelings vocabulary that supports communication and self-regulation."
             },
             {
-              icon: "fa-cloud",
+              icon: Cloud,
               title: "Guided Relaxation",
               desc: "Short guided visualizations and relaxation stories that calm the nervous system and give children a sense of safety and peace."
             },
             {
-              icon: "fa-sun",
+              icon: Sun,
               title: "Gratitude and Positivity",
               desc: "Simple gratitude practices that shift children's attention toward what is good in their lives, building optimism and resilience over time."
             }
@@ -106,7 +107,7 @@ export default function MindfulnessContent() {
               whileHover={{ y: -8, transition: { type: "spring", stiffness: 300, damping: 20 } }}
             >
               <div className="w-12 h-12 bg-[#F1EDE6] rounded-2xl flex items-center justify-center mb-6">
-                <i className={`fa-solid ${item.icon} text-2xl text-[#2D5A4A]`}></i>
+                <item.icon className="h-6 w-6 text-[#2D5A4A]" />
               </div>
               <h3 className="font-semibold text-xl tracking-tight mb-3">{item.title}</h3>
               <p className="text-[#1F2E2A]/70">{item.desc}</p>
@@ -150,7 +151,7 @@ export default function MindfulnessContent() {
               <h3 className="font-semibold text-xl mb-3">{item.title}</h3>
               <p className="text-[#1F2E2A]/70 flex-1">{item.desc}</p>
               <Link href={item.link} className="mt-6 text-sm font-semibold text-[#2D5A4A] inline-flex items-center">
-                {item.linkText} <i className="fa-solid fa-arrow-right ml-2"></i>
+                {item.linkText} <ArrowRight className="h-4 w-4 ml-2" />
               </Link>
             </motion.div>
           ))}

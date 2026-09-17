@@ -1,8 +1,8 @@
 import BirthdayPartyContent from './BirthdayPartyContent';
 
 export const metadata = {
-  title: 'Kids Yoga Birthday Party Toronto | Earth & OM Kids',
-  description: 'Make your child\'s birthday unforgettable with a kids yoga party in Toronto. Fun, active, and mindful birthday yoga experiences for ages 3 to 12. Serving Toronto and the GTA. Book today.',
+  title: 'Kids Yoga Birthday Party Toronto',
+  description: 'Make your child\'s birthday unforgettable with a kids yoga party in Toronto. Fun, active, and mindful experiences for ages 3 to 12. Book today.',
   alternates: { canonical: '/yoga-birthday-party-toronto' },
   openGraph: {
     title: 'Kids Yoga Birthday Party Toronto | Earth & OM Kids',

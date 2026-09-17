@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { School, Heart, ArrowRight, GraduationCap, Baby, MapPin, SlidersHorizontal, Star, Phone } from 'lucide-react';
 
 export default function TorontoContent() {
   return (
@@ -30,13 +31,13 @@ export default function TorontoContent() {
                 href="/schools"
                 className="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-white text-[#2D5A4A] font-semibold rounded-3xl text-lg hover:bg-[#F8F1E9] transition"
               >
-                For Schools and Daycares <i className="fa-solid fa-school"></i>
+                For Schools and Daycares <School className="h-4 w-4" />
               </Link>
               <Link
                 href="/families"
                 className="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold rounded-3xl text-lg transition"
               >
-                For Families <i className="fa-solid fa-heart"></i>
+                For Families <Heart className="h-4 w-4" />
               </Link>
             </div>
           </motion.div>
@@ -89,23 +90,23 @@ export default function TorontoContent() {
               </div>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <Link href="/about" className="inline-flex items-center text-sm font-semibold text-[#2D5A4A] hover:underline">
-                  Meet Taran <i className="fa-solid fa-arrow-right ml-2"></i>
+                  Meet Taran <ArrowRight className="h-4 w-4 ml-2" />
                 </Link>
                 <Link href="/contact" className="inline-flex items-center text-sm font-semibold text-[#2D5A4A] hover:underline">
-                  Get in touch <i className="fa-solid fa-arrow-right ml-2"></i>
+                  Get in touch <ArrowRight className="h-4 w-4 ml-2" />
                 </Link>
               </div>
             </div>
             <div className="space-y-4">
               {[
-                { icon: "fa-graduation-cap", title: "Trained Early Childhood Educator", desc: "Nearly 10 years of real classroom and childcare experience across Toronto." },
-                { icon: "fa-child", title: "Ages 18 Months to 12 Years", desc: "One of the only Toronto providers serving children from 18 months old." },
-                { icon: "fa-location-dot", title: "We Come to You", desc: "Serving all Toronto neighbourhoods, schools, daycares, and homes." },
-                { icon: "fa-sliders", title: "Fully Customized Programs", desc: "Every session tailored to your age group, goals, space, and schedule." },
+                { icon: GraduationCap, title: "Trained Early Childhood Educator", desc: "Nearly 10 years of real classroom and childcare experience across Toronto." },
+                { icon: Baby, title: "Ages 18 Months to 12 Years", desc: "One of the only Toronto providers serving children from 18 months old." },
+                { icon: MapPin, title: "We Come to You", desc: "Serving all Toronto neighbourhoods, schools, daycares, and homes." },
+                { icon: SlidersHorizontal, title: "Fully Customized Programs", desc: "Every session tailored to your age group, goals, space, and schedule." },
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-x-4 bg-[#F8F1E9] rounded-2xl p-5 border border-[#E8D5B7]">
                   <div className="w-10 h-10 bg-[#2D5A4A]/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <i className={`fa-solid ${item.icon} text-[#2D5A4A]`}></i>
+                    <item.icon className="h-5 w-5 text-[#2D5A4A]" />
                   </div>
                   <div>
                     <div className="font-semibold text-sm mb-1">{item.title}</div>
@@ -180,7 +181,7 @@ export default function TorontoContent() {
               <h3 className="font-semibold text-xl mb-3 tracking-tight">{item.title}</h3>
               <p className="text-[#1F2E2A]/70 text-sm leading-relaxed flex-1">{item.desc}</p>
               <Link href={item.link} className="mt-6 text-sm font-semibold text-[#2D5A4A] inline-flex items-center">
-                {item.linkText} <i className="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                {item.linkText} <ArrowRight className="h-3 w-3 ml-2" />
               </Link>
             </motion.div>
           ))}
@@ -230,7 +231,7 @@ export default function TorontoContent() {
               whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}
             >
               <div className="flex gap-1 text-[#E07A5F] mb-4">
-                {[...Array(5)].map((_, i) => <i key={i} className="fa-solid fa-star text-sm"></i>)}
+                {[...Array(5)].map((_, i) => <Star key={i} className="h-3.5 w-3.5" fill="currentColor" strokeWidth={0} />)}
               </div>
               <p className="italic text-[#1F2E2A]/80 leading-relaxed mb-6">"{item.quote}"</p>
               <div className="text-sm">
@@ -382,7 +383,7 @@ export default function TorontoContent() {
               href="tel:6478568206"
               className="inline-flex items-center justify-center gap-x-3 px-10 py-4 border border-white/40 text-white font-semibold rounded-3xl text-lg hover:bg-white/10 transition"
             >
-              <i className="fa-solid fa-phone"></i> (647) 856-8206
+              <Phone className="h-4 w-4" /> (647) 856-8206
             </a>
           </div>
           <p className="text-white/50 text-sm">Serving all of Toronto and the Greater Toronto Area since 2018</p>

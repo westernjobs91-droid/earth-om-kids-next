@@ -3,6 +3,11 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import {
+  School, House, ChevronDown, GraduationCap, SlidersHorizontal, Baby,
+  MapPin, Handshake, ArrowRight, ChevronRight, CircleCheck, Star,
+  Building, Sun, Cake, Heart, Users, Mail,
+} from 'lucide-react';
 
 export default function Home() {
   return (
@@ -74,14 +79,14 @@ export default function Home() {
               className="group inline-flex items-center justify-center gap-x-3 px-8 py-4 bg-white text-[#2D5A4A] font-semibold rounded-3xl text-lg hover:bg-[#F8F1E9] transition-all active:scale-[0.985]"
             >
               For Schools &amp; Centres
-              <i className="fa-solid fa-school group-hover:translate-x-0.5 transition"></i>
+              <School className="h-4 w-4 group-hover:translate-x-0.5 transition" />
             </Link>
             <Link 
               href="/families" 
               className="group inline-flex items-center justify-center gap-x-3 px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur border border-white/40 text-white font-semibold rounded-3xl text-lg transition-all active:scale-[0.985]"
             >
               For Families
-              <i className="fa-solid fa-home group-hover:translate-x-0.5 transition"></i>
+              <House className="h-4 w-4 group-hover:translate-x-0.5 transition" />
             </Link>
           </motion.div>
           
@@ -108,7 +113,7 @@ export default function Home() {
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block">
           <a href="#why-us" className="flex flex-col items-center text-white/70 hover:text-white text-xs tracking-widest">
             SCROLL TO EXPLORE
-            <i className="fa-solid fa-chevron-down mt-1 animate-bounce"></i>
+            <ChevronDown className="h-4 w-4 mt-1 animate-bounce" />
           </a>
         </div>
       </header>
@@ -147,7 +152,7 @@ export default function Home() {
             whileHover={{ y: -12, scale: 1.015, transition: { type: "spring", stiffness: 400, damping: 25 } }}
           >
             <div className="benefit-icon w-14 h-14 bg-[#2D5A4A]/10 rounded-2xl flex items-center justify-center mb-6">
-              <i className="fa-solid fa-user-graduate text-3xl text-[#2D5A4A]"></i>
+              <GraduationCap className="h-7 w-7 text-[#2D5A4A]" />
             </div>
             <h3 className="font-semibold text-2xl tracking-tight mb-3">Led by an Early Childhood Educator</h3>
             <p className="text-[#1F2E2A]/70 leading-relaxed">Deep expertise in child development, classroom dynamics, and age-appropriate practices that work with young children.</p>
@@ -158,7 +163,7 @@ export default function Home() {
             whileHover={{ y: -12, scale: 1.015, transition: { type: "spring", stiffness: 400, damping: 25 } }}
           >
             <div className="benefit-icon w-14 h-14 bg-[#2D5A4A]/10 rounded-2xl flex items-center justify-center mb-6">
-              <i className="fa-solid fa-school text-3xl text-[#2D5A4A]"></i>
+              <School className="h-7 w-7 text-[#2D5A4A]" />
             </div>
             <h3 className="font-semibold text-2xl tracking-tight mb-3">Proven Results in Real Toronto Classrooms</h3>
             <p className="text-[#1F2E2A]/70 leading-relaxed">Teachers report improved focus, fewer disruptions, better emotional regulation, and calmer learning environments.</p>
@@ -169,7 +174,7 @@ export default function Home() {
             whileHover={{ y: -12, scale: 1.015, transition: { type: "spring", stiffness: 400, damping: 25 } }}
           >
             <div className="benefit-icon w-14 h-14 bg-[#2D5A4A]/10 rounded-2xl flex items-center justify-center mb-6">
-              <i className="fa-solid fa-sliders-h text-3xl text-[#2D5A4A]"></i>
+              <SlidersHorizontal className="h-7 w-7 text-[#2D5A4A]" />
             </div>
             <h3 className="font-semibold text-2xl tracking-tight mb-3">Fully Customizable Programs</h3>
             <p className="text-[#1F2E2A]/70 leading-relaxed">Every program is tailored to your schedule, space, age groups, and specific goals whether focus, transitions, or emotional literacy.</p>
@@ -180,7 +185,7 @@ export default function Home() {
             whileHover={{ y: -12, scale: 1.015, transition: { type: "spring", stiffness: 400, damping: 25 } }}
           >
             <div className="benefit-icon w-14 h-14 bg-[#2D5A4A]/10 rounded-2xl flex items-center justify-center mb-6">
-              <i className="fa-solid fa-child text-3xl text-[#2D5A4A]"></i>
+              <Baby className="h-7 w-7 text-[#2D5A4A]" />
             </div>
             <h3 className="font-semibold text-2xl tracking-tight mb-3">Playful + Heart-Centered Approach</h3>
             <p className="text-[#1F2E2A]/70 leading-relaxed">Yoga that feels like play. We use stories, animal poses, breathing games, and imagination so children stay engaged.</p>
@@ -191,7 +196,7 @@ export default function Home() {
             whileHover={{ y: -12, scale: 1.015, transition: { type: "spring", stiffness: 400, damping: 25 } }}
           >
             <div className="benefit-icon w-14 h-14 bg-[#2D5A4A]/10 rounded-2xl flex items-center justify-center mb-6">
-              <i className="fa-solid fa-map-marker-alt text-3xl text-[#2D5A4A]"></i>
+              <MapPin className="h-7 w-7 text-[#2D5A4A]" />
             </div>
             <h3 className="font-semibold text-2xl tracking-tight mb-3">Serving Toronto &amp; the GTA Since 2018</h3>
             <p className="text-[#1F2E2A]/70 leading-relaxed">We work across North York, Scarborough, Etobicoke, Downtown Toronto, and surrounding communities.</p>
@@ -202,7 +207,7 @@ export default function Home() {
             whileHover={{ y: -12, scale: 1.015, transition: { type: "spring", stiffness: 400, damping: 25 } }}
           >
             <div className="benefit-icon w-14 h-14 bg-[#2D5A4A]/10 rounded-2xl flex items-center justify-center mb-6">
-              <i className="fa-solid fa-handshake text-3xl text-[#2D5A4A]"></i>
+              <Handshake className="h-7 w-7 text-[#2D5A4A]" />
             </div>
             <h3 className="font-semibold text-2xl tracking-tight mb-3">Trusted by 25+ Local Schools &amp; Centres</h3>
             <p className="text-[#1F2E2A]/70 leading-relaxed">From Montessori and daycare programs to elementary schools we’ve built strong, long-term partnerships across Toronto.</p>
@@ -219,8 +224,8 @@ export default function Home() {
               <h2 className="text-5xl tracking-tighter font-semibold heading-serif">Kids Yoga &amp; Mindfulness Programs</h2>
             </div>
             <Link href="/programs" className="mt-4 md:mt-0 inline-flex items-center text-[#2D5A4A] font-semibold group">
-              Explore all programs 
-              <i className="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition"></i>
+              Explore all programs
+              <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition" />
             </Link>
           </div>
 
@@ -236,7 +241,7 @@ export default function Home() {
               </div>
               <p className="text-[#1F2E2A]/75 flex-1">Beautifully guided sessions that support focus, confidence, emotional regulation and joyful movement right in the classroom.</p>
               <Link href="/schools" className="mt-6 inline-flex items-center text-sm font-semibold text-[#2D5A4A] group-hover:gap-x-2 transition-all">
-                Learn more for schools <i className="fa-solid fa-chevron-right ml-1.5 text-xs"></i>
+                Learn more for schools <ChevronRight className="h-3 w-3 ml-1.5" />
               </Link>
             </div>
 
@@ -250,7 +255,7 @@ export default function Home() {
               </div>
               <p className="text-[#1F2E2A]/75 flex-1">Playful and calming classes where children unwind, move their bodies, and build mindfulness in a warm, supportive environment.</p>
               <Link href="/programs" className="mt-6 inline-flex items-center text-sm font-semibold text-[#2D5A4A] group-hover:gap-x-2 transition-all">
-                See after-school options <i className="fa-solid fa-chevron-right ml-1.5 text-xs"></i>
+                See after-school options <ChevronRight className="h-3 w-3 ml-1.5" />
               </Link>
             </div>
 
@@ -264,7 +269,7 @@ export default function Home() {
               </div>
               <p className="text-[#1F2E2A]/75 flex-1">Special yoga and mindfulness experiences for camps, daycares, birthday parties, family events, and themed celebrations.</p>
               <Link href="/programs" className="mt-6 inline-flex items-center text-sm font-semibold text-[#2D5A4A] group-hover:gap-x-2 transition-all">
-                View workshops &amp; events <i className="fa-solid fa-chevron-right ml-1.5 text-xs"></i>
+                View workshops &amp; events <ChevronRight className="h-3 w-3 ml-1.5" />
               </Link>
             </div>
           </div>
@@ -284,14 +289,14 @@ export default function Home() {
             
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex gap-4">
-                <div className="text-[#2D5A4A] mt-1"><i className="fa-solid fa-check-circle text-xl"></i></div>
+                <div className="text-[#2D5A4A] mt-1"><CircleCheck className="h-5 w-5" /></div>
                 <div>
                   <div className="font-semibold">Ages 18 months &amp; up</div>
                   <div className="text-sm text-[#1F2E2A]/70">No experience needed. Songs, games, stories &amp; play.</div>
                 </div>
               </div>
               <div className="flex gap-4">
-                <div className="text-[#2D5A4A] mt-1"><i className="fa-solid fa-check-circle text-xl"></i></div>
+                <div className="text-[#2D5A4A] mt-1"><CircleCheck className="h-5 w-5" /></div>
                 <div>
                   <div className="font-semibold">Nature &amp; animal-inspired</div>
                   <div className="text-sm text-[#1F2E2A]/70">Poses, breathing &amp; mindfulness rooted in the natural world.</div>
@@ -360,50 +365,25 @@ export default function Home() {
       {/* Testimonials */}
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="text-center mb-10">
-          <div className="text-[#2D5A4A] text-xs tracking-[2px] font-semibold mb-2">REAL RESULTS FROM REAL TORONTO COMMUNITIES</div>
+          <div className="text-[#2D5A4A] text-xs tracking-[2px] font-semibold mb-2">FROM GOOGLE REVIEWS</div>
           <h2 className="text-4xl tracking-tighter font-semibold heading-serif">What educators &amp; parents are saying</h2>
         </div>
-        
-        <div className="grid md:grid-cols-3 gap-6">
-          {/* Testimonial 1 */}
-          <motion.div className="bg-white p-8 rounded-3xl border border-[#E8D5B7] cursor-pointer" whileHover={{ y: -8, scale: 1.01, transition: { type: "spring", stiffness: 350, damping: 22 } }}>
-            <div className="flex gap-1 text-[#E07A5F] mb-4">
-              <i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i>
-            </div>
-            <p className="italic text-[#1F2E2A]/80">"The children are noticeably calmer and more focused after Taran’s sessions. She has a beautiful way of connecting with even our youngest toddlers."</p>
-            <div className="mt-6 text-sm">
-              <div className="font-semibold">Director</div>
-              <div className="text-[#2D5A4A]/60">Toronto, ON</div>
-            </div>
-          </motion.div>
 
-          {/* Testimonial 2 */}
+        <div className="max-w-xl mx-auto">
           <motion.div className="bg-white p-8 rounded-3xl border border-[#E8D5B7] cursor-pointer" whileHover={{ y: -8, scale: 1.01, transition: { type: "spring", stiffness: 350, damping: 22 } }}>
             <div className="flex gap-1 text-[#E07A5F] mb-4">
-              <i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star-half-stroke"></i>
+              {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4" fill="currentColor" strokeWidth={0} />)}
             </div>
-            <p className="italic text-[#1F2E2A]/80">"Our after-school program has been transformed. The kids love the breathing games and animal poses. Parents constantly comment on how relaxed their children are at pickup."</p>
+            <p className="italic text-[#1F2E2A]/80">"Had the chance to have the yoga program at the daycare this year. My kinders loved it. They loved being challenged and learning at the different poses. Thanks for all the awesome classes!"</p>
             <div className="mt-6 text-sm">
-              <div className="font-semibold">Parent</div>
-              <div className="text-[#2D5A4A]/60">North York, ON</div>
-            </div>
-          </motion.div>
-
-          {/* Testimonial 3 */}
-          <motion.div className="bg-white p-8 rounded-3xl border border-[#E8D5B7] cursor-pointer" whileHover={{ y: -8, scale: 1.01, transition: { type: "spring", stiffness: 350, damping: 22 } }}>
-            <div className="flex gap-1 text-[#E07A5F] mb-4">
-              <i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i>
-            </div>
-            <p className="italic text-[#1F2E2A]/80">"Taran brought such warmth and professionalism to our wellness week. The custom program was perfectly tailored to our mixed-age group. Highly recommend for any school community."</p>
-            <div className="mt-6 text-sm">
-              <div className="font-semibold">Principal</div>
-              <div className="text-[#2D5A4A]/60">Toronto, ON</div>
+              <div className="font-semibold">SLC Daycare</div>
+              <div className="text-[#2D5A4A]/60">Google Review</div>
             </div>
           </motion.div>
         </div>
-        
+
         <div className="text-center mt-8">
-          <Link href="/contact" className="text-sm font-semibold text-[#2D5A4A] inline-flex items-center">Read more testimonials &amp; partner stories →</Link>
+          <Link href="/contact" className="text-sm font-semibold text-[#2D5A4A] inline-flex items-center">Bring this to your school or centre &rarr;</Link>
         </div>
       </section>
 
@@ -442,42 +422,42 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {[
             {
-              icon: "fa-school",
+              icon: School,
               title: "Schools & Montessori Programs",
               desc: "In-class sessions, wellness weeks, and ongoing programs designed for Toronto public, private, and Montessori schools.",
               link: "/schools",
               linkText: "School programs"
             },
             {
-              icon: "fa-building",
+              icon: Building,
               title: "Childcare Centres & Daycares",
               desc: "Weekly yoga sessions and mindfulness programs tailored for childcare centres and daycares across the GTA.",
               link: "/schools",
               linkText: "Daycare programs"
             },
             {
-              icon: "fa-sun",
+              icon: Sun,
               title: "After-School Programs",
               desc: "Fun weekly classes for toddlers, preschoolers, and school-age children in small, nurturing group settings.",
               link: "/families",
               linkText: "After-school classes"
             },
             {
-              icon: "fa-cake-candles",
+              icon: Cake,
               title: "Birthday Parties & Workshops",
               desc: "Magical yoga birthday parties and family workshops delivered at your home, condo, or venue across Toronto.",
               link: "/yoga-birthday-party-toronto",
               linkText: "Birthday parties"
             },
             {
-              icon: "fa-heart",
+              icon: Heart,
               title: "Special Needs & Inclusive Groups",
               desc: "Fully adapted sessions for children with diverse learning needs, sensory sensitivities, and developmental profiles.",
               link: "/contact",
               linkText: "Get in touch"
             },
             {
-              icon: "fa-users",
+              icon: Users,
               title: "Community & Corporate Events",
               desc: "One-time wellness experiences for community events, staff wellness days, and corporate family programs.",
               link: "/contact",
@@ -490,12 +470,12 @@ export default function Home() {
               whileHover={{ y: -6, transition: { type: "spring", stiffness: 400, damping: 25 } }}
             >
               <div className="w-12 h-12 bg-[#2D5A4A]/10 rounded-2xl flex items-center justify-center mb-5">
-                <i className={`fa-solid ${item.icon} text-xl text-[#2D5A4A]`}></i>
+                <item.icon className="h-5 w-5 text-[#2D5A4A]" />
               </div>
               <h3 className="font-semibold text-lg tracking-tight mb-2">{item.title}</h3>
               <p className="text-[#1F2E2A]/70 text-sm leading-relaxed flex-1">{item.desc}</p>
               <Link href={item.link} className="mt-5 text-sm font-semibold text-[#2D5A4A] inline-flex items-center">
-                {item.linkText} <i className="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                {item.linkText} <ArrowRight className="h-3 w-3 ml-2" />
               </Link>
             </motion.div>
           ))}
@@ -543,7 +523,7 @@ export default function Home() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="px-10 py-4 bg-[#2D5A4A] hover:bg-[#1F2E2A] transition text-white font-semibold rounded-3xl text-lg inline-flex items-center justify-center gap-x-2">
-              Request a Program <i className="fa-solid fa-envelope"></i>
+              Request a Program <Mail className="h-4 w-4" />
             </Link>
             <Link href="/programs" className="px-10 py-4 border border-[#2D5A4A] text-[#2D5A4A] hover:bg-white font-semibold rounded-3xl text-lg inline-flex items-center justify-center gap-x-2">
               View All Programs

@@ -1,10 +1,12 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
+import { GraduationCap } from 'lucide-react';
 
 // ─── METADATA ────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'About Taran Kaur | Earth & OM Kids',
-  description: 'Meet Taran Kaur, Early Childhood Educator and founder of Earth & OM Kids. Nearly 10 years experience bringing calm, playful yoga and mindfulness to children in Toronto schools and families.',
+  title: 'About Taran Kaur',
+  description: 'Meet Taran Kaur, Early Childhood Educator and founder of Earth & OM Kids, bringing calm, playful yoga and mindfulness to Toronto schools and families.',
   alternates: {
     canonical: '/about',
   },
@@ -87,10 +89,13 @@ export default function About() {
           <div className="md:col-span-5">
             <div className="sticky top-24">
               <div className="aspect-[4/3] bg-[#E8D5B7] rounded-3xl overflow-hidden shadow-xl mb-6 relative">
-                <img
+                <Image
                   src="/taran-photo.jpg"
                   alt="Taran Kaur, Early Childhood Educator (ECE) and founder of Earth & OM Kids, leading a children's yoga session in Toronto"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(min-width: 768px) 40vw, 100vw"
+                  className="object-cover"
+                  priority
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
                   <div className="text-white text-sm">Toronto, Ontario</div>
@@ -100,7 +105,7 @@ export default function About() {
               <div className="bg-white rounded-3xl p-6 border border-[#E8D5B7]">
                 <div className="flex items-center gap-x-3 mb-4">
                   <div className="text-[#2D5A4A]">
-                    <i className="fa-solid fa-graduation-cap text-2xl"></i>
+                    <GraduationCap className="h-6 w-6" />
                   </div>
                   <div>
                     <div className="font-semibold">Credentials</div>

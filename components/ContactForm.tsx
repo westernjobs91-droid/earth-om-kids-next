@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Loader2 } from 'lucide-react';
+import { Loader2, CircleCheck, ArrowRight, CircleAlert, Send } from 'lucide-react';
 import { sendContactForm } from '@/app/actions';
 
 interface FormData {
@@ -111,7 +111,7 @@ export default function ContactForm() {
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", stiffness: 200, damping: 15, delay: 0.2 }}
               >
-                <i className="fa-solid fa-check-circle text-6xl text-[#2D5A4A]"></i>
+                <CircleCheck className="h-16 w-16 text-[#2D5A4A]" strokeWidth={1.5} />
               </motion.div>
             </div>
             <h1 className="text-4xl md:text-5xl font-semibold heading-serif tracking-tight mb-4">Thank you!</h1>
@@ -123,7 +123,7 @@ export default function ContactForm() {
               className="group inline-flex items-center gap-x-3 px-8 py-4 bg-[#2D5A4A] hover:bg-[#1F2E2A] active:bg-[#16221F] transition-all text-white font-semibold rounded-2xl text-lg"
             >
               Send another message
-              <i className="fa-solid fa-arrow-right group-hover:translate-x-0.5 transition"></i>
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition" />
             </button>
             
             <p className="mt-8 text-xs text-[#2D5A4A]/50">We’re excited to connect with you.</p>
@@ -155,7 +155,7 @@ export default function ContactForm() {
 
               {submitError && (
                 <div className="p-4 bg-red-50 border border-red-200 rounded-2xl text-red-700 text-sm flex items-start gap-x-3">
-                  <i className="fa-solid fa-exclamation-circle mt-0.5"></i>
+                  <CircleAlert className="h-4 w-4 mt-0.5 flex-shrink-0" />
                   <span>{submitError}</span>
                 </div>
               )}
@@ -261,7 +261,7 @@ export default function ContactForm() {
                     </>
                   ) : (
                     <>
-                      Send Message <i className="fa-solid fa-paper-plane"></i>
+                      Send Message <Send className="h-4 w-4" />
                     </>
                   )}
                 </button>

@@ -1,12 +1,12 @@
 import ToddlerYogaContent from './ToddlerYogaContent';
 
 export const metadata = {
-  title: 'Toddler Yoga Toronto | Classes for Ages 18 Months to 3 Years | Earth & OM Kids',
-  description: 'Toddler yoga classes in Toronto for children from 18 months to 3 years old. Playful, song-based sessions that build confidence, calm, and body awareness. Serving Toronto and the GTA.',
+  title: 'Toddler Yoga Toronto | Classes for Ages 18 Months to 3 Years',
+  description: 'Toddler yoga classes in Toronto for children 18 months to 3 years. Playful, song-based sessions that build confidence, calm, and body awareness.',
   alternates: { canonical: '/toddler-yoga-toronto' },
   openGraph: {
     title: 'Toddler Yoga Toronto | Ages 18 Months to 3 Years | Earth & OM Kids',
-    description: 'Playful toddler yoga classes in Toronto for children from 18 months. Fun, song-based sessions led by a trained Early Childhood Educator. Serving Toronto and the GTA.',
+    description: 'Playful toddler yoga classes in Toronto for children from 18 months, led by a trained Early Childhood Educator.',
     url: 'https://kids.earthandom.ca/toddler-yoga-toronto',
   },
 };

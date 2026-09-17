@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { Sparkles, Wind, Star, Feather, MapPin, SlidersHorizontal } from 'lucide-react';
 
 export default function BirthdayPartyContent() {
   return (
@@ -69,32 +70,32 @@ export default function BirthdayPartyContent() {
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
-              icon: "fa-wand-magic-sparkles",
+              icon: Sparkles,
               title: "Themed Yoga Adventure",
               desc: "A fully custom story-based yoga journey built around your child's favourite theme. Animals, nature, space, ocean, superheroes we make it magical."
             },
             {
-              icon: "fa-wind",
+              icon: Wind,
               title: "Breathing and Mindfulness Games",
               desc: "Fun and interactive breathing games that children love. These give kids tools they can use long after the party is over."
             },
             {
-              icon: "fa-star",
+              icon: Star,
               title: "Birthday Child Spotlight",
               desc: "A special moment just for the birthday child. They get to lead a pose, make a wish, and feel truly celebrated in front of their friends."
             },
             {
-              icon: "fa-peace",
+              icon: Feather,
               title: "Group Relaxation Activity",
               desc: "A calming guided relaxation to wind down after the active yoga adventure. Parents love this part too."
             },
             {
-              icon: "fa-location-dot",
+              icon: MapPin,
               title: "We Come to You",
               desc: "We travel to your home, backyard, condo, or party venue anywhere across Toronto and the GTA. No extra travel fees within the city."
             },
             {
-              icon: "fa-sliders",
+              icon: SlidersHorizontal,
               title: "Fully Customizable",
               desc: "Every detail is tailored to your child's age, interests, and group size. Just tell us your vision and we will make it happen."
             }
@@ -105,7 +106,7 @@ export default function BirthdayPartyContent() {
               whileHover={{ y: -8, transition: { type: "spring", stiffness: 300, damping: 20 } }}
             >
               <div className="w-12 h-12 bg-[#F1EDE6] rounded-2xl flex items-center justify-center mb-6">
-                <i className={`fa-solid ${item.icon} text-2xl text-[#2D5A4A]`}></i>
+                <item.icon className="h-6 w-6 text-[#2D5A4A]" />
               </div>
               <h3 className="font-semibold text-xl tracking-tight mb-3">{item.title}</h3>
               <p className="text-[#1F2E2A]/70">{item.desc}</p>

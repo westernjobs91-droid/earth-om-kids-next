@@ -63,13 +63,18 @@ export async function sendContactForm(formData: ContactFormData) {
       };
     }
 
-    // Send auto-reply confirmation to the person who submitted the form
-    await resend.emails.send({
+    // Send auto-reply confirmation to the person who submitted the form.
+    // Not fatal if this fails — the main inquiry above already reached us.
+    const { error: autoReplyError } = await resend.emails.send({
       from: 'Earth & OM Kids <hello@earthandom.ca>',
       to: [formData.email],
       subject: 'We received your message | Earth & OM Kids',
       html: autoReplyHtml,
     });
+
+    if (autoReplyError) {
+      console.error('Resend auto-reply error:', autoReplyError);
+    }
 
     return { success: true };
   } catch (err) {

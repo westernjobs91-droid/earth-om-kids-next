@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { Baby, Brain, House } from 'lucide-react';
 
 export default function FamiliesContent() {
   return (
@@ -38,7 +39,7 @@ export default function FamiliesContent() {
         <div className="grid md:grid-cols-3 gap-6">
           <div className="bg-white p-8 rounded-3xl border border-[#E8D5B7] shadow-sm">
             <div className="w-12 h-12 bg-[#F1EDE6] rounded-2xl flex items-center justify-center mb-6">
-              <i className="fa-solid fa-child text-2xl text-[#2D5A4A]"></i>
+              <Baby className="h-6 w-6 text-[#2D5A4A]" />
             </div>
             <h3 className="font-semibold text-xl tracking-tight mb-3">Playful &amp; Age-Appropriate</h3>
             <p className="text-[#1F2E2A]/70">Classes designed specifically for toddlers, preschoolers, and school-age children using stories, games, and imagination.</p>
@@ -46,7 +47,7 @@ export default function FamiliesContent() {
 
           <div className="bg-white p-8 rounded-3xl border border-[#E8D5B7] shadow-sm">
             <div className="w-12 h-12 bg-[#F1EDE6] rounded-2xl flex items-center justify-center mb-6">
-              <i className="fa-solid fa-brain text-2xl text-[#2D5A4A]"></i>
+              <Brain className="h-6 w-6 text-[#2D5A4A]" />
             </div>
             <h3 className="font-semibold text-xl tracking-tight mb-3">Builds Calm &amp; Confidence</h3>
             <p className="text-[#1F2E2A]/70">Children learn simple tools to manage big feelings, improve focus, and feel more confident in themselves.</p>
@@ -54,7 +55,7 @@ export default function FamiliesContent() {
 
           <div className="bg-white p-8 rounded-3xl border border-[#E8D5B7] shadow-sm">
             <div className="w-12 h-12 bg-[#F1EDE6] rounded-2xl flex items-center justify-center mb-6">
-              <i className="fa-solid fa-home text-2xl text-[#2D5A4A]"></i>
+              <House className="h-6 w-6 text-[#2D5A4A]" />
             </div>
             <h3 className="font-semibold text-xl tracking-tight mb-3">Convenient for Busy Families</h3>
             <p className="text-[#1F2E2A]/70">After-school classes and weekend workshops that fit easily into your family’s schedule.</p>

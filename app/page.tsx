@@ -4,7 +4,7 @@ import HomeContent from './HomeContent';
 // ─── METADATA ────────────────────────────────────────────────────────────────
 export const metadata = {
   title: "Kids Yoga Toronto | School & Family Programs | Earth & OM Kids",
-  description: "Professional kids yoga and mindfulness programs in Toronto & GTA. Trusted by 25+ schools and childcare centres. Calm minds, joyful movement, confident kids. Ages 18 months+.",
+  description: "Professional kids yoga and mindfulness programs in Toronto & GTA. Trusted by 25+ schools and childcare centres. Ages 18 months+.",
   alternates: {
     canonical: '/',
   },
@@ -72,8 +72,8 @@ const faqSchema = {
 };
 
 // ─── SCHEMA: AggregateRating ──────────────────────────────────────────────────
-// Enables gold star ratings to appear in Google search results
-// Update reviewCount as real Google reviews come in
+// Reflects our real Google review(s) only. Add more entries here as new
+// genuine Google reviews come in — never fabricate reviews or ratings.
 const aggregateRatingSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -81,29 +81,15 @@ const aggregateRatingSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
-    "reviewCount": "25",
+    "reviewCount": "1",
     "bestRating": "5",
     "worstRating": "1"
   },
   "review": [
     {
       "@type": "Review",
-      "author": { "@type": "Person", "name": "School Director, Toronto" },
-      "reviewBody": "The children are noticeably calmer and more focused after Taran's sessions. She has a beautiful way of connecting with even our youngest toddlers.",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "itemReviewed": { "@type": "LocalBusiness", "name": "Earth & OM Kids" }
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Parent, North York" },
-      "reviewBody": "Our after-school program has been transformed. The kids love the breathing games and animal poses. Parents constantly comment on how relaxed their children are at pickup.",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "itemReviewed": { "@type": "LocalBusiness", "name": "Earth & OM Kids" }
-    },
-    {
-      "@type": "Review",
-      "author": { "@type": "Person", "name": "Principal, Toronto" },
-      "reviewBody": "Taran brought such warmth and professionalism to our wellness week. The custom program was perfectly tailored to our mixed-age group. Highly recommend for any school community.",
+      "author": { "@type": "Organization", "name": "SLC Daycare" },
+      "reviewBody": "Had the chance to have the yoga program at the daycare this year. My kinders loved it. They loved being challenged and learning at the different poses. Thanks for all the awesome classes!",
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
       "itemReviewed": { "@type": "LocalBusiness", "name": "Earth & OM Kids" }
     }

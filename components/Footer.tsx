@@ -1,5 +1,30 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+
+// Lucide doesn't ship brand/logo icons (trademarked marks are intentionally
+// excluded from generic icon sets), so these follow the same outline style by hand.
+const InstagramIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <rect x="2" y="2" width="20" height="20" rx="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+  </svg>
+);
+
+const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect x="2" y="9" width="4" height="12" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+);
+
+const FacebookIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+);
 
 const Footer: React.FC = () => {
   return (
@@ -12,9 +37,11 @@ const Footer: React.FC = () => {
           <div className="md:col-span-4">
             <div className="flex items-center gap-x-3 mb-5">
               <div className="w-11 h-11 bg-[#2D5A4A] rounded-2xl flex items-center justify-center overflow-hidden">
-                <img
+                <Image
                   src="/yoga-icon.png"
                   alt="Earth & OM Kids — kids yoga and mindfulness programs Toronto"
+                  width={28}
+                  height={28}
                   className="w-7 h-7 object-contain"
                 />
               </div>
@@ -28,7 +55,7 @@ const Footer: React.FC = () => {
             </p>
 
             {/* Social Icons — fixed to actual profiles */}
-            <div className="mt-6 flex gap-x-5 text-xl">
+            <div className="mt-6 flex gap-x-5">
               <a
                 href="https://www.instagram.com/earthandomkids"
                 target="_blank"
@@ -36,7 +63,7 @@ const Footer: React.FC = () => {
                 aria-label="Earth & OM Kids on Instagram"
                 className="hover:text-white transition"
               >
-                <i className="fa-brands fa-instagram"></i>
+                <InstagramIcon className="h-5 w-5" />
               </a>
               <a
                 href="https://www.linkedin.com/in/tarankauryoga"
@@ -45,7 +72,7 @@ const Footer: React.FC = () => {
                 aria-label="Earth & OM Kids on LinkedIn"
                 className="hover:text-white transition"
               >
-                <i className="fa-brands fa-linkedin"></i>
+                <LinkedinIcon className="h-5 w-5" />
               </a>
               <a
                 href="https://www.facebook.com/earthandomkids"
@@ -54,7 +81,7 @@ const Footer: React.FC = () => {
                 aria-label="Earth & OM Kids on Facebook"
                 className="hover:text-white transition"
               >
-                <i className="fa-brands fa-facebook"></i>
+                <FacebookIcon className="h-5 w-5" />
               </a>
             </div>
           </div>

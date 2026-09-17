@@ -122,8 +122,14 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/yoga-icon.png",
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/yoga-icon.png", sizes: "500x500", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
+  manifest: "/site.webmanifest",
 
   openGraph: {
     title: "Kids Yoga Toronto | School & Family Programs | Earth & OM Kids",
@@ -176,10 +182,6 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-[#F8F1E9] text-[#1F2E2A]">
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        />
         <Navbar />
         <main>{children}</main>
         <Footer />

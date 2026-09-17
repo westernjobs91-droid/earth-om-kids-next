@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { Brain, GraduationCap, Heart, ArrowRight } from 'lucide-react';
 
 export default function ToddlerYogaContent() {
   return (
@@ -70,17 +71,17 @@ export default function ToddlerYogaContent() {
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
-              icon: "fa-brain",
+              icon: Brain,
               title: "Brain Development",
               desc: "The first three years of life are the most critical period for brain development. Introducing movement, breathing, and body awareness at this stage builds lasting neural pathways."
             },
             {
-              icon: "fa-graduation-cap",
+              icon: GraduationCap,
               title: "ECE Expertise",
               desc: "As a trained Early Childhood Educator, Taran has the professional knowledge to work safely and effectively with very young children in ways a standard yoga teacher cannot."
             },
             {
-              icon: "fa-heart",
+              icon: Heart,
               title: "Early Emotional Tools",
               desc: "Toddlers who learn simple breathing and body awareness techniques early have a head start on emotional regulation before the big feelings of preschool arrive."
             }
@@ -91,7 +92,7 @@ export default function ToddlerYogaContent() {
               whileHover={{ y: -8, transition: { type: "spring", stiffness: 300, damping: 20 } }}
             >
               <div className="w-12 h-12 bg-[#F1EDE6] rounded-2xl flex items-center justify-center mb-6">
-                <i className={`fa-solid ${item.icon} text-2xl text-[#2D5A4A]`}></i>
+                <item.icon className="h-6 w-6 text-[#2D5A4A]" />
               </div>
               <h3 className="font-semibold text-xl tracking-tight mb-3">{item.title}</h3>
               <p className="text-[#1F2E2A]/70">{item.desc}</p>
@@ -198,7 +199,7 @@ export default function ToddlerYogaContent() {
               <h3 className="font-semibold text-xl mb-3">{item.title}</h3>
               <p className="text-[#1F2E2A]/70 flex-1">{item.desc}</p>
               <Link href={item.link} className="mt-6 text-sm font-semibold text-[#2D5A4A] inline-flex items-center">
-                {item.linkText} <i className="fa-solid fa-arrow-right ml-2"></i>
+                {item.linkText} <ArrowRight className="h-4 w-4 ml-2" />
               </Link>
             </motion.div>
           ))}

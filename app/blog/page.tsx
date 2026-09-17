@@ -1,7 +1,16 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
+
+export const metadata = {
+  title: 'Kids Yoga Blog | Toronto Kids Yoga & Mindfulness Articles',
+  description: "Helpful articles on kids yoga, mindfulness, and supporting children's emotional wellbeing, written for Toronto parents, schools, and childcare centres.",
+  alternates: { canonical: '/blog' },
+  openGraph: {
+    title: 'Kids Yoga Blog | Toronto Kids Yoga & Mindfulness Articles | Earth & OM Kids',
+    description: "Helpful articles on kids yoga, mindfulness, and supporting children's emotional wellbeing across Toronto and the GTA.",
+    url: 'https://kids.earthandom.ca/blog',
+  },
+};
 
 export default function BlogPage() {
   const blogPosts = [

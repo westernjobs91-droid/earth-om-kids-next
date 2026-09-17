@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Privacy Policy | Earth & OM Kids',
+  title: 'Privacy Policy',
   description: 'Privacy policy for Earth & OM Kids — kids yoga and mindfulness programs in Toronto and the GTA.',
   alternates: { canonical: '/privacy-policy' },
 };

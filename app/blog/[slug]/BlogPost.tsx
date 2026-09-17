@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface BlogPost {
   title: string;
@@ -297,6 +298,17 @@ If you are a Montessori school director or parent in Toronto and you are curious
 export default function BlogPost({ params }: { params: { slug: string } }) {
   const post = blogPosts[params.slug];
 
+  // Related posts — 3 other posts, prioritizing same category, so every post
+  // links to and is linked from others (helps Google discover & index all of them).
+  const relatedPosts = Object.entries(blogPosts)
+    .filter(([slug]) => slug !== params.slug)
+    .sort(([, a], [, b]) => {
+      const aMatch = post && a.category === post.category ? -1 : 0;
+      const bMatch = post && b.category === post.category ? -1 : 0;
+      return aMatch - bMatch;
+    })
+    .slice(0, 3);
+
   if (!post) {
     return (
       <div className="max-w-3xl mx-auto px-6 py-20 text-center">
@@ -330,9 +342,11 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       {/* Author Bio */}
       <div className="mt-16 pt-8 border-t border-[#E8D5B7]">
         <div className="flex items-start gap-x-5">
-          <img
+          <Image
             src="/taran-photo.jpg"
             alt="Taran Kaur, trained Early Childhood Educator and founder of Earth and OM Kids"
+            width={56}
+            height={56}
             className="w-14 h-14 rounded-2xl object-cover flex-shrink-0"
           />
           <div>
@@ -344,6 +358,25 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           </div>
         </div>
       </div>
+
+      {/* Related Posts */}
+      {relatedPosts.length > 0 && (
+        <div className="mt-16 pt-8 border-t border-[#E8D5B7]">
+          <h3 className="text-sm font-semibold tracking-[1.5px] text-[#2D5A4A] mb-5">MORE FROM THE BLOG</h3>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {relatedPosts.map(([slug, relatedPost]) => (
+              <Link
+                key={slug}
+                href={`/blog/${slug}`}
+                className="block bg-[#F8F1E9] rounded-2xl p-5 hover:bg-[#E8D5B7]/50 transition-colors"
+              >
+                <span className="text-xs text-[#2D5A4A]/70">{relatedPost.category}</span>
+                <div className="mt-1 font-semibold text-sm text-[#1F2E2A] leading-snug">{relatedPost.title}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* CTA */}
       <div className="mt-10 bg-[#F8F1E9] rounded-3xl p-8 text-center">
