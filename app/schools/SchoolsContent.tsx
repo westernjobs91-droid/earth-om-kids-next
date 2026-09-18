@@ -35,7 +35,7 @@ export default function SchoolsContent() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            { icon: GraduationCap, title: "Led by a Registered ECE", desc: "Deep understanding of child development, classroom dynamics, and how to support diverse learners." },
+            { icon: GraduationCap, title: "Led by a Trained ECE", desc: "Deep understanding of child development, classroom dynamics, and how to support diverse learners." },
             { icon: Clock, title: "Classroom-Ready Sessions", desc: "30–45 minute sessions that fit seamlessly into your daily schedule with minimal disruption." },
             { icon: TrendingUp, title: "Measurable Classroom Impact", desc: "Improved focus, emotional regulation, fewer disruptions, and calmer transitions reported by teachers." },
             { icon: SlidersHorizontal, title: "Fully Customizable", desc: "We tailor every program to your school’s goals, age groups, space, and schedule." },
