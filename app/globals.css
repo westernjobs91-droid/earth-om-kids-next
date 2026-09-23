@@ -65,6 +65,17 @@ body {
     linear-gradient(160deg, #1F2E2A 0%, #2D5A4A 55%, #3D7A62 100%);
   background-size: cover;
   background-position: center;
+  position: relative;
+  isolation: isolate;
+}
+
+.nature-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url('/hero-yoga-sunrise.jpg') center 20% / cover no-repeat;
+  opacity: 0.3;
 }
 
 .soft-shadow {
