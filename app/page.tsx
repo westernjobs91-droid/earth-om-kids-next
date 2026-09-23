@@ -1,5 +1,6 @@
 import React from 'react';
 import HomeContent from './HomeContent';
+import { reviews } from '@/lib/reviews';
 
 // ─── METADATA ────────────────────────────────────────────────────────────────
 export const metadata = {
@@ -72,8 +73,7 @@ const faqSchema = {
 };
 
 // ─── SCHEMA: AggregateRating ──────────────────────────────────────────────────
-// Reflects our real Google review(s) only. Add more entries here as new
-// genuine Google reviews come in — never fabricate reviews or ratings.
+// Driven by lib/reviews.ts — real Google reviews only, never fabricated.
 const aggregateRatingSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -81,19 +81,17 @@ const aggregateRatingSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
-    "reviewCount": "1",
+    "reviewCount": String(reviews.length),
     "bestRating": "5",
     "worstRating": "1"
   },
-  "review": [
-    {
-      "@type": "Review",
-      "author": { "@type": "Organization", "name": "SLC Daycare" },
-      "reviewBody": "Had the chance to have the yoga program at the daycare this year. My kinders loved it. They loved being challenged and learning at the different poses. Thanks for all the awesome classes!",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-      "itemReviewed": { "@type": "LocalBusiness", "name": "Earth & OM Kids" }
-    }
-  ]
+  "review": reviews.map((r) => ({
+    "@type": "Review",
+    "author": { "@type": r.type, "name": r.name },
+    "reviewBody": r.body,
+    "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+    "itemReviewed": { "@type": "LocalBusiness", "name": "Earth & OM Kids" }
+  }))
 };
 
 // ─── PAGE ─────────────────────────────────────────────────────────────────────

@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { reviews } from '@/lib/reviews';
 import {
   School, House, ChevronDown, GraduationCap, SlidersHorizontal, Baby,
   MapPin, Handshake, ArrowRight, ChevronRight, CircleCheck, Star,
@@ -369,17 +370,19 @@ export default function Home() {
           <h2 className="text-4xl tracking-tighter font-semibold heading-serif">What educators &amp; parents are saying</h2>
         </div>
 
-        <div className="max-w-xl mx-auto">
-          <motion.div className="bg-white p-8 rounded-3xl border border-[#E8D5B7] cursor-pointer" whileHover={{ y: -8, scale: 1.01, transition: { type: "spring", stiffness: 350, damping: 22 } }}>
-            <div className="flex gap-1 text-[#E07A5F] mb-4">
-              {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4" fill="currentColor" strokeWidth={0} />)}
-            </div>
-            <p className="italic text-[#1F2E2A]/80">"Had the chance to have the yoga program at the daycare this year. My kinders loved it. They loved being challenged and learning at the different poses. Thanks for all the awesome classes!"</p>
-            <div className="mt-6 text-sm">
-              <div className="font-semibold">SLC Daycare</div>
-              <div className="text-[#2D5A4A]/60">Google Review</div>
-            </div>
-          </motion.div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+          {reviews.map((review) => (
+            <motion.div key={review.name} className="bg-white p-8 rounded-3xl border border-[#E8D5B7]" whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}>
+              <div className="flex gap-1 text-[#E07A5F] mb-4">
+                {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4" fill="currentColor" strokeWidth={0} />)}
+              </div>
+              <p className="italic text-[#1F2E2A]/80 leading-relaxed">&ldquo;{review.body}&rdquo;</p>
+              <div className="mt-6 text-sm">
+                <div className="font-semibold">{review.name}</div>
+                <div className="text-[#2D5A4A]/60">Google Review</div>
+              </div>
+            </motion.div>
+          ))}
         </div>
 
         <div className="text-center mt-8">
