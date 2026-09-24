@@ -75,6 +75,15 @@ const Navbar: React.FC = () => {
                       <Link href="/programs#school-programs" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
                         In-School Yoga
                       </Link>
+                      <Link href="/after-school-yoga-toronto" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
+                        After-School Yoga
+                      </Link>
+                      <Link href="/march-break-summer-camp-yoga-toronto" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
+                        March Break &amp; Summer Camps
+                      </Link>
+                      <Link href="/mindfulness-workshops-for-kids-toronto" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
+                        Mindfulness Workshops
+                      </Link>
                       <Link href="/programs#workshops-events" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
                         Workshops &amp; Events
                       </Link>
@@ -162,6 +171,15 @@ const Navbar: React.FC = () => {
                 </Link>
                 <Link href="/mindfulness-for-kids-toronto" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-[#1F2E2A]">
                   Mindfulness for Kids
+                </Link>
+                <Link href="/after-school-yoga-toronto" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-[#1F2E2A]">
+                  After-School Yoga
+                </Link>
+                <Link href="/march-break-summer-camp-yoga-toronto" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-[#1F2E2A]">
+                  March Break &amp; Summer Camps
+                </Link>
+                <Link href="/mindfulness-workshops-for-kids-toronto" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-[#1F2E2A]">
+                  Mindfulness Workshops
                 </Link>
                 <Link href="/yoga-birthday-party-toronto" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-[#1F2E2A]">
                   Birthday Parties

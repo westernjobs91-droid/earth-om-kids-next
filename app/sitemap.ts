@@ -15,6 +15,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/yoga-birthday-party-toronto`, lastModified: today, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/toddler-yoga-toronto`, lastModified: today, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/mindfulness-for-kids-toronto`, lastModified: today, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/after-school-yoga-toronto`, lastModified: today, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/march-break-summer-camp-yoga-toronto`, lastModified: today, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/mindfulness-workshops-for-kids-toronto`, lastModified: today, changeFrequency: 'monthly', priority: 0.9 },
 
     // ─── Legal pages ──────────────────────────────────────────────────────────────
 { url: `${baseUrl}/privacy-policy`, lastModified: today, changeFrequency: 'yearly', priority: 0.3 },

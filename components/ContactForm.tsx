@@ -215,7 +215,7 @@ export default function ContactForm() {
               <div>
                 <label className="block text-sm font-semibold mb-3">I&apos;m interested in... <span className="text-[#1F2E2A]/50 font-normal">(select all that apply)</span></label>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                  {['School Program', 'After-School', 'Workshop', 'Family Session', 'Birthday Party'].map((item) => {
+                  {['School Program', 'After-School', 'Workshop', 'Camp', 'Family Session', 'Birthday Party'].map((item) => {
                     const isChecked = formData.interests.includes(item);
                     return (
                       <label 

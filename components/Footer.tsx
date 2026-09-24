@@ -106,6 +106,9 @@ const Footer: React.FC = () => {
               <Link href="/schools" className="block hover:text-white">For Schools</Link>          
               <Link href="/toddler-yoga-toronto" className="block hover:text-white">Toddler Yoga</Link>
               <Link href="/mindfulness-for-kids-toronto" className="block hover:text-white">Mindfulness</Link>
+              <Link href="/after-school-yoga-toronto" className="block hover:text-white">After-School Yoga</Link>
+              <Link href="/march-break-summer-camp-yoga-toronto" className="block hover:text-white">Summer &amp; March Break Camps</Link>
+              <Link href="/mindfulness-workshops-for-kids-toronto" className="block hover:text-white">Mindfulness Workshops</Link>
               <Link href="/yoga-birthday-party-toronto" className="block hover:text-white">Birthday Parties</Link>
             </div>
           </div>

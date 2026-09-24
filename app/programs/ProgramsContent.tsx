@@ -124,6 +124,7 @@ export default function ProgramsContent() {
               </div>
             </div>
             <p className="text-xs mt-4 text-[#2D5A4A]/70">Currently offered at select locations in Toronto. Inquire for availability or to host a class at your centre.</p>
+            <Link href="/after-school-yoga-toronto" className="inline-block mt-3 text-sm font-semibold text-[#2D5A4A] hover:underline">Learn more about after-school yoga &rarr;</Link>
           </div>
         </motion.div>
       </motion.section>
@@ -174,6 +175,11 @@ export default function ProgramsContent() {
                 <div className="bg-[#F8F1E9] p-6 rounded-2xl">
                   <div className="text-xs uppercase tracking-wider font-semibold text-[#2D5A4A] mb-2">FULLY CUSTOMIZABLE</div>
                   <p className="text-sm">Themes, length (30–90 min), age groups, and focus areas can be tailored to your event. Great for PD days, holiday celebrations, or team-building.</p>
+                  <div className="mt-3 flex flex-col gap-1 text-sm font-semibold text-[#2D5A4A]">
+                    <Link href="/march-break-summer-camp-yoga-toronto" className="hover:underline">March Break &amp; summer camps &rarr;</Link>
+                    <Link href="/mindfulness-workshops-for-kids-toronto" className="hover:underline">Mindfulness workshops &rarr;</Link>
+                    <Link href="/yoga-birthday-party-toronto" className="hover:underline">Birthday parties &rarr;</Link>
+                  </div>
                 </div>
               </div>
             </div>
