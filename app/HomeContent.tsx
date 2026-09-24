@@ -231,49 +231,31 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* Program Cards - Kept as is */}
-            <div className="group bg-[#F8F1E9] rounded-3xl p-8 flex flex-col h-full border border-[#E8D5B7]/50 hover:border-[#2D5A4A]/30 transition-all">
-              <div className="flex items-center gap-x-4 mb-6">
-                <div className="text-4xl">🏫</div>
-                <div>
-                  <div className="font-semibold text-xl">School Yoga Programs</div>
-                  <div className="text-sm text-[#2D5A4A]/70">In-class • Wellness weeks • Custom packages</div>
-                </div>
-              </div>
-              <p className="text-[#1F2E2A]/75 flex-1">Beautifully guided sessions that support focus, confidence, emotional regulation and joyful movement right in the classroom.</p>
-              <Link href="/schools" className="mt-6 inline-flex items-center text-sm font-semibold text-[#2D5A4A] group-hover:gap-x-2 transition-all">
-                Learn more for schools <ChevronRight className="h-3 w-3 ml-1.5" />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { emoji: "🏫", title: "School Yoga Programs", tag: "In-class • Wellness weeks", desc: "Guided sessions that support focus, confidence, and emotional regulation right in the classroom.", href: "/schools", cta: "For schools" },
+              { emoji: "🌿", title: "After-School Classes", tag: "Weekly • Small groups", desc: "Playful, calming weekly classes where children unwind, move, and build mindfulness.", href: "/after-school-yoga-toronto", cta: "After-school yoga" },
+              { emoji: "🧸", title: "Toddler Yoga", tag: "Ages 18 months to 3", desc: "Short, song-based sessions with animal poses and breathing games made for toddlers.", href: "/toddler-yoga-toronto", cta: "Toddler yoga" },
+              { emoji: "☀️", title: "March Break & Summer Camps", tag: "Camp days • Camp weeks", desc: "Active, playful yoga and mindfulness camps, or a yoga day at your existing camp.", href: "/march-break-summer-camp-yoga-toronto", cta: "Camps" },
+              { emoji: "🧘", title: "Mindfulness for Kids", tag: "Schools • Daycares • Families", desc: "Breathing, focus, and emotional regulation tools taught through play.", href: "/mindfulness-for-kids-toronto", cta: "Mindfulness programs" },
+              { emoji: "🌬️", title: "Mindfulness Workshops", tag: "Kids • Educators • Families", desc: "One-time or short-series workshops for classrooms, PD days, and family events.", href: "/mindfulness-workshops-for-kids-toronto", cta: "Workshops" },
+              { emoji: "👨‍👩‍👧", title: "Family Yoga Sessions", tag: "Parents & children together", desc: "Workshops and private sessions where families practice mindful movement together.", href: "/families", cta: "For families" },
+              { emoji: "🎂", title: "Birthday Parties", tag: "Ages 3 to 12 • We come to you", desc: "Themed yoga adventures at your home or venue that kids remember long after the cake.", href: "/yoga-birthday-party-toronto", cta: "Birthday parties" },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="group bg-[#F8F1E9] rounded-3xl p-7 flex flex-col h-full border border-[#E8D5B7]/50 hover:border-[#2D5A4A]/30 hover:-translate-y-1 transition-all"
+              >
+                <div className="text-4xl mb-4">{item.emoji}</div>
+                <div className="font-semibold text-xl leading-tight">{item.title}</div>
+                <div className="text-sm text-[#2D5A4A]/70 mt-1 mb-4">{item.tag}</div>
+                <p className="text-[#1F2E2A]/75 text-[15px] flex-1">{item.desc}</p>
+                <span className="mt-5 inline-flex items-center text-sm font-semibold text-[#2D5A4A] group-hover:gap-x-2 transition-all">
+                  {item.cta} <ChevronRight className="h-3 w-3 ml-1.5" />
+                </span>
               </Link>
-            </div>
-
-            <div className="group bg-[#F8F1E9] rounded-3xl p-8 flex flex-col h-full border border-[#E8D5B7]/50 hover:border-[#2D5A4A]/30 transition-all">
-              <div className="flex items-center gap-x-4 mb-6">
-                <div className="text-4xl">🌿</div>
-                <div>
-                  <div className="font-semibold text-xl">After-School Classes</div>
-                  <div className="text-sm text-[#2D5A4A]/70">Weekly • Small groups • Breathing games</div>
-                </div>
-              </div>
-              <p className="text-[#1F2E2A]/75 flex-1">Playful and calming classes where children unwind, move their bodies, and build mindfulness in a warm, supportive environment.</p>
-              <Link href="/programs" className="mt-6 inline-flex items-center text-sm font-semibold text-[#2D5A4A] group-hover:gap-x-2 transition-all">
-                See after-school options <ChevronRight className="h-3 w-3 ml-1.5" />
-              </Link>
-            </div>
-
-            <div className="group bg-[#F8F1E9] rounded-3xl p-8 flex flex-col h-full border border-[#E8D5B7]/50 hover:border-[#2D5A4A]/30 transition-all">
-              <div className="flex items-center gap-x-4 mb-6">
-                <div className="text-4xl">🎉</div>
-                <div>
-                  <div className="font-semibold text-xl">Workshops &amp; Events</div>
-                  <div className="text-sm text-[#2D5A4A]/70">Camps • Family events • Community celebrations</div>
-                </div>
-              </div>
-              <p className="text-[#1F2E2A]/75 flex-1">Special yoga and mindfulness experiences for camps, daycares, birthday parties, family events, and themed celebrations.</p>
-              <Link href="/programs" className="mt-6 inline-flex items-center text-sm font-semibold text-[#2D5A4A] group-hover:gap-x-2 transition-all">
-                View workshops &amp; events <ChevronRight className="h-3 w-3 ml-1.5" />
-              </Link>
-            </div>
+            ))}
           </div>
         </div>
       </section>
