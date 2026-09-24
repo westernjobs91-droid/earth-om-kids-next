@@ -4,22 +4,12 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { reviews } from '@/lib/reviews';
+import ReviewsCarousel from '@/components/ReviewsCarousel';
 import {
   School, House, ChevronDown, GraduationCap, SlidersHorizontal, Baby,
   MapPin, Handshake, ArrowRight, ChevronRight, CircleCheck, Star,
   Building, Sun, Cake, Heart, Users, Mail,
 } from 'lucide-react';
-
-// Spread reviews over 3 columns by text length so column heights stay balanced.
-const reviewColumns = reviews.reduce<{ items: typeof reviews; size: number }[]>(
-  (cols, review) => {
-    const shortest = cols.reduce((min, c) => (c.size < min.size ? c : min));
-    shortest.items.push(review);
-    shortest.size += review.body.length + 120;
-    return cols;
-  },
-  [0, 1, 2].map(() => ({ items: [], size: 0 })),
-).map((c) => c.items);
 
 export default function Home() {
   return (
@@ -381,24 +371,7 @@ export default function Home() {
           <h2 className="text-4xl tracking-tighter font-semibold heading-serif">What educators &amp; parents are saying</h2>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-6 max-w-2xl lg:max-w-none mx-auto">
-          {reviewColumns.map((column, colIndex) => (
-            <div key={colIndex} className="flex flex-col gap-6 lg:flex-1">
-              {column.map((review) => (
-                <motion.div key={review.name} className="bg-white p-8 rounded-3xl border border-[#E8D5B7]" whileHover={{ y: -6, transition: { type: "spring", stiffness: 300, damping: 20 } }}>
-                  <div className="flex gap-1 text-[#E07A5F] mb-4">
-                    {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4" fill="currentColor" strokeWidth={0} />)}
-                  </div>
-                  <p className="italic text-[#1F2E2A]/80 leading-relaxed">&ldquo;{review.body}&rdquo;</p>
-                  <div className="mt-6 text-sm">
-                    <div className="font-semibold">{review.name}</div>
-                    <div className="text-[#2D5A4A]/60">Google Review</div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          ))}
-        </div>
+        <ReviewsCarousel reviews={reviews} />
 
         <div className="text-center mt-8">
           <Link href="/contact" className="text-sm font-semibold text-[#2D5A4A] inline-flex items-center">Bring this to your school or centre &rarr;</Link>
