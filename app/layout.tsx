@@ -107,6 +107,21 @@ const websiteSchema = {
   "description": "Professional kids yoga and mindfulness programs for Toronto schools and families."
 };
 
+// ─── SCHEMA: Organization (Google's site-name guidance calls this out
+// specifically, in addition to WebSite — see
+// https://developers.google.com/search/docs/appearance/site-names) ──────────
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Earth & OM Kids",
+  "url": "https://kids.earthandom.ca",
+  "logo": "https://kids.earthandom.ca/yoga-icon.png",
+  "sameAs": [
+    "https://www.instagram.com/earthandomkids",
+    "https://www.facebook.com/earthandomkids"
+  ]
+};
+
 // ─── METADATA ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   metadataBase: new URL('https://kids.earthandom.ca'),
@@ -179,6 +194,11 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        {/* Organization schema — additional signal for Google's site name feature */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
       <body className="bg-[#F8F1E9] text-[#1F2E2A]">
