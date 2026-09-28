@@ -183,9 +183,9 @@ export default function NorthYorkPage() {
               {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4" fill="currentColor" strokeWidth={0} />)}
             </div>
             <blockquote className="text-xl md:text-2xl leading-relaxed font-light italic mb-6">
-              "Our after-school program has been transformed. The kids love the breathing games and animal poses. Parents constantly comment on how relaxed their children are at pickup."
+              "I have only been here twice and I can tell you that the atmosphere is cozy, welcoming and the staff there are very professional. I'd highly recommend them for whoever is asking."
             </blockquote>
-            <div className="text-white/70 text-sm">Parent, North York</div>
+            <div className="text-white/70 text-sm">Tioclassic Beauty saloon &middot; Google Review</div>
           </div>
         </div>
       </section>

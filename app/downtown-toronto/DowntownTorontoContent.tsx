@@ -154,8 +154,8 @@ export default function DowntownTorontoPage() {
         <div className="bg-[#2D5A4A] text-white rounded-3xl p-10 md:p-14">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex gap-1 text-[#F4D35E] justify-center mb-6">{[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4" fill="currentColor" strokeWidth={0} />)}</div>
-            <blockquote className="text-xl md:text-2xl leading-relaxed font-light italic mb-6">"Taran brought such warmth and professionalism to our wellness week. The custom program was perfectly tailored to our mixed age group. Highly recommend for any school community."</blockquote>
-            <div className="text-white/70 text-sm">Principal, Downtown Toronto</div>
+            <blockquote className="text-xl md:text-2xl leading-relaxed font-light italic mb-6">"We've been working with Earth & OM Kids for the past two years during our summer camp, and we've had such a great experience! The instructors are amazing with the children, patient, friendly, and always make the sessions fun and engaging."</blockquote>
+            <div className="text-white/70 text-sm">Catherine Maheu &middot; Google Review</div>
           </div>
         </div>
       </section>

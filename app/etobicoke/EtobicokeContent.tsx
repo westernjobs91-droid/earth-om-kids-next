@@ -154,8 +154,8 @@ export default function EtobicokePage() {
         <div className="bg-[#2D5A4A] text-white rounded-3xl p-10 md:p-14">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex gap-1 text-[#F4D35E] justify-center mb-6">{[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4" fill="currentColor" strokeWidth={0} />)}</div>
-            <blockquote className="text-xl md:text-2xl leading-relaxed font-light italic mb-6">"Taran brought such warmth and professionalism to our wellness week. The custom program was perfectly tailored to our mixed age group. Highly recommend for any school community."</blockquote>
-            <div className="text-white/70 text-sm">Principal, Toronto</div>
+            <blockquote className="text-xl md:text-2xl leading-relaxed font-light italic mb-6">"This summer, I joined Taran's Saturday 9 AM yoga class at Humber Bay Shores Park. I loved not only how she instructed the class, but also how much she cared about everyone in the group. It wasn't just a yoga class, but also a great community here in Humber Bay."</blockquote>
+            <div className="text-white/70 text-sm">Saihim Park &middot; Google Review</div>
           </div>
         </div>
       </section>

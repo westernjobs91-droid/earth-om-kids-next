@@ -154,8 +154,8 @@ export default function ScarboroughPage() {
         <div className="bg-[#2D5A4A] text-white rounded-3xl p-10 md:p-14">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex gap-1 text-[#F4D35E] justify-center mb-6">{[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4" fill="currentColor" strokeWidth={0} />)}</div>
-            <blockquote className="text-xl md:text-2xl leading-relaxed font-light italic mb-6">"The children are noticeably calmer and more focused after Taran's sessions. She has a beautiful way of connecting with even our youngest toddlers."</blockquote>
-            <div className="text-white/70 text-sm">Director, Toronto</div>
+            <blockquote className="text-xl md:text-2xl leading-relaxed font-light italic mb-6">"I've been attending the outdoor yoga classes held every Saturday at Humber Bay for about 2 months now. It's been the most relaxing start to my weekend! Taran focuses on breathing, and encourages you to go at your own pace."</blockquote>
+            <div className="text-white/70 text-sm">Sharmeen Rangwala &middot; Google Review</div>
           </div>
         </div>
       </section>

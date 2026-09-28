@@ -144,9 +144,9 @@ export default function BirthdayPartyContent() {
           <div className="max-w-3xl mx-auto text-center">
             <div className="text-4xl mb-6">🎉</div>
             <blockquote className="text-xl md:text-2xl leading-relaxed font-light italic mb-6">
-              "We booked Taran for our daughter's 5th birthday and it was the best decision we made. The kids were completely engaged the whole time. Even the parents were laughing and joining in. Every single child left calm and happy."
+              "Earth & OM Kids is a wonderful place for children. The environment is warm, welcoming, and thoughtfully designed, and the staff are kind, patient, and professional. I highly recommend Earth & OM Kids to families looking for a safe, engaging, and supportive space for their children."
             </blockquote>
-            <div className="text-white/70 text-sm">Parent, North York Toronto</div>
+            <div className="text-white/70 text-sm">Ogede Bashir &middot; Google Review</div>
           </div>
         </div>
       </section>

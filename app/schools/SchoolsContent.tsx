@@ -117,12 +117,14 @@ export default function SchoolsContent() {
 
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-white p-8 rounded-3xl border border-[#E8D5B7]">
-            <p className="italic text-[#1F2E2A]/80">"The children are noticeably calmer and more focused after Taran’s sessions. She has a beautiful way of connecting with even our youngest toddlers."</p>
-            <div className="mt-6 text-sm font-semibold">Director, Toronto</div>
+            <p className="italic text-[#1F2E2A]/80">"Our toddler and preschool children have enjoyed Earth & OM kids yoga program since July 2026. Miss Taran has provided an age appropriate introduction to yoga for young children. The children look forward to participate in the relaxing and mindful practices to enable self regulation and well being."</p>
+            <div className="mt-6 text-sm font-semibold">Sunburst Children's Centre</div>
+            <div className="text-xs text-[#2D5A4A]/60">Google Review</div>
           </div>
           <div className="bg-white p-8 rounded-3xl border border-[#E8D5B7]">
-            <p className="italic text-[#1F2E2A]/80">"Taran brought such warmth and professionalism to our wellness week. The custom program was perfectly tailored to our mixed-age group."</p>
-            <div className="mt-6 text-sm font-semibold">Prinicipal, Toronto</div>
+            <p className="italic text-[#1F2E2A]/80">"Taran comes to lead monthly yoga sessions with the preschoolers in our childcare program. She is great with the children and they are always happy to see her arrive. They love making animal poses with her and have fun with the warm up exercises and breath balls and feathers to focus on breathing."</p>
+            <div className="mt-6 text-sm font-semibold">Lynn Lewis</div>
+            <div className="text-xs text-[#2D5A4A]/60">Google Review</div>
           </div>
         </div>
       </section>

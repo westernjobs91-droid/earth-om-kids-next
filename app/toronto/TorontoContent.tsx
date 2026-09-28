@@ -221,9 +221,9 @@ export default function TorontoContent() {
 
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { quote: "The children are noticeably calmer and more focused after Taran's sessions. She has a beautiful way of connecting with even our youngest toddlers.", name: "Director", location: "Toronto School" },
-            { quote: "Our after-school program has been transformed. The kids love the breathing games and animal poses. Parents constantly comment on how relaxed their children are at pickup.", name: "Parent", location: "North York, Toronto" },
-            { quote: "Taran brought such warmth and professionalism to our wellness week. The custom program was perfectly tailored to our mixed age group. Highly recommend for any school community.", name: "Principal", location: "Downtown Toronto" },
+            { quote: "Earth and OM yoga has a beautiful, welcoming and positive atmosphere. The staff are incredibly friendly, caring and approachable. The way the yoga sessions are taught are wonderful, engaging, gentle and fun, while still helping children develop mindfulness, confidence and relaxation.", name: "Ajwinder Kaur", location: "Google Review" },
+            { quote: "Earth & OM Kids is a wonderful place for children. The environment is warm, welcoming, and thoughtfully designed, and the staff are kind, patient, and professional. I highly recommend Earth & OM Kids to families looking for a safe, engaging, and supportive space for their children.", name: "Ogede Bashir", location: "Google Review" },
+            { quote: "We had a wonderful experience with Earth & Om kids! The sessions were fun, engaging and calming for the children.", name: "Kanwalpreet Kaur", location: "Google Review" },
           ].map((item, index) => (
             <motion.div
               key={index}

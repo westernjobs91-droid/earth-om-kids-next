@@ -157,9 +157,9 @@ export default function ToddlerYogaContent() {
           <div className="max-w-3xl mx-auto text-center">
             <div className="text-4xl mb-6">🌱</div>
             <blockquote className="text-xl md:text-2xl leading-relaxed font-light italic mb-6">
-              "I was not sure if my 20 month old was ready for yoga. She absolutely loved it. She now does her little breathing exercises at home when she gets upset. I cannot believe how quickly she picked it up."
+              "We had a wonderful experience with Earth & Om kids! The sessions were fun, engaging and calming for the children."
             </blockquote>
-            <div className="text-white/70 text-sm">Parent, North York Toronto</div>
+            <div className="text-white/70 text-sm">Kanwalpreet Kaur &middot; Google Review</div>
           </div>
         </div>
       </section>
