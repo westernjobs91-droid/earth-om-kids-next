@@ -68,3 +68,18 @@
   .featured li { transition: none; }
   .featured li:hover { translate: none; }
 }
+
+.reviewCarousel { max-width: 900px; margin-left: auto; margin-right: auto; }
+.reviewLayout { display: grid; grid-template-columns: 44px minmax(0, 1fr) 44px; align-items: center; gap: 16px; }
+.reviewArrow { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #E8D5B7; border-radius: 50%; color: var(--primary-green); background: var(--warm-cream); }
+.reviewArrow:hover { background: var(--primary-green); color: white; }
+.reviewSlide { min-width: 0; margin: 0; }
+.reviewSlide blockquote { font-size: 22px; min-height: 132px; display: flex; align-items: center; justify-content: center; }
+.readReview { min-height: 44px; margin-top: 12px; font-size: 13px; font-weight: 500; color: var(--primary-green); text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 600px) {
+  .reviewLayout { grid-template-columns: 44px minmax(0, 1fr) 44px; gap: 12px; }
+  .reviewSlide { grid-column: 1 / -1; grid-row: 1; }
+  .reviewArrow { grid-row: 2; }
+  .reviewArrow:last-child { grid-column: 3; }
+  .reviewSlide blockquote { font-size: 20px; min-height: 0; }
+}

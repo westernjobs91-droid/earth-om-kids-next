@@ -3,8 +3,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { reviews } from '@/lib/reviews';
-import ReviewsCarousel from '@/components/ReviewsCarousel';
 import SchoolCommunity from '@/components/SchoolCommunity';
 import {
   School, House, ChevronDown, GraduationCap, SlidersHorizontal, Baby,
@@ -331,20 +329,6 @@ export default function Home() {
               <div className="text-sm text-white/80">Develops body awareness, pride &amp; inner strength</div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <div className="text-center mb-10">
-          <div className="text-[#2D5A4A] text-xs tracking-[2px] font-semibold mb-2">FROM GOOGLE REVIEWS</div>
-          <h2 className="text-4xl tracking-tighter font-semibold heading-serif">What educators &amp; parents are saying</h2>
-        </div>
-
-        <ReviewsCarousel reviews={reviews} />
-
-        <div className="text-center mt-8">
-          <Link href="/contact" className="text-sm font-semibold text-[#2D5A4A] inline-flex items-center">Bring this to your school or centre &rarr;</Link>
         </div>
       </section>
 

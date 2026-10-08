@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Pause, Play } from 'lucide-react';
 import styles from './SchoolCommunity.module.css';
+import CommunityReviews from './CommunityReviews';
 
 const featured = [
   'PLASP',
@@ -92,11 +93,7 @@ export default function SchoolCommunity() {
         </div>
       </div>
 
-      <figure className={styles.testimonial}>
-        <div className={styles.quoteLabel}>FROM OUR SCHOOL COMMUNITY</div>
-        <blockquote className="heading-serif">“Miss Taran has provided an age appropriate introduction to yoga for young children.”</blockquote>
-        <figcaption><strong>Sunburst Children’s Centre</strong><span>Excerpt from a Google review</span></figcaption>
-      </figure>
+      <CommunityReviews />
       <div className={styles.invitation}>
         <h3 className="heading-serif">Bring yoga &amp; mindfulness<br />to your school.</h3>
         <p>Let’s create a programme for your children, your space, and your school day.</p>
