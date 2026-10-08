@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { reviews } from '@/lib/reviews';
 import ReviewsCarousel from '@/components/ReviewsCarousel';
+import SchoolCommunity from '@/components/SchoolCommunity';
 import {
   School, House, ChevronDown, GraduationCap, SlidersHorizontal, Baby,
   MapPin, Handshake, ArrowRight, ChevronRight, CircleCheck, Star,
@@ -120,20 +121,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Trust Bar / Partners */}
-      <div className="bg-white py-6 border-b border-[#E8D5B7]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 opacity-75">
-            <div className="text-xs uppercase tracking-[1.5px] font-medium text-[#2D5A4A]/60 mr-3">Featured in</div>
-            <div className="text-sm font-medium">Beach Hill Montessori</div>
-            <div className="text-sm font-medium">Abacus Montessori</div>
-            <div className="text-sm font-medium">Lycée Français Toronto</div>
-            <div className="text-sm font-medium">Kids Connect Daycare</div>
-            <div className="text-sm font-medium">East Toronto Village Children’s Centre</div>
-            <div className="text-xs text-[#2D5A4A]/50">+ 20 more</div>
-          </div>
-        </div>
-      </div>
+      <SchoolCommunity />
 
       {/* Why Us Section - Enhanced */}
       <section id="why-us" className="max-w-7xl mx-auto px-6 pt-20 pb-16">
