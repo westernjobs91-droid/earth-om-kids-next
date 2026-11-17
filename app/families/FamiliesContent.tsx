@@ -1,143 +1,97 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
-import { Baby, Brain, House } from 'lucide-react';
+import { reviews } from '@/lib/reviews';
+import { PageHero, Section, Panel, TickList, Quote, ClosingCTA, display } from '@/components/rd/Kit';
+import RainbowArc from '@/components/RainbowArc';
+
+const ages = [
+  { name: 'Toddlers', ages: '18 months to 3 years', body: 'Short, playful sessions with songs, simple movements, repetition and lots of joy.', tone: 'bg-[#E4EEDF]' },
+  { name: 'Preschool', ages: '3 to 5 years', body: 'Story-based classes with animal poses, breathing games and beginning mindfulness.', tone: 'bg-[#FBEFC2]' },
+  { name: 'School age', ages: '5 to 10 years', body: 'Longer sessions with more poses, emotional awareness and self-regulation tools.', tone: 'bg-[#F6E3D3]' },
+];
+
+const gains = ['Better focus and attention', 'Tools for big feelings', 'More confidence', 'Calmer transitions', 'Stronger body awareness', 'Kindness and cooperation', 'Better sleep habits', 'Ways to handle stress'];
 
 export default function FamiliesContent() {
+  const ajwinder = reviews.find((r) => r.name === 'Ajwinder Kaur')!;
+  const kanwal = reviews.find((r) => r.name === 'Kanwalpreet Kaur')!;
+
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16">
-      
-      {/* Hero */}
-      <div className="text-center mb-16">
-        <div className="inline-block px-4 py-1 bg-[#A7C4A0]/20 text-[#2D5A4A] text-xs font-semibold tracking-[1.5px] rounded-full mb-4">
-          FOR FAMILIES
-        </div>
-        <h1 className="text-5xl md:text-6xl tracking-tighter font-semibold heading-serif mb-4">
-          Kids Yoga &amp; Mindfulness<br />for Toronto Families
-        </h1>
-        <p className="max-w-2xl mx-auto text-xl text-[#1F2E2A]/70">
-          Playful after-school classes, birthday parties, and workshops designed to help children feel calm, confident, and connected.
-        </p>
-        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/contact" className="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-[#2D5A4A] hover:bg-[#1F2E2A] transition text-white font-semibold rounded-3xl text-lg">
-            Book for Your Child
-          </Link>
-          <Link href="/programs" className="inline-flex items-center justify-center gap-x-3 px-10 py-4 border border-[#2D5A4A] text-[#2D5A4A] hover:bg-white font-semibold rounded-3xl text-lg">
-            View All Options
-          </Link>
-        </div>
-      </div>
+    <>
+      <PageHero
+        title={<>Kids yoga and mindfulness for Toronto families</>}
+        lead="Playful after-school classes, birthday parties and workshops that help children feel calm, confident and connected."
+        actions={[
+          { href: '/contact', label: 'Book for your child' },
+          { href: '/programs', label: 'See all programs' },
+        ]}
+        aside={<RainbowArc className="w-64 md:w-80" />}
+      />
 
-      {/* Why Families Love Us */}
-      <section className="mb-20">
-        <div className="text-center mb-12">
-          <div className="text-[#2D5A4A] text-xs tracking-[2px] font-semibold mb-2">WHY FAMILIES CHOOSE US</div>
-          <h2 className="text-4xl tracking-tighter font-semibold heading-serif">A fun and calming experience for kids</h2>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-white p-8 rounded-3xl border border-[#E8D5B7] shadow-sm">
-            <div className="w-12 h-12 bg-[#F1EDE6] rounded-2xl flex items-center justify-center mb-6">
-              <Baby className="h-6 w-6 text-[#2D5A4A]" />
-            </div>
-            <h3 className="font-semibold text-xl tracking-tight mb-3">Playful &amp; Age-Appropriate</h3>
-            <p className="text-[#1F2E2A]/70">Classes designed specifically for toddlers, preschoolers, and school-age children using stories, games, and imagination.</p>
-          </div>
-
-          <div className="bg-white p-8 rounded-3xl border border-[#E8D5B7] shadow-sm">
-            <div className="w-12 h-12 bg-[#F1EDE6] rounded-2xl flex items-center justify-center mb-6">
-              <Brain className="h-6 w-6 text-[#2D5A4A]" />
-            </div>
-            <h3 className="font-semibold text-xl tracking-tight mb-3">Builds Calm &amp; Confidence</h3>
-            <p className="text-[#1F2E2A]/70">Children learn simple tools to manage big feelings, improve focus, and feel more confident in themselves.</p>
-          </div>
-
-          <div className="bg-white p-8 rounded-3xl border border-[#E8D5B7] shadow-sm">
-            <div className="w-12 h-12 bg-[#F1EDE6] rounded-2xl flex items-center justify-center mb-6">
-              <House className="h-6 w-6 text-[#2D5A4A]" />
-            </div>
-            <h3 className="font-semibold text-xl tracking-tight mb-3">Convenient for Busy Families</h3>
-            <p className="text-[#1F2E2A]/70">After-school classes and weekend workshops that fit easily into your family’s schedule.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* After-School Classes */}
-      <section className="mb-20">
-        <div className="text-center mb-10">
-          <div className="text-[#2D5A4A] text-xs tracking-[2px] font-semibold mb-2">WEEKLY CLASSES</div>
-          <h2 className="text-4xl tracking-tighter font-semibold heading-serif">After-School Yoga Classes</h2>
-        </div>
-
-        <div className="bg-white border border-[#E8D5B7] rounded-3xl p-10">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="font-semibold text-xl mb-4">Toddlers (18 months – 3 years)</h3>
-              <p className="text-[#1F2E2A]/70">Short, playful sessions with songs, simple movements, repetition, and lots of joy.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-xl mb-4">Preschool (3 – 5 years)</h3>
-              <p className="text-[#1F2E2A]/70">Story-based classes with animal poses, breathing games, and beginning mindfulness.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-xl mb-4">School Age (5 – 10 years)</h3>
-              <p className="text-[#1F2E2A]/70">Longer sessions with more poses, emotional awareness, and self-regulation tools.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Birthday Parties & Workshops */}
-      <section className="mb-20">
-        <div className="text-center mb-10">
-          <div className="text-[#2D5A4A] text-xs tracking-[2px] font-semibold mb-2">SPECIAL EXPERIENCES</div>
-          <h2 className="text-4xl tracking-tighter font-semibold heading-serif">Birthday Parties &amp; Workshops</h2>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-white p-8 rounded-3xl border border-[#E8D5B7]">
-            <h3 className="font-semibold text-xl mb-4">🎉 Yoga Birthday Parties</h3>
-            <p className="text-[#1F2E2A]/70 mb-4">A fun, active, and mindful birthday experience your child and their friends will remember.</p>
-            <Link href="/contact" className="text-sm font-semibold text-[#2D5A4A]">Book a Birthday Party →</Link>
-          </div>
-
-          <div className="bg-white p-8 rounded-3xl border border-[#E8D5B7]">
-            <h3 className="font-semibold text-xl mb-4">🌿 Family Yoga Workshops</h3>
-            <p className="text-[#1F2E2A]/70 mb-4">Weekend workshops where parents and children practice together. Great for bonding and learning mindfulness as a family.</p>
-            <Link href="/contact" className="text-sm font-semibold text-[#2D5A4A]">Inquire about Workshops →</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* What Kids Learn */}
-      <section className="mb-20">
-        <div className="text-center mb-10">
-          <div className="text-[#2D5A4A] text-xs tracking-[2px] font-semibold mb-2">WHAT YOUR CHILD WILL GAIN</div>
-          <h2 className="text-4xl tracking-tighter font-semibold heading-serif">Skills That Last a Lifetime</h2>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {["Better focus & attention", "Emotional regulation tools", "Improved confidence", "Calmer transitions", "Stronger body awareness", "Kindness & cooperation", "Better sleep habits", "Stress management skills"].map((item, index) => (
-            <div key={index} className="bg-white p-6 rounded-3xl border border-[#E8D5B7] text-center">
-              <p className="font-medium">{item}</p>
+      <Section title="Why families choose us">
+        <div className="grid md:grid-cols-3 gap-x-10 gap-y-8">
+          {[
+            { t: 'Playful and age-appropriate', b: 'Classes for toddlers, preschoolers and school-age children, built on stories, games and imagination.' },
+            { t: 'Builds calm and confidence', b: 'Simple tools to manage big feelings, focus better and feel good in their own bodies.' },
+            { t: 'Easy for busy families', b: 'After-school classes and weekend workshops that fit your week.' },
+          ].map((x) => (
+            <div key={x.t}>
+              <h3 className={`${display} text-xl font-semibold`}>{x.t}</h3>
+              <p className="mt-2 text-[#5b665f] text-lg leading-relaxed">{x.b}</p>
             </div>
           ))}
         </div>
-      </section>
+      </Section>
 
-      {/* Final CTA */}
-      <div className="text-center bg-[#F8F1E9] rounded-3xl p-12">
-        <h2 className="text-3xl tracking-tighter font-semibold heading-serif mb-4">
-          Ready to help your child feel calmer and more confident?
-        </h2>
-        <p className="text-[#1F2E2A]/70 mb-8 max-w-md mx-auto">
-          We’d love to welcome your child into our classes or create a special experience for their birthday.
-        </p>
-        <Link href="/contact" className="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-[#2D5A4A] hover:bg-[#1F2E2A] transition text-white font-semibold rounded-3xl text-lg">
-          Book a Class or Party
+      <Section tone="white" title="Weekly after-school classes" intro="Small groups, grouped by age so every child is at the right level.">
+        <div className="grid md:grid-cols-3 gap-5">
+          {ages.map((a) => (
+            <div key={a.name} className={`rounded-[32px] p-8 ${a.tone}`}>
+              <h3 className={`${display} text-2xl font-semibold`}>{a.name}</h3>
+              <p className="mt-1 font-semibold text-[#2D5A4A]">{a.ages}</p>
+              <p className="mt-4 text-[#3d4f49] leading-relaxed">{a.body}</p>
+            </div>
+          ))}
+        </div>
+        <Link href="/after-school-yoga-toronto" className="mt-9 inline-block font-semibold text-[#2D5A4A] underline decoration-[#F4D35E] decoration-4 underline-offset-8">
+          More about after-school yoga
         </Link>
-      </div>
-    </div>
+      </Section>
+
+      <Section title="Birthday parties and workshops">
+        <div className="grid md:grid-cols-2 gap-6">
+          <Panel tone="sun" className="flex flex-col">
+            <h3 className={`${display} text-3xl font-semibold`}>Yoga birthday parties</h3>
+            <p className="mt-3 text-lg text-[#4a4630]">A fun, active and mindful party your child and their friends will remember. Ages 3 to 12, at your home or venue.</p>
+            <div className="mt-auto pt-8">
+              <Link href="/yoga-birthday-party-toronto" className="inline-flex px-7 py-4 rounded-full bg-[#1F2E2A] text-[#FFFCF5] font-semibold text-lg hover:bg-black transition-colors">Plan a party</Link>
+            </div>
+          </Panel>
+          <Panel tone="sage" className="flex flex-col">
+            <h3 className={`${display} text-3xl font-semibold`}>Family yoga workshops</h3>
+            <p className="mt-3 text-lg text-[#3d4f49]">Weekend workshops where parents and children practise together. Great for bonding and learning mindfulness as a family.</p>
+            <div className="mt-auto pt-8">
+              <Link href="/contact" className="inline-flex px-7 py-4 rounded-full bg-[#2D5A4A] text-[#FFFCF5] font-semibold text-lg hover:bg-[#244a3d] transition-colors">Ask about workshops</Link>
+            </div>
+          </Panel>
+        </div>
+      </Section>
+
+      <Section tone="white" title="What your child will gain">
+        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
+          <TickList items={gains} className="sm:columns-2 sm:block [&>li]:mb-3 [&>li]:break-inside-avoid" />
+          <div className="space-y-7">
+            <Quote body={ajwinder.body} name={ajwinder.name} />
+            <Quote body={kanwal.body} name={kanwal.name} />
+          </div>
+        </div>
+      </Section>
+
+      <ClosingCTA
+        title="Ready to help your child feel calmer and more confident?"
+        body="We would love to welcome your child to a class or plan a special celebration."
+        primary={{ href: '/contact', label: 'Book a class or party' }}
+      />
+    </>
   );
 }

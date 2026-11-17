@@ -2,8 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import RainbowArc from '@/components/RainbowArc';
 import { reviews } from '@/lib/reviews';
-import { figtree } from './fonts';
-import s from './Redesign.module.css';
+import s from '@/components/rd/rd.module.css';
 
 
 // Current partners only (featured + "currently working with" in SchoolCommunity).
@@ -130,7 +129,7 @@ function Tick() {
 
 export default function RedesignHome() {
   return (
-    <main className={`${figtree.variable} ${s.page}`}>
+    <main className={s.page}>
       {/* HERO: the breath ball is the one bold, moving element */}
       <section className={s.hero}>
         <div className="max-w-6xl mx-auto px-6 pt-16 pb-36 md:pt-24 md:pb-44 grid lg:grid-cols-[1.35fr_0.65fr] gap-12 items-center">

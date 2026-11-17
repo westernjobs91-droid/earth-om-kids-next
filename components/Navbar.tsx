@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, ArrowRight, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 
@@ -124,8 +124,7 @@ const Navbar: React.FC = () => {
               href="/contact"
               className="inline-flex items-center px-6 py-3 bg-[#F4D35E] hover:bg-[#E8C84A] text-[#2D5A4A] text-sm font-semibold rounded-full transition-all active:scale-[0.985] shadow-sm hover:shadow"
             >
-              Book a Program
-              <ArrowRight className="ml-2 h-4 w-4" />
+              Request a program
             </Link>
           </div>
 
@@ -188,8 +187,7 @@ const Navbar: React.FC = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="mt-2 inline-flex justify-center items-center px-6 py-3 bg-[#F4D35E] hover:bg-[#E8C84A] text-[#2D5A4A] text-sm font-semibold rounded-full transition-all active:scale-[0.985]"
               >
-                Book a Program
-                <ArrowRight className="ml-2 h-4 w-4" />
+                Request a program
               </Link>
             </div>
           </motion.div>

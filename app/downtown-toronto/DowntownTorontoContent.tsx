@@ -5,17 +5,14 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { School, Calendar, ArrowRight, GraduationCap, Clock, Users, Building, Star, Phone } from 'lucide-react';
 
+import { Hills } from '@/components/rd/Kit';
 export default function DowntownTorontoPage() {
   return (
     <>
       {/* HERO */}
-      <div className="bg-[#2D5A4A] text-white py-20">
+      <div className="relative overflow-hidden bg-[#2D5A4A] text-white pt-20 pb-32 md:pb-40">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <div className="inline-flex items-center gap-x-2 bg-white/15 backdrop-blur px-4 py-1.5 rounded-full mb-6 text-sm font-medium tracking-wider">
-              <div className="w-2 h-2 bg-[#A7C4A0] rounded-full animate-pulse"></div>
-              DOWNTOWN TORONTO • SERVING SINCE 2018
-            </div>
             <h1 className="text-5xl md:text-7xl tracking-tighter font-semibold heading-serif mb-6 leading-tight">
               Kids Yoga in<br />Downtown Toronto
             </h1>
@@ -23,15 +20,16 @@ export default function DowntownTorontoPage() {
               Professional kids yoga and mindfulness for Downtown Toronto schools, childcare centres, daycares, and families. Led by a trained Early Childhood Educator. We come to you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/schools" className="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-white text-[#2D5A4A] font-semibold rounded-3xl text-lg hover:bg-[#F8F1E9] transition">
+              <Link href="/schools" className="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-[#F4D35E] text-[#1F2E2A] font-semibold rounded-full text-lg hover:bg-[#f7dd7f] transition">
                 For Schools and Daycares <School className="h-4 w-4" />
               </Link>
-              <Link href="/contact" className="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold rounded-3xl text-lg transition">
+              <Link href="/contact" className="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold rounded-full text-lg transition">
                 Book a Program <Calendar className="h-4 w-4" />
               </Link>
             </div>
           </motion.div>
         </div>
+        <Hills />
       </div>
 
       {/* TRUST BAR */}
@@ -70,7 +68,6 @@ export default function DowntownTorontoPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="text-[#2D5A4A] text-xs tracking-[2px] font-semibold mb-3">KIDS YOGA AND MINDFULNESS IN DOWNTOWN TORONTO</div>
               <h2 className="text-4xl tracking-tighter font-semibold heading-serif mb-6">Downtown Toronto's kids yoga program built on real child development expertise</h2>
               <div className="space-y-4 text-[#1F2E2A]/75 leading-relaxed">
                 <p>Earth and OM Kids has been delivering professional kids yoga and mindfulness programs to Downtown Toronto schools, childcare centres, and families since 2018. We serve all of the downtown core including The Annex, Kensington Market, Trinity Bellwoods, Little Italy, Harbourfront, Corktown, Leslieville, Riverdale, Rosedale, Midtown, and Forest Hill.</p>
@@ -107,7 +104,6 @@ export default function DowntownTorontoPage() {
       {/* PROGRAMS */}
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="text-center mb-14">
-          <div className="text-[#2D5A4A] text-xs tracking-[2px] font-semibold mb-2">WHAT WE OFFER IN DOWNTOWN TORONTO</div>
           <h2 className="text-5xl tracking-tighter font-semibold heading-serif">Every program. Every age. Across Downtown Toronto.</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
@@ -134,13 +130,11 @@ export default function DowntownTorontoPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-[#2D5A4A] text-white rounded-3xl p-10">
-              <div className="text-[#A7C4A0] text-xs font-semibold tracking-[2px] mb-3">FOR DOWNTOWN TORONTO SCHOOLS AND DAYCARES</div>
               <h3 className="text-3xl font-semibold tracking-tight heading-serif mb-4">Bring professional yoga to your Downtown Toronto school</h3>
               <p className="text-white/75 mb-8 leading-relaxed">We work with public schools, private schools, Montessori programs, French language schools, and childcare centres across Downtown Toronto. Single sessions, wellness weeks, and ongoing programs available.</p>
               <Link href="/schools" className="inline-flex items-center justify-center px-8 py-3 bg-white text-[#2D5A4A] font-semibold rounded-2xl hover:bg-[#F8F1E9] transition text-sm">Learn about school programs</Link>
             </div>
             <div className="bg-white rounded-3xl p-10 border border-[#E8D5B7]">
-              <div className="text-[#2D5A4A] text-xs font-semibold tracking-[2px] mb-3">FOR DOWNTOWN TORONTO FAMILIES</div>
               <h3 className="text-3xl font-semibold tracking-tight heading-serif mb-4">Weekly classes and private sessions for your child</h3>
               <p className="text-[#1F2E2A]/70 mb-8 leading-relaxed">After school weekly classes, condo and home sessions, toddler yoga, birthday parties, and family workshops. Available across all Downtown Toronto neighbourhoods for children from 18 months to 12 years.</p>
               <Link href="/families" className="inline-flex items-center justify-center px-8 py-3 bg-[#2D5A4A] text-white font-semibold rounded-2xl hover:bg-[#1F2E2A] transition text-sm">Explore family programs</Link>
@@ -163,7 +157,6 @@ export default function DowntownTorontoPage() {
       {/* BENEFITS */}
       <section className="max-w-6xl mx-auto px-6 pb-20">
         <div className="text-center mb-12">
-          <div className="text-[#2D5A4A] text-xs tracking-[2px] font-semibold mb-2">WHY KIDS YOGA MATTERS IN DOWNTOWN TORONTO</div>
           <h2 className="text-4xl tracking-tighter font-semibold heading-serif">Benefits Downtown Toronto teachers and parents see every day</h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -186,7 +179,6 @@ export default function DowntownTorontoPage() {
       <section className="bg-white border-y border-[#E8D5B7] py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <div className="text-[#2D5A4A] text-xs tracking-[2px] font-semibold mb-2">WHERE WE WORK IN DOWNTOWN TORONTO</div>
             <h2 className="text-4xl tracking-tighter font-semibold heading-serif">Every corner of the downtown core</h2>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
@@ -200,7 +192,6 @@ export default function DowntownTorontoPage() {
       {/* FAQ */}
       <section className="max-w-4xl mx-auto px-6 py-20">
         <div className="text-center mb-12">
-          <div className="text-[#2D5A4A] text-xs tracking-[2px] font-semibold mb-2">FREQUENTLY ASKED QUESTIONS</div>
           <h2 className="text-4xl tracking-tighter font-semibold heading-serif">Questions from Downtown Toronto schools and families</h2>
         </div>
         <div className="space-y-4">
@@ -221,12 +212,11 @@ export default function DowntownTorontoPage() {
       {/* FINAL CTA */}
       <section className="bg-[#2D5A4A] text-white py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <div className="text-[#A7C4A0] text-xs tracking-[2px] font-semibold mb-4">READY TO GET STARTED</div>
           <h2 className="text-4xl md:text-5xl tracking-tighter font-semibold heading-serif mb-4">Bring kids yoga to your Downtown Toronto school or family today</h2>
           <p className="text-white/75 text-xl mb-10 max-w-2xl mx-auto">We respond within 1 to 2 business days. No obligation. Just a friendly conversation about how we can support the children in your care.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link href="/contact" className="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-white text-[#2D5A4A] font-semibold rounded-3xl text-lg hover:bg-[#F8F1E9] transition">Request a Program</Link>
-            <a href="tel:6478568206" className="inline-flex items-center justify-center gap-x-3 px-10 py-4 border border-white/40 text-white font-semibold rounded-3xl text-lg hover:bg-white/10 transition"><Phone className="h-4 w-4" /> (647) 856-8206</a>
+            <Link href="/contact" className="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-[#F4D35E] text-[#1F2E2A] font-semibold rounded-full text-lg hover:bg-[#f7dd7f] transition">Request a Program</Link>
+            <a href="tel:6478568206" className="inline-flex items-center justify-center gap-x-3 px-10 py-4 border border-white/40 text-white font-semibold rounded-full text-lg hover:bg-white/10 transition"><Phone className="h-4 w-4" /> (647) 856-8206</a>
           </div>
           <p className="text-white/50 text-sm">Serving Downtown Toronto and all of Toronto since 2018</p>
         </div>

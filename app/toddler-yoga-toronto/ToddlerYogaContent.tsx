@@ -5,36 +5,16 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Brain, GraduationCap, Heart, ArrowRight } from 'lucide-react';
 
+import { PageHero } from '@/components/rd/Kit';
 export default function ToddlerYogaContent() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16">
-
-      {/* Hero */}
-      <div className="text-center mb-20">
-        <div className="inline-block px-4 py-1 bg-[#A7C4A0]/20 text-[#2D5A4A] text-xs font-semibold tracking-[1.5px] rounded-full mb-4">
-          TODDLER YOGA TORONTO · AGES 18 MONTHS TO 3 YEARS
-        </div>
-        <h1 className="text-5xl md:text-6xl tracking-tighter font-semibold heading-serif mb-4">
-          Toddler Yoga in Toronto
-        </h1>
-        <p className="max-w-2xl mx-auto text-xl text-[#1F2E2A]/70">
-          Playful, song-based yoga classes for children from 18 months old. Fun movement, animal poses, and breathing games designed for how toddlers actually learn. Serving Toronto and the GTA.
-        </p>
-        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-[#2D5A4A] hover:bg-[#1F2E2A] transition text-white font-semibold rounded-3xl text-lg"
-          >
-            Book a Toddler Yoga Program
-          </Link>
-          <Link
-            href="/programs"
-            className="inline-flex items-center justify-center gap-x-3 px-10 py-4 border border-[#2D5A4A] text-[#2D5A4A] hover:bg-white font-semibold rounded-3xl text-lg"
-          >
-            View All Programs
-          </Link>
-        </div>
-      </div>
+    <>
+      <PageHero
+        title={<>Toddler Yoga in Toronto</>}
+        lead={<>Playful, song-based yoga classes for children from 18 months old. Fun movement, animal poses, and breathing games designed for how toddlers actually learn. Serving Toronto and the GTA.</>}
+        actions={[{ href: '/contact', label: 'Book a Toddler Yoga Program' }, { href: '/programs', label: 'View All Programs' }]}
+      />
+    <div className="max-w-6xl mx-auto px-6 pt-6 pb-16">
 
       {/* SEO Content Block */}
       <section className="mb-20 bg-white rounded-3xl border border-[#E8D5B7] p-10 md:p-14">
@@ -63,7 +43,6 @@ export default function ToddlerYogaContent() {
       {/* Why 18 Months */}
       <section className="mb-20">
         <div className="text-center mb-12">
-          <div className="text-[#2D5A4A] text-xs tracking-[2px] font-semibold mb-2">WHY START AT 18 MONTHS</div>
           <h2 className="text-4xl tracking-tighter font-semibold heading-serif">Why We Welcome Toddlers from 18 Months</h2>
           <p className="mt-3 text-[#1F2E2A]/60 max-w-xl mx-auto">Most programs make you wait until age 3. We know that the earlier children experience mindful movement, the deeper the benefits go.</p>
         </div>
@@ -104,7 +83,6 @@ export default function ToddlerYogaContent() {
       {/* What Happens in a Session */}
       <section className="mb-20 bg-[#F8F1E9] rounded-3xl p-10 md:p-14">
         <div className="text-center mb-12">
-          <div className="text-[#2D5A4A] text-xs tracking-[2px] font-semibold mb-2">WHAT TO EXPECT</div>
           <h2 className="text-4xl tracking-tighter font-semibold heading-serif">What Happens in a Toddler Yoga Session</h2>
         </div>
 
@@ -251,13 +229,13 @@ export default function ToddlerYogaContent() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-white text-[#2D5A4A] font-semibold rounded-3xl text-lg hover:bg-[#F8F1E9] transition"
+            className="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-[#F4D35E] text-[#1F2E2A] font-semibold rounded-full text-lg hover:bg-[#f7dd7f] transition"
           >
             Book a Toddler Yoga Program
           </Link>
           <a
             href="tel:6478568206"
-            className="inline-flex items-center justify-center gap-x-3 px-10 py-4 border border-white text-white font-semibold rounded-3xl text-lg hover:bg-white/10 transition"
+            className="inline-flex items-center justify-center gap-x-3 px-10 py-4 border border-white text-white font-semibold rounded-full text-lg hover:bg-white/10 transition"
           >
             Call (647) 856-8206
           </a>
@@ -265,5 +243,6 @@ export default function ToddlerYogaContent() {
       </div>
 
     </div>
+    </>
   );
 }

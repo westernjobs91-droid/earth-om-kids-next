@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
+import { PageHero } from '@/components/rd/Kit';
 export default function LocationsContent() {
   const locations = [
     {
@@ -40,20 +41,12 @@ export default function LocationsContent() {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16">
-
-      {/* Hero */}
-      <div className="text-center mb-16">
-        <div className="inline-block px-4 py-1 bg-[#A7C4A0]/20 text-[#2D5A4A] text-xs font-semibold tracking-[1.5px] rounded-full mb-4">
-          WHERE WE SERVE
-        </div>
-        <h1 className="text-5xl md:text-6xl tracking-tighter font-semibold heading-serif mb-4">
-          Kids Yoga Across Toronto and the GTA
-        </h1>
-        <p className="max-w-2xl mx-auto text-xl text-[#1F2E2A]/70">
-          We bring professional kids yoga and mindfulness programs to schools, childcare centres, and families across Toronto and the Greater Toronto Area. We come to you.
-        </p>
-      </div>
+    <>
+      <PageHero
+        title={<>Kids Yoga Across Toronto and the GTA</>}
+        lead={<>We bring professional kids yoga and mindfulness programs to schools, childcare centres, and families across Toronto and the Greater Toronto Area. We come to you.</>}
+      />
+    <div className="max-w-6xl mx-auto px-6 pt-6 pb-16">
 
       {/* Toronto featured card — full width */}
       <motion.div
@@ -67,7 +60,6 @@ export default function LocationsContent() {
         >
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div>
-              <div className="text-[#A7C4A0] text-xs font-semibold tracking-[2px] mb-2">PRIMARY SERVICE AREA</div>
               <h2 className="text-4xl font-semibold tracking-tight mb-3">Toronto</h2>
               <p className="text-white/75 max-w-xl">
                 Professional kids yoga and mindfulness programs for schools, childcare centres, daycares, and families across all of Toronto. Trusted by 25+ local schools since 2018.
@@ -107,7 +99,6 @@ export default function LocationsContent() {
       {/* Coming soon GTA areas */}
       <div className="mt-10 bg-[#F8F1E9] rounded-3xl p-8 border border-[#E8D5B7]">
         <div className="text-center mb-6">
-          <div className="text-[#2D5A4A] text-xs font-semibold tracking-[2px] mb-2">ALSO SERVING THE GTA</div>
           <h3 className="text-2xl font-semibold tracking-tight heading-serif">Greater Toronto Area</h3>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -126,11 +117,12 @@ export default function LocationsContent() {
         </p>
         <Link
           href="/contact"
-          className="inline-flex items-center justify-center gap-x-3 px-8 py-4 bg-[#2D5A4A] hover:bg-[#1F2E2A] transition text-white font-semibold rounded-3xl text-lg"
+          className="inline-flex items-center justify-center gap-x-3 px-8 py-4 bg-[#2D5A4A] hover:bg-[#1F2E2A] transition text-white font-semibold rounded-full text-lg"
         >
           Contact Us About Your Area
         </Link>
       </div>
     </div>
+    </>
   );
 }

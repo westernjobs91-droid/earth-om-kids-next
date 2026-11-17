@@ -1,14 +1,15 @@
 import { OG_IMAGE } from '@/lib/seo';
 import type { Metadata } from 'next';
-import { Inter, Fredoka } from 'next/font/google';
+import { Figtree, Fredoka } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
-const inter = Inter({
+// Warm, highly legible body face that pairs with the rounded Fredoka headings.
+const figtree = Figtree({
   subsets: ['latin'],
-  variable: '--font-inter',
-  weight: ['300', '400', '500', '600'],
+  variable: '--font-figtree',
+  weight: ['400', '500', '600'],
   display: 'swap',
 });
 
@@ -178,7 +179,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${fredoka.variable}`}>
+    <html lang="en" className={`${figtree.variable} ${fredoka.variable}`}>
       <head>
         {/* LocalBusiness schema — runs on every page */}
         <script
@@ -196,7 +197,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
-      <body className="bg-[#F8F1E9] text-[#1F2E2A]">
+      <body className="bg-[#FFFCF5] text-[#1F2E2A]">
         <Navbar />
         <main>{children}</main>
         <Footer />

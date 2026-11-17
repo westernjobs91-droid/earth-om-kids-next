@@ -17,7 +17,7 @@ html {
 
 /* Custom styles ported from original site */
 body {
-  font-family: var(--font-inter), system_ui, sans-serif;
+  font-family: var(--font-figtree), system-ui, sans-serif;
 }
 
 /* Headings: rounded Fredoka to match the playful logo. Class name kept for compatibility. */

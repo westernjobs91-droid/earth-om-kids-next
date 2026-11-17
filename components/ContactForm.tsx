@@ -94,7 +94,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto px-6 py-16">
+    <div className="max-w-3xl mx-auto px-6 pt-4 pb-20">
       <AnimatePresence mode="wait">
         {isSubmitted ? (
           <motion.div
@@ -120,7 +120,7 @@ export default function ContactForm() {
             
             <button
               onClick={resetForm}
-              className="group inline-flex items-center gap-x-3 px-8 py-4 bg-[#2D5A4A] hover:bg-[#1F2E2A] active:bg-[#16221F] transition-all text-white font-semibold rounded-2xl text-lg"
+              className="group inline-flex items-center gap-x-3 px-8 py-4 bg-[#2D5A4A] hover:bg-[#1F2E2A] active:bg-[#16221F] transition-all text-white font-semibold rounded-full text-lg"
             >
               Send another message
               <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition" />
@@ -135,13 +135,7 @@ export default function ContactForm() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
           >
-            <div className="text-center mb-10">
-              <div className="inline px-4 py-1 bg-[#A7C4A0]/20 text-[#2D5A4A] text-xs font-semibold tracking-[1.5px] rounded-full mb-3">LET&apos;S CONNECT</div>
-              <h1 className="text-5xl tracking-tighter font-semibold heading-serif">We&apos;d love to hear from you</h1>
-              <p className="mt-4 text-xl text-[#1F2E2A]/70">Whether you&apos;re a school, centre, or family looking to bring calm and joy through yoga we&apos;re here to help.</p>
-            </div>
-
-            <form onSubmit={handleSubmit} className="bg-white rounded-3xl p-10 border border-[#E8D5B7] soft-shadow space-y-6">
+            <form onSubmit={handleSubmit} className="bg-white rounded-[36px] p-8 md:p-10 border-2 border-[#E4EEDF] space-y-6">
               {/* Honeypot field for basic spam protection - hidden from real users, bots often fill it */}
               <input
                 type="text"
@@ -253,7 +247,7 @@ export default function ContactForm() {
                 <button 
                   type="submit" 
                   disabled={isLoading}
-                  className="w-full sm:w-auto px-10 py-4 bg-[#2D5A4A] hover:bg-[#1F2E2A] disabled:bg-[#2D5A4A]/70 disabled:cursor-not-allowed transition-all text-white font-semibold rounded-2xl text-lg flex items-center justify-center gap-x-2 active:scale-[0.985]"
+                  className="w-full sm:w-auto px-10 py-4 bg-[#2D5A4A] hover:bg-[#1F2E2A] disabled:bg-[#2D5A4A]/70 disabled:cursor-not-allowed transition-all text-white font-semibold rounded-full text-lg flex items-center justify-center gap-x-2 active:scale-[0.985]"
                 >
                   {isLoading ? (
                     <>

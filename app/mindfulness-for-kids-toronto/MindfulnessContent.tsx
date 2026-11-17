@@ -5,36 +5,16 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Wind, PersonStanding, Ear, Heart, Cloud, Sun, ArrowRight } from 'lucide-react';
 
+import { PageHero } from '@/components/rd/Kit';
 export default function MindfulnessContent() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16">
-
-      {/* Hero */}
-      <div className="text-center mb-20">
-        <div className="inline-block px-4 py-1 bg-[#A7C4A0]/20 text-[#2D5A4A] text-xs font-semibold tracking-[1.5px] rounded-full mb-4">
-          MINDFULNESS FOR KIDS TORONTO
-        </div>
-        <h1 className="text-5xl md:text-6xl tracking-tighter font-semibold heading-serif mb-4">
-          Mindfulness for Kids in Toronto
-        </h1>
-        <p className="max-w-2xl mx-auto text-xl text-[#1F2E2A]/70">
-          Professional children's mindfulness programs for Toronto schools, daycares, and families. Practical tools that help children manage stress, improve focus, and build lifelong emotional resilience. Ages 18 months to 12 years.
-        </p>
-        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-[#2D5A4A] hover:bg-[#1F2E2A] transition text-white font-semibold rounded-3xl text-lg"
-          >
-            Book a Mindfulness Program
-          </Link>
-          <Link
-            href="/programs"
-            className="inline-flex items-center justify-center gap-x-3 px-10 py-4 border border-[#2D5A4A] text-[#2D5A4A] hover:bg-white font-semibold rounded-3xl text-lg"
-          >
-            View All Programs
-          </Link>
-        </div>
-      </div>
+    <>
+      <PageHero
+        title={<>Mindfulness for Kids in Toronto</>}
+        lead={<>Professional children's mindfulness programs for Toronto schools, daycares, and families. Practical tools that help children manage stress, improve focus, and build lifelong emotional resilience. Ages 18 months to 12 years.</>}
+        actions={[{ href: '/contact', label: 'Book a Mindfulness Program' }, { href: '/programs', label: 'View All Programs' }]}
+      />
+    <div className="max-w-6xl mx-auto px-6 pt-6 pb-16">
 
       {/* SEO Content Block */}
       <section className="mb-20 bg-white rounded-3xl border border-[#E8D5B7] p-10 md:p-14">
@@ -63,7 +43,6 @@ export default function MindfulnessContent() {
       {/* What Mindfulness Looks Like */}
       <section className="mb-20">
         <div className="text-center mb-12">
-          <div className="text-[#2D5A4A] text-xs tracking-[2px] font-semibold mb-2">WHAT WE TEACH</div>
           <h2 className="text-4xl tracking-tighter font-semibold heading-serif">What Children's Mindfulness Actually Looks Like</h2>
           <p className="mt-3 text-[#1F2E2A]/60 max-w-xl mx-auto">Not sitting in silence. Real, playful, and age-appropriate tools children actually use.</p>
         </div>
@@ -247,13 +226,13 @@ export default function MindfulnessContent() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-white text-[#2D5A4A] font-semibold rounded-3xl text-lg hover:bg-[#F8F1E9] transition"
+            className="inline-flex items-center justify-center gap-x-3 px-10 py-4 bg-[#F4D35E] text-[#1F2E2A] font-semibold rounded-full text-lg hover:bg-[#f7dd7f] transition"
           >
             Book a Mindfulness Program
           </Link>
           <a
             href="tel:6478568206"
-            className="inline-flex items-center justify-center gap-x-3 px-10 py-4 border border-white text-white font-semibold rounded-3xl text-lg hover:bg-white/10 transition"
+            className="inline-flex items-center justify-center gap-x-3 px-10 py-4 border border-white text-white font-semibold rounded-full text-lg hover:bg-white/10 transition"
           >
             Call (647) 856-8206
           </a>
@@ -261,5 +240,6 @@ export default function MindfulnessContent() {
       </div>
 
     </div>
+    </>
   );
 }

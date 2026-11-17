@@ -2,6 +2,7 @@ import { sharedOpenGraph } from '@/lib/seo';
 import React from 'react';
 import Link from 'next/link';
 
+import { PageHero } from '@/components/rd/Kit';
 export const metadata = {
   title: 'Kids Yoga Blog | Toronto Kids Yoga & Mindfulness Articles',
   description: "Helpful articles on kids yoga, mindfulness, and supporting children's emotional wellbeing, written for Toronto parents, schools, and childcare centres.",
@@ -75,21 +76,19 @@ export default function BlogPage() {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-16">
-      <div className="text-center mb-12">
-        <div className="text-[#2D5A4A] text-xs tracking-[2px] font-semibold mb-2">RESOURCES AND INSIGHTS</div>
-        <h1 className="text-5xl tracking-tighter font-semibold heading-serif">Kids Yoga Blog</h1>
-        <p className="mt-3 text-xl text-[#1F2E2A]/70 max-w-md mx-auto">
-          Helpful articles on kids yoga, mindfulness, and supporting children's emotional wellbeing across Toronto and the GTA.
-        </p>
-      </div>
+    <>
+    <PageHero
+      title="Kids yoga blog"
+      lead="Helpful articles on kids yoga, mindfulness and supporting children's emotional wellbeing across Toronto and the GTA."
+    />
+    <div className="max-w-5xl mx-auto px-6 pt-6 pb-20">
 
       <div className="grid md:grid-cols-2 gap-8">
         {blogPosts.map((post, index) => (
           <Link
             key={index}
             href={`/blog/${post.slug}`}
-            className="group block bg-white border border-[#E8D5B7] rounded-3xl p-8 hover:border-[#2D5A4A]/40 transition-all"
+            className="group block bg-white border-2 border-[#E4EEDF] rounded-[32px] p-8 hover:border-[#2D5A4A]/40 transition-all"
           >
             <div className="flex items-center gap-x-3 mb-4">
               <span className="text-xs px-3 py-1 bg-[#F8F1E9] rounded-full text-[#2D5A4A]">{post.category}</span>
@@ -108,5 +107,6 @@ export default function BlogPage() {
         ))}
       </div>
     </div>
+    </>
   );
 }
