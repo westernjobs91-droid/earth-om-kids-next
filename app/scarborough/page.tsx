@@ -1,3 +1,4 @@
+import { sharedOpenGraph } from '@/lib/seo';
 import ScarboroughContent from './ScarboroughContent';
 
 export const metadata = {
@@ -5,6 +6,7 @@ export const metadata = {
   description: "Professional kids yoga and mindfulness programs for schools, childcare centres, and families across Scarborough. Trusted by local schools since 2018.",
   alternates: { canonical: '/scarborough' },
   openGraph: {
+    ...sharedOpenGraph,
     title: "Kids Yoga Scarborough | Earth & OM Kids",
     description: "Professional kids yoga and mindfulness programs for Scarborough schools and families.",
   },

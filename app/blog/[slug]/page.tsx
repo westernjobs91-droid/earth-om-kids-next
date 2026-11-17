@@ -1,3 +1,4 @@
+import { sharedOpenGraph } from '@/lib/seo';
 import { Metadata } from 'next';
 import BlogPost from './BlogPost';
 
@@ -56,6 +57,7 @@ export async function generateMetadata(
       canonical: `/blog/${slug}`,
     },
     openGraph: {
+      ...sharedOpenGraph,
       title: `${meta.title} | Earth & OM Kids`,
       description: meta.description,
       url: `https://kids.earthandom.ca/blog/${slug}`,

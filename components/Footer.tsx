@@ -35,21 +35,16 @@ const Footer: React.FC = () => {
 
           {/* Brand + Description */}
           <div className="md:col-span-4">
-            <div className="flex items-center gap-x-3 mb-5">
-              <div className="w-11 h-11 bg-[#2D5A4A] rounded-2xl flex items-center justify-center overflow-hidden">
-                <Image
-                  src="/yoga-icon.png"
-                  alt="Earth & OM Kids — kids yoga and mindfulness programs Toronto"
-                  width={28}
-                  height={28}
-                  className="w-7 h-7 object-contain"
-                />
-              </div>
-              <div>
-                <div className="font-semibold text-2xl tracking-tight text-white">Earth &amp; OM Kids</div>
-                <div className="text-[10px] text-[#A7C4A0] -mt-1 tracking-[2px]">Kids Yoga • Mindfulness • School Programs</div>
-              </div>
-            </div>
+            <Link href="/" className="inline-block mb-6" aria-label="Earth & OM Kids home">
+              <Image
+                src="/logo-sage.svg"
+                alt="Earth & OM Kids, kids yoga and mindfulness programs Toronto"
+                width={121}
+                height={90}
+                unoptimized
+                className="h-[90px] w-auto"
+              />
+            </Link>
             <p className="max-w-sm text-sm leading-relaxed">
               Professional kids yoga and mindfulness programs helping children in Toronto feel calmer, more focused, and confident since 2018.
             </p>

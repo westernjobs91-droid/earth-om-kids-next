@@ -1,3 +1,4 @@
+import { sharedOpenGraph } from '@/lib/seo';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
     canonical: '/about',
   },
   openGraph: {
+    ...sharedOpenGraph,
     title: 'About Taran Kaur | Earth & OM Kids Yoga Toronto',
     description: 'Early Childhood Educator with nearly 10 years experience. Heart-centered, nature-inspired kids yoga and mindfulness in Toronto.',
   },

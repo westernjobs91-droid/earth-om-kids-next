@@ -1,3 +1,4 @@
+import { sharedOpenGraph } from '@/lib/seo';
 import LandingPageContent from '@/components/LandingPageContent';
 import { landingPages, buildServiceSchema, buildFaqSchema } from '@/lib/landingPages';
 
@@ -8,6 +9,7 @@ export const metadata = {
   description: page.metaDescription,
   alternates: { canonical: '/' + page.slug },
   openGraph: {
+    ...sharedOpenGraph,
     title: page.ogTitle,
     description: page.metaDescription,
     url: 'https://kids.earthandom.ca/' + page.slug,

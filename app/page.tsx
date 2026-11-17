@@ -1,3 +1,4 @@
+import { sharedOpenGraph } from '@/lib/seo';
 import React from 'react';
 import HomeContent from './HomeContent';
 import { reviews } from '@/lib/reviews';
@@ -10,6 +11,7 @@ export const metadata = {
     canonical: '/',
   },
   openGraph: {
+    ...sharedOpenGraph,
     title: "Kids Yoga Toronto | School & Family Programs | Earth & OM Kids",
     description: "Professional kids yoga and mindfulness programs in Toronto & GTA. Trusted by 25+ schools and childcare centres.",
   },

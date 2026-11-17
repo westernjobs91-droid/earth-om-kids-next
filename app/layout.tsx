@@ -1,3 +1,4 @@
+import { OG_IMAGE } from '@/lib/seo';
 import type { Metadata } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
@@ -28,8 +29,8 @@ const localBusinessSchema = {
   "telephone": "+16478568206",
   "email": "earthandomkids@gmail.com",
   "foundingDate": "2018",
-  "logo": "https://kids.earthandom.ca/yoga-icon.png",
-  "image": "https://kids.earthandom.ca/og-image.jpg",
+  "logo": "https://kids.earthandom.ca/logo.png",
+  "image": "https://kids.earthandom.ca/og-share.jpg",
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
@@ -115,7 +116,7 @@ const organizationSchema = {
   "@type": "Organization",
   "name": "Earth & OM Kids",
   "url": "https://kids.earthandom.ca",
-  "logo": "https://kids.earthandom.ca/yoga-icon.png",
+  "logo": "https://kids.earthandom.ca/logo.png",
   "sameAs": [
     "https://www.instagram.com/earthandomkids",
     "https://www.facebook.com/earthandomkids"
@@ -153,21 +154,14 @@ export const metadata: Metadata = {
     siteName: "Earth & OM Kids",
     locale: "en_CA",
     type: "website",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Earth & OM Kids — professional kids yoga and mindfulness programs for Toronto schools and families",
-      },
-    ],
+    images: [OG_IMAGE],
   },
 
   twitter: {
     card: "summary_large_image",
     title: "Kids Yoga Toronto | Earth & OM Kids",
     description: "Professional kids yoga and mindfulness programs in Toronto & GTA. Ages 18 months+.",
-    images: ["/og-image.jpg"],
+    images: [OG_IMAGE.url],
   },
 
   other: {

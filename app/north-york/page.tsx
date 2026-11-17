@@ -1,3 +1,4 @@
+import { sharedOpenGraph } from '@/lib/seo';
 // app/north-york/page.tsx
 import NorthYorkContent from './NorthYorkContent';
 
@@ -6,6 +7,7 @@ export const metadata = {
   description: "Professional kids yoga and mindfulness programs for schools, childcare centres, and families across North York. Trusted by local schools since 2018.",
   alternates: { canonical: '/north-york' },
   openGraph: {
+    ...sharedOpenGraph,
     title: "Kids Yoga North York | Earth & OM Kids",
     description: "Professional kids yoga and mindfulness programs for North York schools and families.",
   },

@@ -36,22 +36,19 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-20">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-x-3">
-            <div className="w-11 h-11 bg-[#2D5A4A] rounded-2xl flex items-center justify-center overflow-hidden">
+          <div className="lg:flex-1">
+            <Link href="/" className="inline-flex items-center" aria-label="Earth & OM Kids home">
               <Image
-                src="/yoga-icon.png"
-                alt="Earth & OM Kids — kids yoga and mindfulness programs Toronto"
-                width={28}
-                height={28}
-                className="w-7 h-7 object-contain"
+                src="/logo-wordmark-green.svg"
+                alt="Earth & OM Kids, kids yoga and mindfulness programs Toronto"
+                width={88}
+                height={60}
+                preload
+                unoptimized
+                className="h-[52px] lg:h-[60px] w-auto"
               />
-            </div>
-            <div>
-              <div className="font-semibold text-xl lg:text-2xl tracking-tight text-[#2D5A4A]">Earth &amp; OM Kids</div>
-              {/* Tagline hidden until xl so logo stays compact on lg */}
-              <div className="hidden xl:block text-[10px] text-[#2D5A4A]/70 -mt-1 tracking-[2px]">Kids Yoga • Mindfulness • School Programs</div>
-            </div>
-          </Link>
+            </Link>
+          </div>
 
           {/* Desktop nav — visible from lg (1024px) up */}
           <div className="hidden lg:flex items-center gap-x-4 lg:gap-x-5 xl:gap-x-7 text-sm font-medium">
@@ -122,7 +119,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* CTA Button — visible from lg up */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex lg:flex-1 justify-end">
             <Link
               href="/contact"
               className="inline-flex items-center px-6 py-3 bg-[#F4D35E] hover:bg-[#E8C84A] text-[#2D5A4A] text-sm font-semibold rounded-2xl transition-all active:scale-[0.985] shadow-sm hover:shadow"

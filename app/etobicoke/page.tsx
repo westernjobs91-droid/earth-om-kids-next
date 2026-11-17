@@ -1,3 +1,4 @@
+import { sharedOpenGraph } from '@/lib/seo';
 import EtobicokeContent from './EtobicokeContent';
 
 export const metadata = {
@@ -5,6 +6,7 @@ export const metadata = {
   description: "Professional kids yoga and mindfulness programs for schools, childcare centres, and families across Etobicoke and West Toronto since 2018.",
   alternates: { canonical: '/etobicoke' },
   openGraph: {
+    ...sharedOpenGraph,
     title: "Kids Yoga Etobicoke | Earth & OM Kids",
     description: "Professional kids yoga and mindfulness programs for Etobicoke schools and families.",
   },

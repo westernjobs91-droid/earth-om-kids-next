@@ -1,3 +1,4 @@
+import { sharedOpenGraph } from '@/lib/seo';
 import DowntownTorontoContent from './DowntownTorontoContent';
 
 export const metadata = {
@@ -5,6 +6,7 @@ export const metadata = {
   description: "Professional kids yoga and mindfulness programs for schools, childcare centres, and families across Downtown Toronto. Trusted by local schools since 2018.",
   alternates: { canonical: '/downtown-toronto' },
   openGraph: {
+    ...sharedOpenGraph,
     title: "Kids Yoga Downtown Toronto | Earth & OM Kids",
     description: "Professional kids yoga and mindfulness programs for Downtown Toronto schools and families.",
   },

@@ -1,3 +1,4 @@
+import { sharedOpenGraph } from '@/lib/seo';
 import ToddlerYogaContent from './ToddlerYogaContent';
 
 export const metadata = {
@@ -5,6 +6,7 @@ export const metadata = {
   description: 'Toddler yoga classes in Toronto for children 18 months to 3 years. Playful, song-based sessions that build confidence, calm, and body awareness.',
   alternates: { canonical: '/toddler-yoga-toronto' },
   openGraph: {
+    ...sharedOpenGraph,
     title: 'Toddler Yoga Toronto | Ages 18 Months to 3 Years | Earth & OM Kids',
     description: 'Playful toddler yoga classes in Toronto for children from 18 months, led by a trained Early Childhood Educator.',
     url: 'https://kids.earthandom.ca/toddler-yoga-toronto',

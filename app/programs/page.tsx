@@ -1,3 +1,4 @@
+import { sharedOpenGraph } from '@/lib/seo';
 import React from 'react';
 import ProgramsContent from './ProgramsContent';
 
@@ -9,16 +10,9 @@ export const metadata = {
     canonical: '/programs',
   },
   openGraph: {
+    ...sharedOpenGraph,
     title: "Kids Yoga Programs Toronto | Schools, After-School & Workshops",
     description: "Professional kids yoga and mindfulness programs in Toronto: in-school sessions, after-school classes, birthday parties, and custom workshops.",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Earth & OM Kids — kids yoga programs for Toronto schools, families and after-school programs",
-      },
-    ],
   },
 };
 

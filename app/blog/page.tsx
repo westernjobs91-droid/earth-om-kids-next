@@ -1,3 +1,4 @@
+import { sharedOpenGraph } from '@/lib/seo';
 import React from 'react';
 import Link from 'next/link';
 
@@ -6,6 +7,7 @@ export const metadata = {
   description: "Helpful articles on kids yoga, mindfulness, and supporting children's emotional wellbeing, written for Toronto parents, schools, and childcare centres.",
   alternates: { canonical: '/blog' },
   openGraph: {
+    ...sharedOpenGraph,
     title: 'Kids Yoga Blog | Toronto Kids Yoga & Mindfulness Articles | Earth & OM Kids',
     description: "Helpful articles on kids yoga, mindfulness, and supporting children's emotional wellbeing across Toronto and the GTA.",
     url: 'https://kids.earthandom.ca/blog',
