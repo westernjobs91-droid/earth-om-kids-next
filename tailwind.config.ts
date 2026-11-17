@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['Playfair Display', 'Georgia', 'serif'],
+        display: ['var(--font-fredoka)', 'Arial Rounded MT Bold', 'sans-serif'],
       },
     },
   },

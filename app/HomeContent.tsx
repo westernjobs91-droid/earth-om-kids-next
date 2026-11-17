@@ -4,11 +4,16 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import SchoolCommunity from '@/components/SchoolCommunity';
+import RainbowArc from '@/components/RainbowArc';
 import {
   School, House, ChevronDown, GraduationCap, SlidersHorizontal, Baby,
   MapPin, Handshake, ArrowRight, ChevronRight, CircleCheck, Star,
   Building, Sun, Cake, Heart, Users, Mail,
 } from 'lucide-react';
+
+// Soft brand tints rotate across cards so the grid feels playful but stays calm.
+const CARD_TINTS = ['bg-[#A7C4A0]/25', 'bg-[#F4D35E]/25', 'bg-[#E8D5B7]/45', 'bg-[#E07A5F]/15'];
+const STEP_COLOURS = ['bg-[#2D5A4A] text-white', 'bg-[#A7C4A0] text-[#1F2E2A]', 'bg-[#F4D35E] text-[#1F2E2A]', 'bg-[#E07A5F] text-white'];
 
 export default function Home() {
   return (
@@ -63,7 +68,7 @@ export default function Home() {
             }}
             className="max-w-2xl mx-auto text-xl md:text-2xl text-white/90 mb-10 tracking-tight"
           >
-            Refined kids yoga &amp; mindfulness programs trusted by schools, 
+            Playful kids yoga &amp; mindfulness programs trusted by schools, 
             childcare centres, and families across Toronto.
           </motion.p>
 
@@ -77,14 +82,14 @@ export default function Home() {
           >
             <Link 
               href="/schools" 
-              className="group inline-flex items-center justify-center gap-x-3 px-8 py-4 bg-white text-[#2D5A4A] font-semibold rounded-3xl text-lg hover:bg-[#F8F1E9] transition-all active:scale-[0.985]"
+              className="group inline-flex items-center justify-center gap-x-3 px-8 py-4 bg-white text-[#2D5A4A] font-semibold rounded-full text-lg hover:bg-[#F8F1E9] transition-all active:scale-[0.985]"
             >
               For Schools &amp; Centres
               <School className="h-4 w-4 group-hover:translate-x-0.5 transition" />
             </Link>
             <Link 
               href="/families" 
-              className="group inline-flex items-center justify-center gap-x-3 px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur border border-white/40 text-white font-semibold rounded-3xl text-lg transition-all active:scale-[0.985]"
+              className="group inline-flex items-center justify-center gap-x-3 px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur border border-white/40 text-white font-semibold rounded-full text-lg transition-all active:scale-[0.985]"
             >
               For Families
               <House className="h-4 w-4 group-hover:translate-x-0.5 transition" />
@@ -111,12 +116,22 @@ export default function Home() {
         </motion.div>
         
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block">
+        <div className="absolute bottom-24 left-1/2 -translate-x-1/2 hidden md:block z-10">
           <a href="#why-us" className="flex flex-col items-center text-white/70 hover:text-white text-xs tracking-widest">
             SCROLL TO EXPLORE
             <ChevronDown className="h-4 w-4 mt-1 animate-bounce" />
           </a>
         </div>
+        {/* Soft rolling hills: an organic, playful edge into the cream page */}
+        <svg
+          className="absolute bottom-0 left-0 w-full h-[44px] md:h-[110px] pointer-events-none"
+          viewBox="0 0 1440 110"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path d="M0,70 C220,20 420,20 640,58 C860,96 1080,96 1260,52 C1340,32 1400,30 1440,36 L1440,110 L0,110 Z" fill="#A7C4A0" opacity="0.55" />
+          <path d="M0,88 C240,52 470,56 720,82 C960,106 1200,98 1440,70 L1440,110 L0,110 Z" fill="#F8F1E9" />
+        </svg>
       </header>
 
       <SchoolCommunity />
@@ -227,13 +242,13 @@ export default function Home() {
               { emoji: "🌬️", title: "Mindfulness Workshops", tag: "Kids • Educators • Families", desc: "One-time or short-series workshops for classrooms, PD days, and family events.", href: "/mindfulness-workshops-for-kids-toronto", cta: "Workshops" },
               { emoji: "👨‍👩‍👧", title: "Family Yoga Sessions", tag: "Parents & children together", desc: "Workshops and private sessions where families practice mindful movement together.", href: "/families", cta: "For families" },
               { emoji: "🎂", title: "Birthday Parties", tag: "Ages 3 to 12 • We come to you", desc: "Themed yoga adventures at your home or venue that kids remember long after the cake.", href: "/yoga-birthday-party-toronto", cta: "Birthday parties" },
-            ].map((item) => (
+            ].map((item, i) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="group bg-[#F8F1E9] rounded-3xl p-7 flex flex-col h-full border border-[#E8D5B7]/50 hover:border-[#2D5A4A]/30 hover:-translate-y-1 transition-all"
+                className={`group ${CARD_TINTS[i % CARD_TINTS.length]} rounded-3xl p-7 flex flex-col h-full border border-transparent hover:border-[#2D5A4A]/30 hover:-translate-y-1 transition-all`}
               >
-                <div className="text-4xl mb-4">{item.emoji}</div>
+                <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center text-3xl mb-4 shadow-sm">{item.emoji}</div>
                 <div className="font-semibold text-xl leading-tight">{item.title}</div>
                 <div className="text-sm text-[#2D5A4A]/70 mt-1 mb-4">{item.tag}</div>
                 <p className="text-[#1F2E2A]/75 text-[15px] flex-1">{item.desc}</p>
@@ -348,7 +363,7 @@ export default function Home() {
             { step: "4", title: "Watch the Transformation", desc: "Children experience calmer minds, better focus, and more joyful movement." }
           ].map((item, index) => (
             <div key={index} className="bg-white p-8 rounded-3xl border border-[#E8D5B7]">
-              <div className="w-10 h-10 bg-[#2D5A4A] text-white rounded-2xl flex items-center justify-center font-semibold mb-5">{item.step}</div>
+              <div className={`w-12 h-12 ${STEP_COLOURS[index % STEP_COLOURS.length]} rounded-full flex items-center justify-center text-xl heading-serif font-semibold mb-5`}>{item.step}</div>
               <h3 className="font-semibold text-xl tracking-tight mb-3">{item.title}</h3>
               <p className="text-[#1F2E2A]/70 text-sm leading-relaxed">{item.desc}</p>
             </div>
@@ -455,9 +470,11 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="bg-[#F8F1E9] border-t border-b border-[#E8D5B7] py-16">
+      <section className="relative overflow-hidden bg-[#F8F1E9] border-t border-[#E8D5B7] pt-20 pb-36 md:pb-24">
+        <RainbowArc className="absolute -bottom-1 -left-8 w-44 md:w-72 opacity-90" />
+        <RainbowArc className="absolute -bottom-1 -right-10 w-40 md:w-56 opacity-90 hidden sm:block" />
         <motion.div 
-          className="max-w-4xl mx-auto px-6 text-center"
+          className="relative max-w-4xl mx-auto px-6 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -467,10 +484,10 @@ export default function Home() {
           <p className="text-xl text-[#1F2E2A]/70 mb-8 max-w-md mx-auto">Whether you&apos;re a school, childcare centre, or parent we&apos;d love to partner with you.</p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="px-10 py-4 bg-[#2D5A4A] hover:bg-[#1F2E2A] transition text-white font-semibold rounded-3xl text-lg inline-flex items-center justify-center gap-x-2">
+            <Link href="/contact" className="px-10 py-4 bg-[#2D5A4A] hover:bg-[#1F2E2A] transition text-white font-semibold rounded-full text-lg inline-flex items-center justify-center gap-x-2">
               Request a Program <Mail className="h-4 w-4" />
             </Link>
-            <Link href="/programs" className="px-10 py-4 border border-[#2D5A4A] text-[#2D5A4A] hover:bg-white font-semibold rounded-3xl text-lg inline-flex items-center justify-center gap-x-2">
+            <Link href="/programs" className="px-10 py-4 border border-[#2D5A4A] text-[#2D5A4A] hover:bg-white font-semibold rounded-full text-lg inline-flex items-center justify-center gap-x-2">
               View All Programs
             </Link>
           </div>

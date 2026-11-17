@@ -122,7 +122,7 @@ const Navbar: React.FC = () => {
           <div className="hidden lg:flex lg:flex-1 justify-end">
             <Link
               href="/contact"
-              className="inline-flex items-center px-6 py-3 bg-[#F4D35E] hover:bg-[#E8C84A] text-[#2D5A4A] text-sm font-semibold rounded-2xl transition-all active:scale-[0.985] shadow-sm hover:shadow"
+              className="inline-flex items-center px-6 py-3 bg-[#F4D35E] hover:bg-[#E8C84A] text-[#2D5A4A] text-sm font-semibold rounded-full transition-all active:scale-[0.985] shadow-sm hover:shadow"
             >
               Book a Program
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -186,7 +186,7 @@ const Navbar: React.FC = () => {
               <Link
                 href="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="mt-2 inline-flex justify-center items-center px-6 py-3 bg-[#F4D35E] hover:bg-[#E8C84A] text-[#2D5A4A] text-sm font-semibold rounded-2xl transition-all active:scale-[0.985]"
+                className="mt-2 inline-flex justify-center items-center px-6 py-3 bg-[#F4D35E] hover:bg-[#E8C84A] text-[#2D5A4A] text-sm font-semibold rounded-full transition-all active:scale-[0.985]"
               >
                 Book a Program
                 <ArrowRight className="ml-2 h-4 w-4" />

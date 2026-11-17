@@ -63,9 +63,7 @@ export default function SchoolCommunity() {
           {featured.map((school) => <li key={school}>{school}</li>)}
         </ul>
         <div className={styles.centre}>
-          <Image src="/yoga-icon.png" alt="Earth & OM Kids yoga logo" width={55} height={55} />
-          <strong className="heading-serif">Earth &amp; OM</strong>
-          <span>KIDS</span>
+          <Image src="/logo.png" alt="Earth & OM Kids yoga logo" width={104} height={77} />
         </div>
       </div>
 

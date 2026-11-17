@@ -2,7 +2,8 @@
   "name": "Earth & OM Kids",
   "short_name": "Earth & OM Kids",
   "icons": [
-    { "src": "/yoga-icon.png", "sizes": "500x500", "type": "image/png" }
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
   ],
   "theme_color": "#2D5A4A",
   "background_color": "#F8F1E9",

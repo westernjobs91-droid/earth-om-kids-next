@@ -20,8 +20,10 @@ body {
   font-family: var(--font-inter), system_ui, sans-serif;
 }
 
+/* Headings: rounded Fredoka to match the playful logo. Class name kept for compatibility. */
 .heading-serif {
-  font-family: var(--font-playfair), Georgia, serif;
+  font-family: var(--font-fredoka), 'Arial Rounded MT Bold', system-ui, sans-serif;
+  letter-spacing: -0.01em;
 }
 
 .nav-link {

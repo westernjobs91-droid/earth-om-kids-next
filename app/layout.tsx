@@ -1,6 +1,6 @@
 import { OG_IMAGE } from '@/lib/seo';
 import type { Metadata } from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Inter, Fredoka } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -12,10 +12,11 @@ const inter = Inter({
   display: 'swap',
 });
 
-const playfair = Playfair_Display({
+// Rounded display face for headings, chosen to match the bubbly Earth & OM logo.
+const fredoka = Fredoka({
   subsets: ['latin'],
-  variable: '--font-playfair',
-  weight: ['700'],
+  variable: '--font-fredoka',
+  weight: ['500', '600'],
   display: 'swap',
 });
 
@@ -141,7 +142,7 @@ export const metadata: Metadata = {
     icon: [
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/yoga-icon.png", sizes: "500x500", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
     ],
     apple: "/apple-touch-icon.png",
   },
@@ -177,7 +178,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${inter.variable} ${fredoka.variable}`}>
       <head>
         {/* LocalBusiness schema — runs on every page */}
         <script

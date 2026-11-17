@@ -1,0 +1,128 @@
+/* Earth & OM Kids redesign. Tokens:
+   forest #2D5A4A · ink #1F2E2A · paper #FFFCF5 · sage #A7C4A0 · sage-tint #E4EEDF
+   sun #F4D35E · sun-tint #FBEFC2 · coral #E07A5F (small accents only) */
+
+.page {
+  font-family: var(--font-figtree), system-ui, sans-serif;
+  background: #fffcf5;
+  color: #1f2e2a;
+}
+
+.display {
+  font-family: var(--font-fredoka), 'Arial Rounded MT Bold', system-ui, sans-serif;
+  letter-spacing: -0.015em;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  background: #2d5a4a;
+  color: #fffcf5;
+  overflow: hidden;
+}
+
+.heroTitle {
+  font-size: clamp(2.9rem, 5.4vw, 5rem);
+  line-height: 0.98;
+  font-weight: 600;
+}
+
+/* Breath ball: the one moving element on the page. 4s in, 4s out. */
+.ballStage {
+  position: relative;
+  width: min(380px, 68vw);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+}
+
+.ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  border: 2px solid rgba(167, 196, 160, 0.35);
+}
+.ring:nth-child(2) { inset: 9%; border-color: rgba(167, 196, 160, 0.25); }
+.ring:nth-child(3) { inset: 18%; border-color: rgba(167, 196, 160, 0.18); }
+
+.ball {
+  width: 64%;
+  aspect-ratio: 1;
+  animation: breathe 8s ease-in-out infinite;
+  filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.18));
+}
+
+.cue {
+  position: relative;
+  height: 2.2rem;
+}
+.cue span {
+  position: absolute;
+  inset: 0;
+  text-align: center;
+  font-size: 1.6rem;
+}
+.cueIn { animation: cueIn 8s ease-in-out infinite; }
+.cueOut { animation: cueOut 8s ease-in-out infinite; }
+
+@keyframes breathe {
+  0%, 100% { transform: scale(0.72); }
+  50% { transform: scale(1); }
+}
+/* Words swap without overlapping: one fades out fully before the other fades in. */
+@keyframes cueIn {
+  0%, 46% { opacity: 1; }
+  48%, 98% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes cueOut {
+  0%, 48% { opacity: 0; }
+  50%, 96% { opacity: 1; }
+  98%, 100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ball { animation: none; transform: scale(0.9); }
+  .cueIn, .cueOut { animation: none; }
+  .cueIn { opacity: 1; }
+  .cueOut { opacity: 0; }
+}
+
+/* ---------- Arches: the repeating shape, borrowed from the rainbow ---------- */
+.arch {
+  border-radius: 999px 999px 28px 28px;
+  overflow: hidden;
+}
+
+/* ---------- Partner wall ---------- */
+.partner {
+  font-family: var(--font-fredoka), system-ui, sans-serif;
+  font-weight: 500;
+  color: #2d5a4a;
+  line-height: 1.15;
+}
+
+/* ---------- Class flow ---------- */
+.flow {
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .flow::before {
+    content: '';
+    position: absolute;
+    top: 48px;
+    /* from the first circle's centre to the last one's (4 columns, 40px gaps) */
+    left: 48px;
+    right: calc((100% - 120px) / 4 - 48px);
+    border-top: 3px dashed #a7c4a0;
+    z-index: 0;
+  }
+}
+
+/* ---------- Focus ---------- */
+.page a:focus-visible,
+.page button:focus-visible {
+  outline: 3px solid #f4d35e;
+  outline-offset: 3px;
+  border-radius: 999px;
+}

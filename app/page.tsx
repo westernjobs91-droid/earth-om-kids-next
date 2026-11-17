@@ -1,6 +1,7 @@
 import { sharedOpenGraph } from '@/lib/seo';
 import React from 'react';
-import HomeContent from './HomeContent';
+// Preview branch: the redesigned homepage replaces HomeContent.
+import RedesignHome from './redesign/RedesignHome';
 import { reviews } from '@/lib/reviews';
 
 // ─── METADATA ────────────────────────────────────────────────────────────────
@@ -112,7 +113,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingSchema) }}
       />
 
-      <HomeContent />
+      <RedesignHome />
     </>
   );
 }
