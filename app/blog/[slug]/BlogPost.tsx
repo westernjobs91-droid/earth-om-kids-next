@@ -3,6 +3,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import rd from '@/components/rd/rd.module.css';
+import { Hills, ClosingCTA } from '@/components/rd/Kit';
 
 interface BlogPost {
   title: string;
@@ -312,7 +314,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
   if (!post) {
     return (
       <div className="max-w-3xl mx-auto px-6 py-20 text-center">
-        <h1 className="text-3xl font-semibold">Blog post not found</h1>
+        <h1 className="text-3xl font-semibold heading-serif">Blog post not found</h1>
         <Link href="/blog" className="mt-6 inline-block text-[#2D5A4A] hover:underline">
           Back to Blog
         </Link>
@@ -321,83 +323,89 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <div className="max-w-3xl mx-auto px-6 py-16">
-      <Link href="/blog" className="text-sm text-[#2D5A4A] hover:underline mb-6 inline-block">
-        Back to Blog
-      </Link>
+    <>
+      <header className={rd.hero}>
+        <div className="max-w-3xl mx-auto px-6 pt-12 pb-28 md:pb-36">
+          <Link href="/blog" className="text-[#E4EEDF] underline decoration-[#F4D35E] decoration-2 underline-offset-4">All articles</Link>
+          <p className="mt-8 flex flex-wrap items-center gap-3 text-[#E4EEDF]">
+            <span className="px-3 py-1 rounded-full bg-[#F4D35E] text-[#1F2E2A] text-sm font-semibold">{post.category}</span>
+            <span>{post.date}</span>
+            <span aria-hidden="true">/</span>
+            <span>{post.readTime}</span>
+          </p>
+          <h1 className={`${rd.display} mt-5 text-4xl md:text-[3.25rem] leading-[1.05] font-semibold`}>{post.title}</h1>
+        </div>
+        <Hills />
+      </header>
 
-      <div className="flex items-center gap-x-3 mb-4">
-        <span className="text-xs px-3 py-1 bg-[#F8F1E9] rounded-full text-[#2D5A4A]">{post.category}</span>
-        <span className="text-xs text-[#1F2E2A]/50">{post.date} • {post.readTime}</span>
-      </div>
+      <article className="max-w-3xl mx-auto px-6 pt-4 pb-16">
+        {post.content.split('\n\n').map((block, index) => {
+          const text = block.trim();
+          const numbered = text.match(/^(\d+)\.\s+([^\n]+)\n([\s\S]+)$/);
+          if (numbered) {
+            return (
+              <div key={index} className="mt-8 flex gap-4">
+                <span className={`${rd.display} w-10 h-10 shrink-0 rounded-full bg-[#E4EEDF] text-[#2D5A4A] grid place-items-center font-semibold`}>{numbered[1]}</span>
+                <div>
+                  <h3 className={`${rd.display} text-xl font-semibold`}>{numbered[2]}</h3>
+                  <p className="mt-2 text-lg leading-relaxed text-[#3d4f49]">{numbered[3]}</p>
+                </div>
+              </div>
+            );
+          }
+          if (text.length < 90 && index > 0 && !/[.:!,]$/.test(text) && !/\.\s/.test(text)) {
+            return <h2 key={index} className={`${rd.display} mt-12 mb-2 text-2xl md:text-3xl font-semibold leading-tight`}>{text}</h2>;
+          }
+          return (
+            <p key={index} className={index === 0 ? 'text-xl md:text-2xl leading-relaxed text-[#1F2E2A] mb-6' : 'mt-5 text-lg leading-relaxed text-[#3d4f49]'}>
+              {text}
+            </p>
+          );
+        })}
 
-      <h1 className="text-4xl tracking-tighter font-semibold heading-serif mb-8">{post.title}</h1>
-
-      <div className="prose prose-lg max-w-none text-[#1F2E2A]/90">
-        {post.content.split('\n\n').map((paragraph, index) => (
-          <p key={index} className="mb-5 leading-relaxed">{paragraph}</p>
-        ))}
-      </div>
-
-      {/* Author Bio */}
-      <div className="mt-16 pt-8 border-t border-[#E8D5B7]">
-        <div className="flex items-start gap-x-5">
+        <aside className="mt-16 rounded-[32px] bg-[#E4EEDF] p-7 md:p-8 flex flex-col sm:flex-row gap-6 items-start">
           <Image
             src="/taran-photo.jpg"
             alt="Taran Kaur, trained Early Childhood Educator and founder of Earth and OM Kids"
-            width={56}
-            height={56}
-            className="w-14 h-14 rounded-2xl object-cover flex-shrink-0"
+            width={96}
+            height={96}
+            className="w-24 h-24 rounded-full object-cover border-4 border-[#F4D35E] shrink-0"
           />
           <div>
-            <div className="font-semibold text-[#1F2E2A]">Taran Kaur</div>
-            <div className="text-sm text-[#2D5A4A] mb-2">Trained Early Childhood Educator · Founder of Earth and OM Kids</div>
-            <p className="text-sm text-[#1F2E2A]/70 leading-relaxed">
-              Taran has nearly 10 years of experience working with children in Toronto schools, daycares, and Montessori communities. She founded Earth and OM Kids to bring professional kids yoga and mindfulness programs to children and families across Toronto and the GTA.
+            <p className={`${rd.display} text-xl font-semibold`}>Written by Taran Kaur</p>
+            <p className="text-[#2D5A4A] font-medium">Trained Early Childhood Educator and founder of Earth and OM Kids</p>
+            <p className="mt-3 text-[#3d4f49] leading-relaxed">
+              Taran has nearly 10 years of experience working with children in Toronto schools, daycares and Montessori communities. She founded Earth and OM Kids to bring professional kids yoga and mindfulness programs to children and families across Toronto and the GTA.
             </p>
           </div>
-        </div>
-      </div>
+        </aside>
+      </article>
 
-      {/* Related Posts */}
       {relatedPosts.length > 0 && (
-        <div className="mt-16 pt-8 border-t border-[#E8D5B7]">
-          <h3 className="text-sm font-semibold tracking-[1.5px] text-[#2D5A4A] mb-5">MORE FROM THE BLOG</h3>
-          <div className="grid sm:grid-cols-3 gap-4">
-            {relatedPosts.map(([slug, relatedPost]) => (
-              <Link
-                key={slug}
-                href={`/blog/${slug}`}
-                className="block bg-[#F8F1E9] rounded-2xl p-5 hover:bg-[#E8D5B7]/50 transition-colors"
-              >
-                <span className="text-xs text-[#2D5A4A]/70">{relatedPost.category}</span>
-                <div className="mt-1 font-semibold text-sm text-[#1F2E2A] leading-snug">{relatedPost.title}</div>
-              </Link>
-            ))}
+        <section className="bg-white py-16">
+          <div className="max-w-6xl mx-auto px-6">
+            <h2 className={`${rd.display} text-3xl font-semibold`}>Keep reading</h2>
+            <div className="mt-8 grid md:grid-cols-3 gap-5">
+              {relatedPosts.map(([slug, relatedPost], i) => (
+                <Link
+                  key={slug}
+                  href={`/blog/${slug}`}
+                  className={`block rounded-[28px] p-7 ${['bg-[#E4EEDF]', 'bg-[#FBEFC2]', 'bg-[#F6E3D3]'][i % 3]} hover:ring-2 hover:ring-[#2D5A4A]/30 transition`}
+                >
+                  <span className="text-sm font-semibold text-[#2D5A4A]">{relatedPost.category}</span>
+                  <span className={`${rd.display} mt-2 block text-xl font-semibold leading-snug`}>{relatedPost.title}</span>
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
+        </section>
       )}
 
-      {/* CTA */}
-      <div className="mt-10 bg-[#F8F1E9] rounded-3xl p-8 text-center">
-        <h3 className="text-xl font-semibold heading-serif mb-2">Bring this to your school or family</h3>
-        <p className="text-sm text-[#1F2E2A]/70 mb-5">
-          Earth and OM Kids delivers professional yoga and mindfulness programs across Toronto and the GTA. Schools, daycares, and families welcome.
-        </p>
-        <Link
-          href="/contact"
-          className="inline-flex items-center justify-center px-8 py-3 bg-[#2D5A4A] text-white font-semibold rounded-2xl hover:bg-[#1F2E2A] transition text-sm"
-        >
-          Get in Touch
-        </Link>
-      </div>
-
-      {/* Back */}
-      <div className="mt-10">
-        <Link href="/blog" className="text-sm text-[#2D5A4A] hover:underline">
-          Back to all posts
-        </Link>
-      </div>
-    </div>
+      <ClosingCTA
+        title="Bring this to your school or family"
+        body="Earth and OM Kids delivers yoga and mindfulness programs across Toronto and the GTA. Schools, daycares and families welcome."
+        primary={{ href: '/contact', label: 'Get in touch' }}
+      />
+    </>
   );
 }

@@ -1,11 +1,7 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { PageHero, Section, ClosingCTA, display } from '@/components/rd/Kit';
 
-import { PageHero } from '@/components/rd/Kit';
 export default function LocationsContent() {
   const locations = [
     {
@@ -40,89 +36,51 @@ export default function LocationsContent() {
     },
   ];
 
+  const [toronto, ...rest] = locations;
+  const tints = ['bg-[#E4EEDF]', 'bg-[#FBEFC2]', 'bg-[#F6E3D3]', 'bg-[#E4EEDF]'];
+
   return (
     <>
       <PageHero
-        title={<>Kids Yoga Across Toronto and the GTA</>}
-        lead={<>We bring professional kids yoga and mindfulness programs to schools, childcare centres, and families across Toronto and the Greater Toronto Area. We come to you.</>}
+        title={<>Kids yoga across Toronto and the GTA</>}
+        lead="We bring kids yoga and mindfulness programs to schools, childcare centres and families across Toronto and the Greater Toronto Area. We come to you."
+        actions={[{ href: '/contact', label: 'Request a program' }]}
       />
-    <div className="max-w-6xl mx-auto px-6 pt-6 pb-16">
 
-      {/* Toronto featured card — full width */}
-      <motion.div
-        className="mb-6"
-        whileHover={{ y: -6 }}
-        transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      >
-        <Link
-          href="/toronto"
-          className="block bg-[#2D5A4A] text-white rounded-3xl p-10 hover:bg-[#1F2E2A] transition-all"
-        >
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <Section>
+        <Link href={`/${toronto.slug}`} className="group block rounded-[36px] bg-[#2D5A4A] text-[#FFFCF5] p-8 md:p-12 hover:bg-[#244a3d] transition-colors">
+          <div className="grid md:grid-cols-[1fr_auto] gap-6 items-end">
             <div>
-              <h2 className="text-4xl font-semibold tracking-tight mb-3">Toronto</h2>
-              <p className="text-white/75 max-w-xl">
-                Professional kids yoga and mindfulness programs for schools, childcare centres, daycares, and families across all of Toronto. Trusted by 25+ local schools since 2018.
-              </p>
+              <h2 className={`${display} text-4xl md:text-5xl font-semibold`}>{toronto.name}</h2>
+              <p className="mt-4 text-lg text-[#E4EEDF] max-w-2xl">{toronto.description}</p>
             </div>
-            <div className="flex-shrink-0">
-              <span className="inline-flex items-center text-sm font-semibold text-white/90">
-                Explore Toronto Programs <ArrowRight className="h-4 w-4 ml-2" />
-              </span>
-            </div>
+            <span className="inline-flex px-7 py-4 rounded-full bg-[#F4D35E] text-[#1F2E2A] font-semibold text-lg">Explore Toronto programs</span>
           </div>
         </Link>
-      </motion.div>
-
-      {/* Other location cards */}
-      <div className="grid md:grid-cols-2 gap-6">
-        {locations.filter(l => !l.featured).map((location, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ y: -8 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          >
-            <Link
-              href={`/${location.slug}`}
-              className="block bg-white border border-[#E8D5B7] rounded-3xl p-8 h-full hover:border-[#2D5A4A]/40 transition-all"
-            >
-              <h2 className="text-3xl font-semibold tracking-tight mb-3">{location.name}</h2>
-              <p className="text-[#1F2E2A]/70 mb-6">{location.description}</p>
-              <span className="inline-flex items-center text-sm font-semibold text-[#2D5A4A]">
-                Explore {location.name} Programs <ArrowRight className="h-4 w-4 ml-2" />
-              </span>
+        <div className="mt-5 grid md:grid-cols-2 gap-5">
+          {rest.map((loc, i) => (
+            <Link key={loc.slug} href={`/${loc.slug}`} className={`group flex flex-col rounded-[32px] p-8 ${tints[i % tints.length]} hover:ring-2 hover:ring-[#2D5A4A]/30 transition`}>
+              <h2 className={`${display} text-3xl font-semibold`}>{loc.name}</h2>
+              <p className="mt-3 text-[#3d4f49] leading-relaxed">{loc.description}</p>
+              <span className="mt-auto pt-6 font-semibold text-[#2D5A4A] underline decoration-[#2D5A4A]/30 decoration-2 underline-offset-4 group-hover:decoration-[#2D5A4A]">Explore {loc.name} programs</span>
             </Link>
-          </motion.div>
-        ))}
-      </div>
-
-      {/* Coming soon GTA areas */}
-      <div className="mt-10 bg-[#F8F1E9] rounded-3xl p-8 border border-[#E8D5B7]">
-        <div className="text-center mb-6">
-          <h3 className="text-2xl font-semibold tracking-tight heading-serif">Greater Toronto Area</h3>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-          {["Vaughan", "Mississauga", "Markham", "Richmond Hill", "Brampton", "Oakville", "Ajax", "Pickering"].map((city, index) => (
-            <div key={index} className="bg-white rounded-2xl px-4 py-3 text-sm text-center font-medium text-[#2D5A4A] border border-[#E8D5B7]">
-              {city}
-            </div>
           ))}
         </div>
-      </div>
+      </Section>
 
-      {/* Bottom CTA */}
-      <div className="text-center mt-16">
-        <p className="text-[#1F2E2A]/70 mb-4">
-          Do not see your neighbourhood? We may still be able to help.
-        </p>
-        <Link
-          href="/contact"
-          className="inline-flex items-center justify-center gap-x-3 px-8 py-4 bg-[#2D5A4A] hover:bg-[#1F2E2A] transition text-white font-semibold rounded-full text-lg"
-        >
-          Contact Us About Your Area
-        </Link>
-      </div>
-    </div>
+      <Section tone="white" title="Across the Greater Toronto Area" intro="We also travel to schools, centres and families in these cities.">
+        <ul className="flex flex-wrap gap-2.5">
+          {['Vaughan', 'Mississauga', 'Markham', 'Richmond Hill', 'Brampton', 'Oakville', 'Ajax', 'Pickering'].map((city) => (
+            <li key={city} className={`${display} px-5 py-2.5 rounded-full bg-[#E4EEDF] text-lg font-medium`}>{city}</li>
+          ))}
+        </ul>
+      </Section>
+
+      <ClosingCTA
+        title="Don't see your neighbourhood?"
+        body="We may still be able to help. Tell us where you are and what you need."
+        primary={{ href: '/contact', label: 'Ask about your area' }}
+      />
     </>
   );
 }

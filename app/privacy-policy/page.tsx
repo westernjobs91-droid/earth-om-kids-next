@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import { PageHero } from '@/components/rd/Kit';
 export const metadata = {
   title: 'Privacy Policy',
   description: 'Privacy policy for Earth & OM Kids — kids yoga and mindfulness programs in Toronto and the GTA.',
@@ -9,19 +10,10 @@ export const metadata = {
 export default function PrivacyPolicy() {
   return (
     <>
-      {/* Header */}
-      <div className="bg-white border-b border-[#E8D5B7]">
-        <div className="max-w-3xl mx-auto px-6 pt-16 pb-12 text-center">
-          <div className="inline-block px-4 py-1 bg-[#A7C4A0]/20 text-[#2D5A4A] text-xs font-semibold tracking-[1.5px] rounded-full mb-4">
-            LEGAL
-          </div>
-          <h1 className="text-5xl tracking-tighter font-semibold heading-serif">Privacy Policy</h1>
-          <p className="mt-3 text-[#1F2E2A]/60 text-sm">Last updated: May 2026</p>
-        </div>
-      </div>
+      <PageHero title="Privacy policy" lead="Last updated: May 2026" />
 
       {/* Content */}
-      <div className="max-w-3xl mx-auto px-6 py-16">
+      <div className="max-w-3xl mx-auto px-6 pt-4 pb-20">
         <div className="space-y-10">
 
           {/* Who we are */}

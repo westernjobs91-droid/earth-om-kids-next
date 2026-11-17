@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-white border-b border-[#E8D5B7] sticky top-0 z-50">
+    <nav className="bg-[#FFFCF5]/95 backdrop-blur border-b border-[#E4EEDF] sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center h-20">
 
@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Desktop nav — visible from lg (1024px) up */}
-          <div className="hidden lg:flex items-center gap-x-4 lg:gap-x-5 xl:gap-x-7 text-sm font-medium">
+          <div className="hidden lg:flex items-center gap-x-4 lg:gap-x-5 xl:gap-x-7 text-[15px] font-medium">
             {navLinks.map((link) => {
               if (link.href === '/programs') {
                 return (
@@ -65,41 +65,41 @@ const Navbar: React.FC = () => {
                     </Link>
 
                     {/* Programs Dropdown */}
-                    <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-[#E8D5B7] rounded-2xl shadow-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                      <Link href="/programs" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
+                    <div className="absolute top-full left-0 mt-2 w-64 bg-white border-2 border-[#E4EEDF] rounded-3xl shadow-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                      <Link href="/programs" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#E4EEDF] rounded-2xl mx-1 transition-colors">
                         Programs Overview
                       </Link>
-                      <Link href="/programs#school-programs" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
+                      <Link href="/programs#school-programs" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#E4EEDF] rounded-2xl mx-1 transition-colors">
                         In-School Yoga
                       </Link>
-                      <Link href="/after-school-yoga-toronto" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
+                      <Link href="/after-school-yoga-toronto" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#E4EEDF] rounded-2xl mx-1 transition-colors">
                         After-School Yoga
                       </Link>
-                      <Link href="/march-break-summer-camp-yoga-toronto" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
+                      <Link href="/march-break-summer-camp-yoga-toronto" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#E4EEDF] rounded-2xl mx-1 transition-colors">
                         March Break &amp; Summer Camps
                       </Link>
-                      <Link href="/mindfulness-workshops-for-kids-toronto" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
+                      <Link href="/mindfulness-workshops-for-kids-toronto" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#E4EEDF] rounded-2xl mx-1 transition-colors">
                         Mindfulness Workshops
                       </Link>
-                      <Link href="/programs#workshops-events" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
+                      <Link href="/programs#workshops-events" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#E4EEDF] rounded-2xl mx-1 transition-colors">
                         Workshops &amp; Events
                       </Link>
 
-                      <div className="border-t border-[#E8D5B7] my-1 mx-2"></div>
+                      <div className="border-t border-[#E4EEDF] my-1 mx-2"></div>
 
-                      <Link href="/families" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
+                      <Link href="/families" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#E4EEDF] rounded-2xl mx-1 transition-colors">
                         Family Sessions
                       </Link>
-                      <Link href="/toddler-yoga-toronto" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
+                      <Link href="/toddler-yoga-toronto" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#E4EEDF] rounded-2xl mx-1 transition-colors">
                         Toddler Yoga
                       </Link>
-                      <Link href="/mindfulness-for-kids-toronto" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
+                      <Link href="/mindfulness-for-kids-toronto" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#E4EEDF] rounded-2xl mx-1 transition-colors">
                         Mindfulness for Kids
                       </Link>
 
-                      <div className="border-t border-[#E8D5B7] my-1 mx-2"></div>
+                      <div className="border-t border-[#E4EEDF] my-1 mx-2"></div>
 
-                      <Link href="/yoga-birthday-party-toronto" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#F8F1E9] rounded-xl mx-1 transition-colors">
+                      <Link href="/yoga-birthday-party-toronto" className="block px-5 py-2.5 text-sm text-[#1F2E2A] hover:bg-[#E4EEDF] rounded-2xl mx-1 transition-colors">
                         🎂 Birthday Parties
                       </Link>
                     </div>
@@ -122,7 +122,7 @@ const Navbar: React.FC = () => {
           <div className="hidden lg:flex lg:flex-1 justify-end">
             <Link
               href="/contact"
-              className="inline-flex items-center px-6 py-3 bg-[#F4D35E] hover:bg-[#E8C84A] text-[#2D5A4A] text-sm font-semibold rounded-full transition-all active:scale-[0.985] shadow-sm hover:shadow"
+              className="inline-flex items-center px-6 py-3 bg-[#F4D35E] hover:bg-[#f7dd7f] text-[#1F2E2A] text-sm font-semibold rounded-full transition-all active:scale-[0.985] shadow-sm hover:shadow"
             >
               Request a program
             </Link>
@@ -147,37 +147,37 @@ const Navbar: React.FC = () => {
             animate={{ opacity: 1, height: "auto", y: 0 }}
             exit={{ opacity: 0, height: 0, y: -10 }}
             transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
-            className="lg:hidden bg-white border-t border-[#E8D5B7] px-6 py-4 overflow-hidden"
+            className="lg:hidden bg-[#FFFCF5] border-t border-[#E4EEDF] px-6 py-5 overflow-hidden"
           >
-            <div className="flex flex-col gap-y-3 text-sm font-medium">
+            <div className="flex flex-col gap-y-1 text-lg font-medium">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`py-2 text-[#1F2E2A] ${isActive(link.href) ? 'nav-active' : ''}`}
+                  className={`py-3 self-start text-[#1F2E2A] ${isActive(link.href) ? 'nav-active' : ''}`}
                 >
                   {link.label}
                 </Link>
               ))}
 
-              <div className="border-t border-[#E8D5B7] pt-3 flex flex-col gap-y-3">
-                <Link href="/toddler-yoga-toronto" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-[#1F2E2A]">
+              <div className="border-t border-[#E4EEDF] mt-2 pt-3 flex flex-col gap-y-1 text-base">
+                <Link href="/toddler-yoga-toronto" onClick={() => setIsMobileMenuOpen(false)} className="py-2.5 text-[#1F2E2A]">
                   Toddler Yoga
                 </Link>
-                <Link href="/mindfulness-for-kids-toronto" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-[#1F2E2A]">
+                <Link href="/mindfulness-for-kids-toronto" onClick={() => setIsMobileMenuOpen(false)} className="py-2.5 text-[#1F2E2A]">
                   Mindfulness for Kids
                 </Link>
-                <Link href="/after-school-yoga-toronto" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-[#1F2E2A]">
+                <Link href="/after-school-yoga-toronto" onClick={() => setIsMobileMenuOpen(false)} className="py-2.5 text-[#1F2E2A]">
                   After-School Yoga
                 </Link>
-                <Link href="/march-break-summer-camp-yoga-toronto" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-[#1F2E2A]">
+                <Link href="/march-break-summer-camp-yoga-toronto" onClick={() => setIsMobileMenuOpen(false)} className="py-2.5 text-[#1F2E2A]">
                   March Break &amp; Summer Camps
                 </Link>
-                <Link href="/mindfulness-workshops-for-kids-toronto" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-[#1F2E2A]">
+                <Link href="/mindfulness-workshops-for-kids-toronto" onClick={() => setIsMobileMenuOpen(false)} className="py-2.5 text-[#1F2E2A]">
                   Mindfulness Workshops
                 </Link>
-                <Link href="/yoga-birthday-party-toronto" onClick={() => setIsMobileMenuOpen(false)} className="py-2 text-[#1F2E2A]">
+                <Link href="/yoga-birthday-party-toronto" onClick={() => setIsMobileMenuOpen(false)} className="py-2.5 text-[#1F2E2A]">
                   Birthday Parties
                 </Link>
               </div>
@@ -185,7 +185,7 @@ const Navbar: React.FC = () => {
               <Link
                 href="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="mt-2 inline-flex justify-center items-center px-6 py-3 bg-[#F4D35E] hover:bg-[#E8C84A] text-[#2D5A4A] text-sm font-semibold rounded-full transition-all active:scale-[0.985]"
+                className="mt-4 inline-flex justify-center items-center px-6 py-4 text-base bg-[#F4D35E] hover:bg-[#f7dd7f] text-[#1F2E2A] text-sm font-semibold rounded-full transition-all active:scale-[0.985]"
               >
                 Request a program
               </Link>

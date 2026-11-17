@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import { PageHero } from '@/components/rd/Kit';
 export const metadata = {
   title: 'Accessibility',
   description: 'Accessibility statement for Earth & OM Kids — our commitment to an inclusive and accessible website for all users in Toronto and the GTA.',
@@ -9,19 +10,10 @@ export const metadata = {
 export default function Accessibility() {
   return (
     <>
-      {/* Header */}
-      <div className="bg-white border-b border-[#E8D5B7]">
-        <div className="max-w-3xl mx-auto px-6 pt-16 pb-12 text-center">
-          <div className="inline-block px-4 py-1 bg-[#A7C4A0]/20 text-[#2D5A4A] text-xs font-semibold tracking-[1.5px] rounded-full mb-4">
-            ACCESSIBILITY
-          </div>
-          <h1 className="text-5xl tracking-tighter font-semibold heading-serif">Accessibility Statement</h1>
-          <p className="mt-3 text-[#1F2E2A]/60 text-sm">Last updated: May 2026</p>
-        </div>
-      </div>
+      <PageHero title="Accessibility statement" lead="Last updated: May 2026" />
 
       {/* Content */}
-      <div className="max-w-3xl mx-auto px-6 py-16">
+      <div className="max-w-3xl mx-auto px-6 pt-4 pb-20">
         <div className="space-y-10">
 
           {/* Commitment */}

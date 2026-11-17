@@ -3,6 +3,8 @@ import Link from 'next/link';
 import RainbowArc from '@/components/RainbowArc';
 import { reviews } from '@/lib/reviews';
 import s from '@/components/rd/rd.module.css';
+import { Faq } from '@/components/rd/Kit';
+import { homeFaqs } from '@/app/homeFaqs';
 
 
 // Current partners only (featured + "currently working with" in SchoolCommunity).
@@ -320,6 +322,37 @@ export default function RedesignHome() {
             </li>
           ))}
         </ul>
+      </section>
+
+      {/* WHERE WE TEACH: internal links to every location page */}
+      <section className="bg-white py-20">
+        <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-[0.8fr_1.2fr] gap-10 items-start">
+          <div>
+            <h2 className={`${s.display} text-3xl md:text-5xl font-semibold`}>Where we teach</h2>
+            <p className="mt-4 text-lg text-[#5b665f] max-w-md">We come to schools, centres and homes across Toronto and the GTA.</p>
+          </div>
+          <ul className="grid sm:grid-cols-2 gap-3">
+            {[
+              ['/toronto', 'Toronto'], ['/north-york', 'North York'], ['/scarborough', 'Scarborough'],
+              ['/etobicoke', 'Etobicoke'], ['/downtown-toronto', 'Downtown Toronto'], ['/locations', 'All of the GTA'],
+            ].map(([href, label]) => (
+              <li key={href}>
+                <Link href={href} className={`${s.display} flex items-center justify-between rounded-full bg-[#E4EEDF] px-6 py-4 text-xl font-semibold hover:bg-[#d6e5d0] transition-colors`}>
+                  {label}
+                  <span aria-hidden="true" className="w-3 h-3 rounded-full bg-[#2D5A4A]" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* FAQ: same list as the FAQPage schema */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className={`${s.display} text-3xl md:text-5xl font-semibold`}>Questions we hear a lot</h2>
+          <div className="mt-10"><Faq items={homeFaqs} /></div>
+        </div>
       </section>
 
       {/* FINAL CTA */}

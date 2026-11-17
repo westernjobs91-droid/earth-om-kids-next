@@ -2,6 +2,7 @@ import { sharedOpenGraph } from '@/lib/seo';
 import React from 'react';
 // Preview branch: the redesigned homepage replaces HomeContent.
 import RedesignHome from './redesign/RedesignHome';
+import { homeFaqs } from './homeFaqs';
 import { reviews } from '@/lib/reviews';
 
 // ─── METADATA ────────────────────────────────────────────────────────────────
@@ -23,56 +24,11 @@ export const metadata = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What age groups do you work with?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We work with children from 18 months to 12 years old. Our programs are fully age-appropriate, from short playful toddler sessions to longer mindfulness-focused classes for older children."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you come to our location in Toronto?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! We travel to schools, childcare centres, and homes across Toronto and the Greater Toronto Area, including North York, Scarborough, Etobicoke, Vaughan, Mississauga, and Markham."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long are the kids yoga sessions?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most school and daycare sessions are 30–45 minutes. After-school classes and workshops are usually 45–60 minutes. Birthday parties and special events can be customized from 30–90 minutes."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you offer yoga programs for children with special needs?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. As a trained Early Childhood Educator (ECE), Taran has extensive experience working with diverse learners and can fully adapt sessions to be inclusive and supportive for children with varying needs."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What areas of Toronto and the GTA do you serve?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We regularly work in North York, Scarborough, Etobicoke, Downtown Toronto, Vaughan, Mississauga, Markham, and Richmond Hill. Contact us if you don't see your area — we may still be able to help."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do we book a kids yoga program?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Simply fill out the form on our Contact page or call us at (647) 856-8206. We'll get back to you within 1–2 business days to discuss your needs and create a custom proposal."
-      }
-    }
-  ]
+  "mainEntity": homeFaqs.map((f) => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  })),
 };
 
 // ─── SCHEMA: AggregateRating ──────────────────────────────────────────────────
